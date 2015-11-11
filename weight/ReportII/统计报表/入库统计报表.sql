@@ -1,0 +1,1 @@
+select 货名,发货单位,收货单位,规格,备用1,Count(流水号) As 车次,Sum(毛重) as 毛重,Sum(皮重) as 皮重,Sum(净重) as 净重 from 称重信息 where %s group by 货名,发货单位,收货单位,规格,备用1 order by 货名,发货单位,规格,备用1,收货单位
