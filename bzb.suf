@@ -7497,8 +7497,8 @@ g_HandleSystemReboot();
 <PostBuildProg/>
 <PostBuildCmdLine/>
 <PostBuildWait>0</PostBuildWait>
-<Filename>06.称重软件标准版 v2.1.23.exe</Filename>
-<OutputFolder>F:\福州奥特威电子有限公司\2015.08备份\标准版称重软件</OutputFolder>
+<Filename>06.称重软件标准版 v2.1.23.1.exe</Filename>
+<OutputFolder>E:\FZATW\标准版称重软件</OutputFolder>
 <SegmentSizeMode>2</SegmentSizeMode>
 <CustomSegSize>0</CustomSegSize>
 <CustomSegSizeMode>0</CustomSegSizeMode>

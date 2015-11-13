@@ -306,6 +306,7 @@ type
     showSumList: Boolean;
     doubleClickModifyRecord: Boolean; //双击修改主界面列表框记录
     notAllowTareExceed: Boolean;
+    loginTitle, loginInfo, mainTitle: string; //用户自定义信息
   end;
 
   TSysConfigUtil = class
@@ -1170,6 +1171,15 @@ begin
     systemConfig.meterDivide1 := myini.ReadInteger('meter1', 'meter_divide', 1);
     systemConfig.meterShowMode2 := myini.ReadString('meter2', 'meter_show_mode', '0');
     systemConfig.meterDivide2 := myini.ReadInteger('meter2', 'meter_divide', 1);
+  finally
+    myini.Free;
+  end;
+  myini := Tinifile.Create('weightSysInfo.ini');
+  try
+    //用户自定义信息
+    systemConfig.loginTitle := myini.ReadString('system_set', 'login_title', '称重管理系统');
+    systemConfig.loginInfo := myini.ReadString('system_set', 'login_info', '');
+    systemConfig.mainTitle := myini.ReadString('system_set', 'main_title', '称重管理系统');
   finally
     myini.Free;
   end;

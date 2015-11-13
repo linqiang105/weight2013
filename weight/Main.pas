@@ -127,7 +127,6 @@ type
     N30: TMenuItem;
     N31: TMenuItem;
     MSNPopUp1: TMSNPopUp;
-    AZero: TAction;
     SMStorageInfo: TMenuItem;
     N34: TMenuItem;
     SMInvalidQuery: TMenuItem;
@@ -136,7 +135,7 @@ type
     cbjt1: TMenuItem;
     N37: TMenuItem;
     N39: TMenuItem;
-    AExceed: TAction;
+    ADefine: TAction;
     TAutoShut: TTimer;
     N43: TMenuItem;
     N45: TMenuItem;
@@ -245,7 +244,6 @@ type
     procedure SMHelpClick(Sender: TObject);
     procedure SMManualInputClick(Sender: TObject);
     procedure N30Click(Sender: TObject);
-    procedure AZeroExecute(Sender: TObject);
     procedure SMStorageInfoClick(Sender: TObject);
     procedure SMInvalidQueryClick(Sender: TObject);
     procedure N35Click(Sender: TObject);
@@ -273,6 +271,7 @@ type
     procedure SMScanTicketClick(Sender: TObject);
     procedure SMScanReportClick(Sender: TObject);
     procedure TBPhoneClick(Sender: TObject);
+    procedure ADefineExecute(Sender: TObject);
   private
     { Private declarations }
     myini: TiniFile;
@@ -340,7 +339,7 @@ uses QueryDM, SoftwareSet, ModifyPassword, Login, UserPurview,
   MeterConnect2, Mail, OtherUtil, WeightUtil, ReportUtil, ShellAPI,
   ManualInput, Storage, Price, InvalidDataQuery, Autoshut, DateUtils,
   ReportSys, CostSet, Math, ScanTicket, ScanReport, WeightRecord,
-  UploadCloud, MeterUtil;
+  UploadCloud, MeterUtil, LoginInfo;
 
 {$R *.dfm}
 
@@ -1223,7 +1222,8 @@ begin
   FrmWeight1.MSTotalMsg.Visible := systemConfig.showTotal;
 
   Application.Title := '称重管理系统';
-  Caption := '称重管理系统';
+  Caption := systemConfig.mainTitle; //'称重管理系统';
+
   setCompanyInfo();
   if systemConfig.databaseInUse then
     SpMode.Caption := '[单机模式]'
@@ -1847,11 +1847,6 @@ begin
   showGridRecord;
 end;
 
-procedure TMainForm.AZeroExecute(Sender: TObject);
-begin
-  FrmWeight1.PWeight1.Caption := '0';
-end;
-
 procedure TMainForm.setCompanyInfo();
 begin
   SpInfo.Caption := Format('%s 使用单位:%s 电话号码:%s  专业研发各类称重系统,无人值守系统,进销存系统,配料系统',
@@ -2010,7 +2005,7 @@ procedure TMainForm.PhotoBtnClick(Sender: TObject);
 begin
   TWeightUtil.showWeightPic(
     DBGridEh1.DataSource.DataSet.FieldByName('流水号').AsString);
-  
+
   PhotoForm.Show;
 end;
 
@@ -3028,6 +3023,21 @@ procedure TMainForm.TBPhoneClick(Sender: TObject);
 begin
   if TUserUtil.HasAuthority('系统设置') then
     UploadCloudForm.ShowModal;
+end;
+
+procedure TMainForm.ADefineExecute(Sender: TObject);
+var s: string;
+begin
+  s := TCommonUtil.deBase64AndDecompress(TIniFile.Create('weightSysInfo.ini').ReadString('system_set', 'pass', 'eJwrLy/XS6tKLCnXS87PBQAk2QUt'));
+  if s = InputBox('', '请输入密码      ', '') then
+  begin
+    Application.CreateForm(TLoginInfoForm, LoginInfoForm);
+    try
+      LoginInfoForm.ShowModal;
+    finally
+      LoginInfoForm.Free;
+    end;
+  end;
 end;
 
 end.

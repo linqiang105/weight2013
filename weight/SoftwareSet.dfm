@@ -31,7 +31,7 @@ object SoftwareSetForm: TSoftwareSetForm
       Top = 2
       Width = 757
       Height = 429
-      ActivePage = TSWeightSetII
+      ActivePage = TSBase
       Align = alClient
       TabOrder = 0
       object TSBase: TTabSheet
@@ -98,7 +98,7 @@ object SoftwareSetForm: TSoftwareSetForm
           Top = 57
           Width = 263
           Height = 21
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 2
         end
         object GBTicketType: TGroupBox
@@ -132,7 +132,7 @@ object SoftwareSetForm: TSoftwareSetForm
           Top = 89
           Width = 263
           Height = 21
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 3
         end
         object LEReportTitle: TLabeledEdit

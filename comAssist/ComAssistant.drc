@@ -8,42 +8,41 @@
   resources were bound to the produced executable.
 */
 
-#define IdResourceStrings_RSStackEHOSTDOWN 65024
-#define IdResourceStrings_RSStackEHOSTUNREACH 65025
-#define IdResourceStrings_RSStackENOTEMPTY 65026
-#define IdResourceStrings_RSStackHOST_NOT_FOUND 65027
-#define IdResourceStrings_RSStackEADDRINUSE 65040
-#define IdResourceStrings_RSStackEADDRNOTAVAIL 65041
-#define IdResourceStrings_RSStackENETDOWN 65042
-#define IdResourceStrings_RSStackENETUNREACH 65043
-#define IdResourceStrings_RSStackENETRESET 65044
-#define IdResourceStrings_RSStackECONNABORTED 65045
-#define IdResourceStrings_RSStackECONNRESET 65046
-#define IdResourceStrings_RSStackENOBUFS 65047
-#define IdResourceStrings_RSStackEISCONN 65048
-#define IdResourceStrings_RSStackENOTCONN 65049
-#define IdResourceStrings_RSStackESHUTDOWN 65050
-#define IdResourceStrings_RSStackETOOMANYREFS 65051
-#define IdResourceStrings_RSStackETIMEDOUT 65052
-#define IdResourceStrings_RSStackECONNREFUSED 65053
-#define IdResourceStrings_RSStackELOOP 65054
-#define IdResourceStrings_RSStackENAMETOOLONG 65055
-#define IdResourceStrings_RSStackEFAULT 65056
-#define IdResourceStrings_RSStackEINVAL 65057
-#define IdResourceStrings_RSStackEMFILE 65058
-#define IdResourceStrings_RSStackEWOULDBLOCK 65059
-#define IdResourceStrings_RSStackEINPROGRESS 65060
-#define IdResourceStrings_RSStackEALREADY 65061
-#define IdResourceStrings_RSStackENOTSOCK 65062
-#define IdResourceStrings_RSStackEDESTADDRREQ 65063
-#define IdResourceStrings_RSStackEMSGSIZE 65064
-#define IdResourceStrings_RSStackEPROTOTYPE 65065
-#define IdResourceStrings_RSStackENOPROTOOPT 65066
-#define IdResourceStrings_RSStackEPROTONOSUPPORT 65067
-#define IdResourceStrings_RSStackESOCKTNOSUPPORT 65068
-#define IdResourceStrings_RSStackEOPNOTSUPP 65069
-#define IdResourceStrings_RSStackEPFNOSUPPORT 65070
-#define IdResourceStrings_RSStackEAFNOSUPPORT 65071
+#define IdResourceStrings_RSStackEHOSTUNREACH 65024
+#define IdResourceStrings_RSStackENOTEMPTY 65025
+#define IdResourceStrings_RSStackHOST_NOT_FOUND 65026
+#define IdResourceStrings_RSStackEADDRNOTAVAIL 65040
+#define IdResourceStrings_RSStackENETDOWN 65041
+#define IdResourceStrings_RSStackENETUNREACH 65042
+#define IdResourceStrings_RSStackENETRESET 65043
+#define IdResourceStrings_RSStackECONNABORTED 65044
+#define IdResourceStrings_RSStackECONNRESET 65045
+#define IdResourceStrings_RSStackENOBUFS 65046
+#define IdResourceStrings_RSStackEISCONN 65047
+#define IdResourceStrings_RSStackENOTCONN 65048
+#define IdResourceStrings_RSStackESHUTDOWN 65049
+#define IdResourceStrings_RSStackETOOMANYREFS 65050
+#define IdResourceStrings_RSStackETIMEDOUT 65051
+#define IdResourceStrings_RSStackECONNREFUSED 65052
+#define IdResourceStrings_RSStackELOOP 65053
+#define IdResourceStrings_RSStackENAMETOOLONG 65054
+#define IdResourceStrings_RSStackEHOSTDOWN 65055
+#define IdResourceStrings_RSStackEINVAL 65056
+#define IdResourceStrings_RSStackEMFILE 65057
+#define IdResourceStrings_RSStackEWOULDBLOCK 65058
+#define IdResourceStrings_RSStackEINPROGRESS 65059
+#define IdResourceStrings_RSStackEALREADY 65060
+#define IdResourceStrings_RSStackENOTSOCK 65061
+#define IdResourceStrings_RSStackEDESTADDRREQ 65062
+#define IdResourceStrings_RSStackEMSGSIZE 65063
+#define IdResourceStrings_RSStackEPROTOTYPE 65064
+#define IdResourceStrings_RSStackENOPROTOOPT 65065
+#define IdResourceStrings_RSStackEPROTONOSUPPORT 65066
+#define IdResourceStrings_RSStackESOCKTNOSUPPORT 65067
+#define IdResourceStrings_RSStackEOPNOTSUPP 65068
+#define IdResourceStrings_RSStackEPFNOSUPPORT 65069
+#define IdResourceStrings_RSStackEAFNOSUPPORT 65070
+#define IdResourceStrings_RSStackEADDRINUSE 65071
 #define DbUtilsEh_SNotOperatorEh 65072
 #define DbUtilsEh_SAndOperatorEh 65073
 #define DbUtilsEh_SOrOperatorEh 65074
@@ -56,10 +55,10 @@
 #define IdResourceStrings_RSWS2LoadError 65081
 #define IdResourceStrings_RSInvalidServiceName 65082
 #define IdResourceStrings_RSStackError 65083
-#define IdResourceStrings_RSStackInvalidIP 65084
-#define IdResourceStrings_RSStackEINTR 65085
-#define IdResourceStrings_RSStackEBADF 65086
-#define IdResourceStrings_RSStackEACCES 65087
+#define IdResourceStrings_RSStackEINTR 65084
+#define IdResourceStrings_RSStackEBADF 65085
+#define IdResourceStrings_RSStackEACCES 65086
+#define IdResourceStrings_RSStackEFAULT 65087
 #define EhLibConsts_SDeleteRecordEh 65088
 #define EhLibConsts_SEditRecordEh 65089
 #define EhLibConsts_SPostEditEh 65090
@@ -188,13 +187,13 @@
 #define DBConsts_SDataSetOpen 65213
 #define DBConsts_SNotEditing 65214
 #define DBConsts_SDataSetClosed 65215
-#define ComStrs_sDateTimeMax 65216
-#define ComStrs_sDateTimeMin 65217
-#define ComStrs_sNeedAllowNone 65218
-#define ComStrs_sFailSetCalDateTime 65219
-#define ComStrs_sFailSetCalMaxSelRange 65220
-#define ComStrs_sFailSetCalMinMaxRange 65221
-#define ComStrs_sFailsetCalSelRange 65222
+#define ComStrs_sDateTimeMin 65216
+#define ComStrs_sNeedAllowNone 65217
+#define ComStrs_sFailSetCalDateTime 65218
+#define ComStrs_sFailSetCalMaxSelRange 65219
+#define ComStrs_sFailSetCalMinMaxRange 65220
+#define ComStrs_sFailsetCalSelRange 65221
+#define WinHelpViewer_hNoKeyword 65222
 #define DBConsts_SInvalidFieldSize 65223
 #define DBConsts_SInvalidFieldKind 65224
 #define DBConsts_SUnknownFieldType 65225
@@ -218,8 +217,8 @@
 #define ExtCtrls_clNameWindow 65243
 #define ExtCtrls_clNameWindowFrame 65244
 #define ExtCtrls_clNameWindowText 65245
-#define WinHelpViewer_hNoKeyword 65246
-#define ComStrs_sInvalidComCtl32 65247
+#define ComStrs_sInvalidComCtl32 65246
+#define ComStrs_sDateTimeMax 65247
 #define ExtCtrls_clNameSkyBlue 65248
 #define ExtCtrls_clNameCream 65249
 #define ExtCtrls_clNameMedGray 65250
@@ -510,11 +509,9 @@
 #define SysConst_SDiskFull 65535
 STRINGTABLE
 BEGIN
-	IdResourceStrings_RSStackEHOSTDOWN,	"Host is down."
 	IdResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
 	IdResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
 	IdResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
-	IdResourceStrings_RSStackEADDRINUSE,	"Address already in use."
 	IdResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
 	IdResourceStrings_RSStackENETDOWN,	"Network is down."
 	IdResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
@@ -530,7 +527,7 @@ BEGIN
 	IdResourceStrings_RSStackECONNREFUSED,	"Connection refused."
 	IdResourceStrings_RSStackELOOP,	"Too many levels of symbolic links."
 	IdResourceStrings_RSStackENAMETOOLONG,	"File name too long."
-	IdResourceStrings_RSStackEFAULT,	"Bad address."
+	IdResourceStrings_RSStackEHOSTDOWN,	"Host is down."
 	IdResourceStrings_RSStackEINVAL,	"Invalid argument."
 	IdResourceStrings_RSStackEMFILE,	"Too many open files."
 	IdResourceStrings_RSStackEWOULDBLOCK,	"Operation would block. "
@@ -546,6 +543,7 @@ BEGIN
 	IdResourceStrings_RSStackEOPNOTSUPP,	"Operation not supported on socket."
 	IdResourceStrings_RSStackEPFNOSUPPORT,	"Protocol family not supported."
 	IdResourceStrings_RSStackEAFNOSUPPORT,	"Address family not supported by protocol family."
+	IdResourceStrings_RSStackEADDRINUSE,	"Address already in use."
 	DbUtilsEh_SNotOperatorEh,	"Not"
 	DbUtilsEh_SAndOperatorEh,	"AND"
 	DbUtilsEh_SOrOperatorEh,	"OR"
@@ -558,10 +556,10 @@ BEGIN
 	IdResourceStrings_RSWS2LoadError,	"Error on loading Winsock2 library (%s)"
 	IdResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
 	IdResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
-	IdResourceStrings_RSStackInvalidIP,	"%s is not a valid IP address."
 	IdResourceStrings_RSStackEINTR,	"Interrupted system call."
 	IdResourceStrings_RSStackEBADF,	"Bad file number."
 	IdResourceStrings_RSStackEACCES,	"Access denied."
+	IdResourceStrings_RSStackEFAULT,	"Bad address."
 	EhLibConsts_SDeleteRecordEh,	"Delete record"
 	EhLibConsts_SEditRecordEh,	"Edit record"
 	EhLibConsts_SPostEditEh,	"Post edit"
@@ -690,13 +688,13 @@ BEGIN
 	DBConsts_SDataSetOpen,	"Cannot perform this operation on an open dataset"
 	DBConsts_SNotEditing,	"Dataset not in edit or insert mode"
 	DBConsts_SDataSetClosed,	"Cannot perform this operation on a closed dataset"
-	ComStrs_sDateTimeMax,	"Date exceeds maximum of %s"
 	ComStrs_sDateTimeMin,	"Date is less than minimum of %s"
 	ComStrs_sNeedAllowNone,	"You must be in ShowCheckbox mode to set to this date"
 	ComStrs_sFailSetCalDateTime,	"Failed to set calendar date or time"
 	ComStrs_sFailSetCalMaxSelRange,	"Failed to set maximum selection range"
 	ComStrs_sFailSetCalMinMaxRange,	"Failed to set calendar min/max range"
 	ComStrs_sFailsetCalSelRange,	"Failed to set calendar selected range"
+	WinHelpViewer_hNoKeyword,	"No help keyword specified."
 	DBConsts_SInvalidFieldSize,	"Invalid field size"
 	DBConsts_SInvalidFieldKind,	"Invalid FieldKind"
 	DBConsts_SUnknownFieldType,	"Field '%s' is of an unknown type"
@@ -720,8 +718,8 @@ BEGIN
 	ExtCtrls_clNameWindow,	"Window Background"
 	ExtCtrls_clNameWindowFrame,	"Window Frame"
 	ExtCtrls_clNameWindowText,	"Window Text"
-	WinHelpViewer_hNoKeyword,	"No help keyword specified."
 	ComStrs_sInvalidComCtl32,	"This control requires version 4.70 or greater of COMCTL32.DLL"
+	ComStrs_sDateTimeMax,	"Date exceeds maximum of %s"
 	ExtCtrls_clNameSkyBlue,	"Sky Blue"
 	ExtCtrls_clNameCream,	"Cream"
 	ExtCtrls_clNameMedGray,	"Medium Gray"

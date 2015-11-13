@@ -16,6 +16,7 @@ type
     ImgBack: TImage;
     lblHint: TRzLabel;
     lblTitle: TRzLabel;
+    lblInfo: TLabel;
     procedure CBUserChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure lblLoginClick(Sender: TObject);
@@ -51,6 +52,9 @@ begin
     ImgBack.Picture.LoadFromFile(ExtractFilePath(ParamStr(0)) + 'login.jpg');
   lblHint.Visible := TUserUtil.isDefaultPass();
   TUserUtil.addUser(CBUser);
+
+  lblTitle.Caption := MainForm.systemConfig.loginTitle;
+  lblInfo.Caption := MainForm.systemConfig.loginInfo;
 
   CBUser.Text := '';
   EdtPass.Clear;

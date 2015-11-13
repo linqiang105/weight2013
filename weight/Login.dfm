@@ -7426,9 +7426,9 @@ object LoginForm: TLoginForm
     Visible = False
   end
   object lblTitle: TRzLabel
-    Left = 64
+    Left = 48
     Top = 16
-    Width = 241
+    Width = 689
     Height = 49
     AutoSize = False
     Caption = #31216#37325#31649#29702#31995#32479
@@ -7437,6 +7437,21 @@ object LoginForm: TLoginForm
     Font.Height = -37
     Font.Name = #23435#20307
     Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+  end
+  object lblInfo: TLabel
+    Left = 520
+    Top = 384
+    Width = 265
+    Height = 121
+    AutoSize = False
+    Caption = #32852#31995#20154#65306#13#10#13#10#32852#31995#30005#35805#65306#13#10#13#10#32852#31995#22320#22336#65306
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = #23435#20307
+    Font.Style = []
     ParentFont = False
     Transparent = True
   end

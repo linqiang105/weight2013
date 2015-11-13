@@ -94,7 +94,8 @@ uses
   ufrxZintBarcode in 'Code2D\ufrxZintBarcode.pas',
   uRegZintBarcode in 'Code2D\uRegZintBarcode.pas',
   uZintBarcode in 'Code2D\uZintBarcode.pas',
-  uZintInterface in 'Code2D\uZintInterface.pas';
+  uZintInterface in 'Code2D\uZintInterface.pas',
+  LoginInfo in 'LoginInfo.pas' {LoginInfoForm};
 
 {$R *.res}
 {$R UAC.res}
