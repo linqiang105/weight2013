@@ -15,6 +15,21 @@ type
     class function pay(shouHuo, sum: string): Boolean; //扣费
     class function lowCredit(shouHuo: string; sum: Double): Boolean; //信用等级不够
     class function getLeft(shouHuo: string): Double;
+
+    class function getLastSum(carNo: string): Double;
+    class function getLastNet(carNo: string): Double;
+    class function getLastQuanter(carNo: string): Double;
+    class function getLastBackup6(carNo: string): Double;
+    class function getLastBackup7(carNo: string): Double;
+    class function getLastBackup8(carNo: string): Double;
+    class function getLastBackup9(carNo: string): Double;
+    class function getLastBackup15(carNo: string): Double;
+    class function getLastBackup16(carNo: string): Double;
+    class function getLastBackup17(carNo: string): Double;
+    class function getLastBackup18(carNo: string): Double;
+
+
+
   end;
 
 implementation
@@ -77,6 +92,259 @@ begin
   except
     QueryDataModule.DBConnection.RollbackTrans;
     Result := False;
+  end;
+end;
+
+class function TPayUtil.getLastBackup15(carNo: string): Double;
+var adoq: TADOQuery;
+begin
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用15 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';  
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用15').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup16(carNo: string): Double;
+var adoq: TADOQuery;
+begin       
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用16 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用16').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup17(carNo: string): Double;
+var adoq: TADOQuery;
+begin     
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用17 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc'; 
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用17').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup18(carNo: string): Double;
+var adoq: TADOQuery;
+begin        
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select Max(备用18) from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';   
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用18').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup6(carNo: string): Double;
+var adoq: TADOQuery;
+begin        
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用6 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';   
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用6').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup7(carNo: string): Double;
+var adoq: TADOQuery;
+begin      
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用7 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc'; 
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用7').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup8(carNo: string): Double;
+var adoq: TADOQuery;
+begin           
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用8 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc'; 
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用8').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastBackup9(carNo: string): Double;
+var adoq: TADOQuery;
+begin                 
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 备用9 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('备用9').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastNet(carNo: string): Double;
+var adoq: TADOQuery;
+begin             
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 实重 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';  
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('实重').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastQuanter(carNo: string): Double;
+var adoq: TADOQuery;
+begin                
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 方量 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc'; 
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('方量').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
+  end;
+end;
+
+class function TPayUtil.getLastSum(carNo: string): Double;
+var adoq: TADOQuery;
+begin               
+  Result := 0;
+  adoq := TADOQuery.Create(nil);
+  try
+    adoq.Connection := QueryDataModule.DBConnection;
+    with adoq do
+    begin
+      Close;
+      SQL.Text := 'select top 1 金额 from 称重信息 where (车号=:carNo) and (净重<>0) order by 序号 desc';
+      Parameters.ParamByName('carNo').Value := carNo;
+      Open;
+      if not IsEmpty then
+      begin
+        Result := FieldByName('金额').AsFloat;
+      end;
+    end;
+  finally
+    adoq.Free;
   end;
 end;
 

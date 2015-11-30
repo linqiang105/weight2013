@@ -442,9 +442,9 @@ var grossGlideNo: string;
   Flag: boolean; //预置标志
 begin
   Account := 0.00;
-  clearWeight;
+  //clearWeight;
   //等待稳定后才能称重
-  if StrToFloatDef(getWeight(), 0) <= 0 then
+  if (StrToFloatDef(getWeight(), 0) <= 0) and (StrToFloatDef(EdtGross.Text, 0) <= 0) then
   begin
     MainForm.ShowMsg('请上磅后再点我');
     Exit;
@@ -468,7 +468,9 @@ begin
     TPrepareUtil.prepareBackupInfo2(CBBackup10.Text, CBBackup11.Text, CBBackup12.Text,
       CBBackup13.Text, CBBackup14.Text);
   end;
-  EdtGross.Text := getWeight; //获取当前重量
+  if StrToFloatDef(EdtGross.Text, 0) = 0 then
+    EdtGross.Text := getWeight; //获取当前重量
+
   UpdateRecNo := ''; //如果是更新的话，取上一次的号码
   WeightType := 'insert'; //称重类型，一种是插入，一种是更新
   WeightField := 'gross';
@@ -639,9 +641,9 @@ procedure TFrmWeight.BitBtnTareClick(Sender: TObject);
 var tareGlideNo: string;
   sysTare, nowTare: Double;
 begin
-  clearWeight;
+  //clearWeight;
   //等待稳定后才能称重
-  if StrToFloatDef(getWeight(), 0) <= 0 then
+  if (StrToFloatDef(getWeight(), 0) <= 0) and (StrToFloatDef(EdtTare.Text, 0) <= 0) then
   begin
     MainForm.ShowMsg('请上磅后再点我');
     Exit;
@@ -668,7 +670,10 @@ begin
   //自动预置皮重
   if MainForm.systemConfig.autoWriteTare then
     TPrepareUtil.updateCarTare(CBCar.Text, getWeight);
-  EdtTare.Text := getWeight;
+
+  if StrToFloatDef(EdtTare.Text, 0) = 0 then
+    EdtTare.Text := getWeight;
+
   //不允许皮重超过预置皮重
   if MainForm.systemConfig.notAllowTareExceed then
   begin
@@ -894,6 +899,10 @@ begin
         if FieldByName('备用14').AsString <> '' then CBBackup14.Text := FieldByName('备用14').AsString;
       end;
     end;
+  end;
+  if MainForm.systemConfig.recordLeft then
+  begin
+    EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text));
   end;
   if MainForm.systemConfig.sayCombo then
   begin
@@ -1276,8 +1285,8 @@ end;
 procedure TFrmWeight.BtnWeightClick(Sender: TObject);
 var carTare: Double;
 begin
-  clearWeight; //清空重量
-  if StrToFloatDef(getWeight(), 0) <= 0 then
+  //clearWeight; //清空重量
+  if (StrToFloatDef(getWeight(), 0) <= 0) and (StrToFloatDef(EdtGross.Text, 0) <= 0) then
   begin
     MainForm.ShowMsg('请上磅后再点我');
     Exit;
@@ -1304,9 +1313,15 @@ begin
       CBBackup13.Text, CBBackup14.Text);
   end;
   if MainForm.systemConfig.simpleMode = 0 then
-    EdtGross.Text := getWeight
+  begin
+    if StrToFloatDef(EdtGross.Text, 0) = 0 then
+      EdtGross.Text := getWeight
+  end
   else
-    EdtTare.Text := getWeight;
+  begin
+    if StrToFloatDef(EdtTare.Text, 0) = 0 then
+      EdtTare.Text := getWeight;
+  end;
 
   UpdateRecNo := ''; //如果是更新的话，取上一次的号码
   WeightType := 'insert'; //称重类型，一种是插入，一种是更新
@@ -3013,6 +3028,7 @@ function TFrmWeight.weightAndSave: Boolean;
 var carTare: Double;
   sqlStr: string;
   lowCredit: Boolean;
+  currentPay: Double;
 begin
   clearWeight; //清空重量
   if StrToFloatDef(getWeight(), 0) <= 0 then
@@ -3080,25 +3096,32 @@ begin
   if MainForm.systemConfig.usePay and (StrToFloatDef(EdtReal.Text, 0) > 0) then
   begin
     case MainForm.systemConfig.payType of
-      0: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-      1: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtReal.Text, 0));
-      2: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtQuanter.Text, 0));
-      3: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup6.Text, 0));
-      4: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup7.Text, 0));
-      5: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup8.Text, 0));
-      6: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup9.Text, 0));
-      7: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup15.Text, 0));
-      8: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup16.Text, 0));
-      9: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup17.Text, 0));
-      10: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup18.Text, 0));
+      0: currentPay := StrToFloatDef(EdtSum.Text, 0);
+      1: currentPay := StrToFloatDef(EdtReal.Text, 0);
+      2: currentPay := StrToFloatDef(EdtQuanter.Text, 0);
+      3: currentPay := StrToFloatDef(EdtBackup6.Text, 0);
+      4: currentPay := StrToFloatDef(EdtBackup7.Text, 0);
+      5: currentPay := StrToFloatDef(EdtBackup8.Text, 0);
+      6: currentPay := StrToFloatDef(EdtBackup9.Text, 0);
+      7: currentPay := StrToFloatDef(EdtBackup15.Text, 0);
+      8: currentPay := StrToFloatDef(EdtBackup16.Text, 0);
+      9: currentPay := StrToFloatDef(EdtBackup17.Text, 0);
+      10: currentPay := StrToFloatDef(EdtBackup18.Text, 0);
     else
-      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
+      currentPay := StrToFloatDef(EdtSum.Text, 0);
     end;
+    lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
     if lowCredit then
     begin
       addAutoDebug('该单位当前金额不足，请先续费');
-      Result := False;
       Exit;
+    end
+    else
+    begin
+      if MainForm.systemConfig.recordLeft then
+      begin
+        EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - currentPay);
+      end;
     end;
   end;
 
@@ -4010,6 +4033,7 @@ end;
 function TFrmWeight.save: Boolean;
 var sqlStr, tmp: string;
   lowCredit: Boolean;
+  currentPay: Double;
 begin
   Result := False;
   //没加密狗只能用15天或者500条记录
@@ -4043,47 +4067,63 @@ begin
   //设置有公式编辑的字段
   setExpressionValue();
   //如果有收费功能，信用额度过低就不允许过磅
-  if MainForm.systemConfig.usePay and (StrToFloatDef(EdtReal.Text, 0) > 0) then
+  if MainForm.systemConfig.usePay then
   begin
-    case MainForm.systemConfig.payType of
-      0: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-      1: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtReal.Text, 0));
-      2: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtQuanter.Text, 0));
-      3: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup6.Text, 0));
-      4: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup7.Text, 0));
-      5: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup8.Text, 0));
-      6: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup9.Text, 0));
-      7: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup15.Text, 0));
-      8: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup16.Text, 0));
-      9: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup17.Text, 0));
-      10: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup18.Text, 0));
-    else
-      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-    end;
-    if lowCredit then
+    if MainForm.systemConfig.compareLast then
     begin
-      Application.MessageBox('该单位当前金额不足，请先续费', '提示', MB_OK +
-        MB_ICONSTOP);
-      Exit;
-    end
-    else
-    begin
-      if MainForm.systemConfig.recordLeft then
+      case MainForm.systemConfig.payType of
+        0: currentPay := TPayUtil.getLastSum(CBCar.Text);
+        1: currentPay := TPayUtil.getLastNet(CBCar.Text);
+        2: currentPay := TPayUtil.getLastQuanter(CBCar.Text); //StrToFloatDef(EdtQuanter.Text, 0);
+        3: currentPay := TPayUtil.getLastBackup6(CBCar.Text); //StrToFloatDef(EdtBackup6.Text, 0);
+        4: currentPay := TPayUtil.getLastBackup7(CBCar.Text); //StrToFloatDef(EdtBackup7.Text, 0);
+        5: currentPay := TPayUtil.getLastBackup8(CBCar.Text); //StrToFloatDef(EdtBackup8.Text, 0);
+        6: currentPay := TPayUtil.getLastBackup9(CBCar.Text); //StrToFloatDef(EdtBackup9.Text, 0);
+        7: currentPay := TPayUtil.getLastBackup15(CBCar.Text); //StrToFloatDef(EdtBackup15.Text, 0);
+        8: currentPay := TPayUtil.getLastBackup16(CBCar.Text); //StrToFloatDef(EdtBackup16.Text, 0);
+        9: currentPay := TPayUtil.getLastBackup17(CBCar.Text); //StrToFloatDef(EdtBackup17.Text, 0);
+        10: currentPay := TPayUtil.getLastBackup18(CBCar.Text); //StrToFloatDef(EdtBackup18.Text, 0);
+      else
+        currentPay := TPayUtil.getLastSum(CBCar.Text); //StrToFloatDef(EdtSum.Text, 0);
+      end;
+      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
+      if lowCredit then
       begin
-        case MainForm.systemConfig.payType of
-          0: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtSum.Text, 0));
-          1: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtReal.Text, 0));
-          2: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtQuanter.Text, 0));
-          3: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup6.Text, 0));
-          4: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup7.Text, 0));
-          5: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup8.Text, 0));
-          6: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup9.Text, 0));
-          7: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup15.Text, 0));
-          8: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup16.Text, 0));
-          9: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup17.Text, 0));
-          10: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup18.Text, 0));
-        else
-          EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtSum.Text, 0));
+        Application.MessageBox('该单位余额可能不足，请先续费', '提示', MB_OK +
+          MB_ICONSTOP);
+        Exit;
+      end
+    end;
+
+    if StrToFloatDef(EdtReal.Text, 0) > 0 then
+    begin
+      case MainForm.systemConfig.payType of
+        0: currentPay := StrToFloatDef(EdtSum.Text, 0);
+        1: currentPay := StrToFloatDef(EdtReal.Text, 0);
+        2: currentPay := StrToFloatDef(EdtQuanter.Text, 0);
+        3: currentPay := StrToFloatDef(EdtBackup6.Text, 0);
+        4: currentPay := StrToFloatDef(EdtBackup7.Text, 0);
+        5: currentPay := StrToFloatDef(EdtBackup8.Text, 0);
+        6: currentPay := StrToFloatDef(EdtBackup9.Text, 0);
+        7: currentPay := StrToFloatDef(EdtBackup15.Text, 0);
+        8: currentPay := StrToFloatDef(EdtBackup16.Text, 0);
+        9: currentPay := StrToFloatDef(EdtBackup17.Text, 0);
+        10: currentPay := StrToFloatDef(EdtBackup18.Text, 0);
+      else
+        currentPay := StrToFloatDef(EdtSum.Text, 0);
+      end;
+      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
+      if lowCredit then
+      begin
+        Application.MessageBox('该单位当前金额不足，请先续费', '提示', MB_OK +
+          MB_ICONSTOP);
+        Exit;
+      end
+      else
+      begin
+        if MainForm.systemConfig.recordLeft then
+        begin
+          EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - currentPay);
         end;
       end;
     end;
@@ -4326,6 +4366,7 @@ end;
 function TFrmWeight.simpleSave: Boolean;
 var sqlStr: string;
   lowCredit: Boolean;
+  currentPay: Double;
 begin
   Result := False;
   if not getMust() then //输入必填项目
@@ -4344,47 +4385,63 @@ begin
     if TDog.RegTimeOut then Exit;
   end;
   //如果有收费功能，信用额度过低就不允许过磅
-  if MainForm.systemConfig.usePay and (StrToFloatDef(EdtReal.Text, 0) > 0) then
+  if MainForm.systemConfig.usePay then
   begin
-    case MainForm.systemConfig.payType of
-      0: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-      1: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtReal.Text, 0));
-      2: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtQuanter.Text, 0));
-      3: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup6.Text, 0));
-      4: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup7.Text, 0));
-      5: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup8.Text, 0));
-      6: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup9.Text, 0));
-      7: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup15.Text, 0));
-      8: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup16.Text, 0));
-      9: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup17.Text, 0));
-      10: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup18.Text, 0));
-    else
-      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-    end;
-    if lowCredit then
+    if MainForm.systemConfig.compareLast then
     begin
-      Application.MessageBox('该单位当前金额不足，请先续费', '提示', MB_OK +
-        MB_ICONSTOP);
-      Exit;
-    end
-    else
-    begin
-      if MainForm.systemConfig.recordLeft then
+      case MainForm.systemConfig.payType of
+        0: currentPay := TPayUtil.getLastSum(CBCar.Text);
+        1: currentPay := TPayUtil.getLastNet(CBCar.Text);
+        2: currentPay := TPayUtil.getLastQuanter(CBCar.Text); //StrToFloatDef(EdtQuanter.Text, 0);
+        3: currentPay := TPayUtil.getLastBackup6(CBCar.Text); //StrToFloatDef(EdtBackup6.Text, 0);
+        4: currentPay := TPayUtil.getLastBackup7(CBCar.Text); //StrToFloatDef(EdtBackup7.Text, 0);
+        5: currentPay := TPayUtil.getLastBackup8(CBCar.Text); //StrToFloatDef(EdtBackup8.Text, 0);
+        6: currentPay := TPayUtil.getLastBackup9(CBCar.Text); //StrToFloatDef(EdtBackup9.Text, 0);
+        7: currentPay := TPayUtil.getLastBackup15(CBCar.Text); //StrToFloatDef(EdtBackup15.Text, 0);
+        8: currentPay := TPayUtil.getLastBackup16(CBCar.Text); //StrToFloatDef(EdtBackup16.Text, 0);
+        9: currentPay := TPayUtil.getLastBackup17(CBCar.Text); //StrToFloatDef(EdtBackup17.Text, 0);
+        10: currentPay := TPayUtil.getLastBackup18(CBCar.Text); //StrToFloatDef(EdtBackup18.Text, 0);
+      else
+        currentPay := TPayUtil.getLastSum(CBCar.Text); //StrToFloatDef(EdtSum.Text, 0);
+      end;
+      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
+      if lowCredit then
       begin
-        case MainForm.systemConfig.payType of
-          0: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtSum.Text, 0));
-          1: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtReal.Text, 0));
-          2: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtQuanter.Text, 0));
-          3: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup6.Text, 0));
-          4: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup7.Text, 0));
-          5: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup8.Text, 0));
-          6: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup9.Text, 0));
-          7: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup15.Text, 0));
-          8: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup16.Text, 0));
-          9: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup17.Text, 0));
-          10: EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtBackup18.Text, 0));
-        else
-          EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - StrToFloatDef(EdtSum.Text, 0));
+        Application.MessageBox('该单位余额可能不足，请先续费', '提示', MB_OK +
+          MB_ICONSTOP);
+        Exit;
+      end
+    end;
+
+    if StrToFloatDef(EdtReal.Text, 0) > 0 then
+    begin
+      case MainForm.systemConfig.payType of
+        0: currentPay := StrToFloatDef(EdtSum.Text, 0);
+        1: currentPay := StrToFloatDef(EdtReal.Text, 0);
+        2: currentPay := StrToFloatDef(EdtQuanter.Text, 0);
+        3: currentPay := StrToFloatDef(EdtBackup6.Text, 0);
+        4: currentPay := StrToFloatDef(EdtBackup7.Text, 0);
+        5: currentPay := StrToFloatDef(EdtBackup8.Text, 0);
+        6: currentPay := StrToFloatDef(EdtBackup9.Text, 0);
+        7: currentPay := StrToFloatDef(EdtBackup15.Text, 0);
+        8: currentPay := StrToFloatDef(EdtBackup16.Text, 0);
+        9: currentPay := StrToFloatDef(EdtBackup17.Text, 0);
+        10: currentPay := StrToFloatDef(EdtBackup18.Text, 0);
+      else
+        currentPay := StrToFloatDef(EdtSum.Text, 0);
+      end;
+      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
+      if lowCredit then
+      begin
+        Application.MessageBox('该单位当前金额不足，请先续费', '提示', MB_OK +
+          MB_ICONSTOP);
+        Exit;
+      end
+      else
+      begin
+        if MainForm.systemConfig.recordLeft then
+        begin
+          EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - currentPay);
         end;
       end;
     end;
@@ -4702,6 +4759,7 @@ function TFrmWeight.weightAndSave(w: Double): Boolean;
 var carTare: Double;
   sqlStr: string;
   lowCredit: Boolean;
+  currentPay: Double;
 begin
   clearWeight; //清空重量
   if w <= 0 then
@@ -4741,28 +4799,36 @@ begin
   if MainForm.systemConfig.usePay and (StrToFloatDef(EdtReal.Text, 0) > 0) then
   begin
     case MainForm.systemConfig.payType of
-      0: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
-      1: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtReal.Text, 0));
-      2: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtQuanter.Text, 0));
-      3: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup6.Text, 0));
-      4: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup7.Text, 0));
-      5: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup8.Text, 0));
-      6: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup9.Text, 0));
-      7: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup15.Text, 0));
-      8: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup16.Text, 0));
-      9: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup17.Text, 0));
-      10: lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtBackup18.Text, 0));
+      0: currentPay := StrToFloatDef(EdtSum.Text, 0);
+      1: currentPay := StrToFloatDef(EdtReal.Text, 0);
+      2: currentPay := StrToFloatDef(EdtQuanter.Text, 0);
+      3: currentPay := StrToFloatDef(EdtBackup6.Text, 0);
+      4: currentPay := StrToFloatDef(EdtBackup7.Text, 0);
+      5: currentPay := StrToFloatDef(EdtBackup8.Text, 0);
+      6: currentPay := StrToFloatDef(EdtBackup9.Text, 0);
+      7: currentPay := StrToFloatDef(EdtBackup15.Text, 0);
+      8: currentPay := StrToFloatDef(EdtBackup16.Text, 0);
+      9: currentPay := StrToFloatDef(EdtBackup17.Text, 0);
+      10: currentPay := StrToFloatDef(EdtBackup18.Text, 0);
     else
-      lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, StrToFloatDef(EdtSum.Text, 0));
+      currentPay := StrToFloatDef(EdtSum.Text, 0);
     end;
+    lowCredit := TPayUtil.lowCredit(CBShouHuo.Text, currentPay);
     if lowCredit then
     begin
       addAutoDebug('该单位当前金额不足，请先续费');
       Exit;
+    end
+    else
+    begin
+      if MainForm.systemConfig.recordLeft then
+      begin
+        EdtBackup18.Text := FloatToStr(TPayUtil.getLeft(CBShouHuo.Text) - currentPay);
+      end;
     end;
   end;
 
-    //如果用出厂流水号，就用备用1
+  //如果用出厂流水号，就用备用1
   if MainForm.systemConfig.useOutGlideNo then
   begin
     if StrToFloatDef(EdtReal.Text, 0) > 0 then

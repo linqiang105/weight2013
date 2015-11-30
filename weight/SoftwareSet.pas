@@ -161,6 +161,7 @@ type
     CBDelHistory: TCheckBox;
     CBDoubleClickModifyRecord: TCheckBox;
     CBNotAllowTareExceed: TCheckBox;
+    CBCompareLast: TCheckBox;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
@@ -356,6 +357,8 @@ begin
   CBDoubleClickModifyRecord.Checked := myini.ReadBool('system_set', 'double_click_modify_record', False);
   //不允许过皮超过预置皮重
   CBNotAllowTareExceed.Checked := myini.ReadBool('system_set', 'not_allow_tare_exceed', False);
+  //与最近一次扣费对比
+  CBCompareLast.Checked := myini.ReadBool('system_set','compare_last',False);
 end;
 
 function TSoftwareSetForm.writeBasic: Boolean;
@@ -611,7 +614,9 @@ begin
   //不允许过皮超过预置皮重
   myini.WriteBool('system_set', 'not_allow_tare_exceed', CBNotAllowTareExceed.Checked);
   MainForm.systemConfig.notAllowTareExceed := CBNotAllowTareExceed.Checked;
-
+  //与最近一次扣费对比
+  myini.WriteBool('system_set','compare_last',CBCompareLast.Checked);
+  MainForm.systemConfig.compareLast := CBCompareLast.Checked;
 end;
 
 procedure TSoftwareSetForm.FormClose(Sender: TObject;

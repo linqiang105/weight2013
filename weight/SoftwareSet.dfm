@@ -31,7 +31,7 @@ object SoftwareSetForm: TSoftwareSetForm
       Top = 2
       Width = 757
       Height = 429
-      ActivePage = TSBase
+      ActivePage = TSWeightSet
       Align = alClient
       TabOrder = 0
       object TSBase: TTabSheet
@@ -495,14 +495,14 @@ object SoftwareSetForm: TSoftwareSetForm
         end
         object GBOther: TGroupBox
           Left = 560
-          Top = 152
+          Top = 136
           Width = 180
-          Height = 169
+          Height = 185
           Caption = #20854#20182
           TabOrder = 5
           object CBRecordLeft: TCheckBox
             Left = 10
-            Top = 80
+            Top = 78
             Width = 160
             Height = 17
             Caption = #35760#24405#21097#20313#37327'('#22791#29992'18)'
@@ -518,7 +518,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBUseManualFlag: TCheckBox
             Left = 10
-            Top = 37
+            Top = 36
             Width = 160
             Height = 17
             Caption = #20351#29992#34917#21333#26631#24535'('#22791#29992'14)'
@@ -526,7 +526,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBRecordCorrect: TCheckBox
             Left = 10
-            Top = 58
+            Top = 57
             Width = 160
             Height = 17
             Caption = #35760#24405#20462#27491#37327#65288#22791#29992'17'#65289
@@ -534,7 +534,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBDisconnectToZero: TCheckBox
             Left = 10
-            Top = 102
+            Top = 98
             Width = 160
             Height = 17
             Caption = #20202#34920#26029#32447#24402#38646
@@ -542,7 +542,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBDoubleAdd: TCheckBox
             Left = 10
-            Top = 123
+            Top = 119
             Width = 160
             Height = 17
             Caption = #21452#20202#34920#32047#21152
@@ -550,11 +550,19 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBNotAllowTareExceed: TCheckBox
             Left = 10
-            Top = 145
+            Top = 140
             Width = 160
             Height = 17
             Caption = #36807#30382#19981#20801#35768#36229#39044#32622#30382#37325
             TabOrder = 6
+          end
+          object CBCompareLast: TCheckBox
+            Left = 10
+            Top = 161
+            Width = 160
+            Height = 17
+            Caption = #19982#26368#36817#19968#27425#25187#36153#25968#25454#23545#27604
+            TabOrder = 7
           end
         end
         object GBRecord: TGroupBox
@@ -601,7 +609,7 @@ object SoftwareSetForm: TSoftwareSetForm
           Left = 560
           Top = 8
           Width = 180
-          Height = 137
+          Height = 121
           Caption = #25171#21360
           TabOrder = 4
           object CBPrintTwo: TCheckBox
@@ -614,7 +622,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBShowPrintDialog: TCheckBox
             Left = 10
-            Top = 39
+            Top = 35
             Width = 160
             Height = 17
             Caption = #25171#21360#26426#36873#25321#23545#35805#26694
@@ -622,7 +630,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBDefaultPrintPicTicket: TCheckBox
             Left = 10
-            Top = 63
+            Top = 55
             Width = 160
             Height = 17
             Caption = #40664#35748#25171#21360#22270#24418#30917#21333
@@ -630,7 +638,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBSelectTicketBeforePrint: TCheckBox
             Left = 10
-            Top = 87
+            Top = 75
             Width = 160
             Height = 17
             Caption = #25171#21360#26102#36873#25321#30917#21333#26684#24335
@@ -638,7 +646,7 @@ object SoftwareSetForm: TSoftwareSetForm
           end
           object CBPrintNet: TCheckBox
             Left = 10
-            Top = 111
+            Top = 95
             Width = 160
             Height = 17
             Caption = #21482#20801#35768#25171#21360#23436#25104#35760#24405

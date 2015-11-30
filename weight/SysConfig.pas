@@ -307,6 +307,7 @@ type
     doubleClickModifyRecord: Boolean; //双击修改主界面列表框记录
     notAllowTareExceed: Boolean;
     loginTitle, loginInfo, mainTitle: string; //用户自定义信息
+    compareLast: Boolean;
   end;
 
   TSysConfigUtil = class
@@ -1153,6 +1154,8 @@ begin
     systemConfig.doubleClickModifyRecord := myini.ReadBool('system_set', 'double_click_modify_record', False);
     //不允许过皮超过预置皮重
     systemConfig.notAllowTareExceed := myini.ReadBool('system_set', 'not_allow_tare_exceed', False);
+    //与最近一次扣费对比
+    systemConfig.compareLast := myini.ReadBool('system_set', 'compare_last', False);
   finally
     myini.Free;
   end;
