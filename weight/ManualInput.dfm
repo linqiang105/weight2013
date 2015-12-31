@@ -1138,6 +1138,7 @@ object ManualInputForm: TManualInputForm
       TabOnEnter = True
       TabOrder = 34
       Visible = False
+      OnExit = CBShouHuoExit
     end
     object EdtScale: TRzEdit
       Left = 40
@@ -1264,6 +1265,7 @@ object ManualInputForm: TManualInputForm
       TabOnEnter = True
       TabOrder = 26
       Visible = False
+      OnExit = CBGoodsExit
     end
     object CBFaHuo: TRzComboBox
       Left = 40

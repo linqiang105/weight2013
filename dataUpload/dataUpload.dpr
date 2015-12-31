@@ -11,6 +11,6 @@ uses
 begin
   Application.Initialize;
   Application.Title := '后台数据上传';
-  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TUploadCloudForm, UploadCloudForm);
   Application.Run;
 end.

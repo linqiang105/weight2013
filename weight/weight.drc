@@ -8,567 +8,549 @@
   resources were bound to the produced executable.
 */
 
-#define dxGDIPlusAPI_scxGdipInvalidOperation 64416
-#define XMLConst_SMissingNode 64432
-#define XMLConst_SNoAttributes 64433
-#define XMLConst_SInvalidNodeType 64434
-#define XMLConst_SMismatchedRegItems 64435
-#define XMLConst_SNotSingleTextNode 64436
-#define XMLConst_SNoDOMParseOptions 64437
-#define XMLConst_SNodeReadOnly 64438
-#define XMLConst_SNoRefresh 64439
-#define XMLConst_SMissingFileName 64440
-#define XMLConst_SLine 64441
-#define RzTabs_sRzIncorrectNumberOfPoints 64442
-#define RzTabs_sRzTabRegionCapacityError 64443
-#define RzTabs_sRzSavingDCError 64444
-#define RzTabs_sRzCreateRegionError 64445
-#define RzTabs_sRzPageIndexOutOfRange 64446
-#define RzTabs_sRzInvalidVisibilityChange 64447
-#define RzPanel_sRzMoveDown 64448
-#define RzPanel_sRzClose 64449
-#define RzPanel_sRzTextOptions 64450
-#define RzPanel_sRzNoTextLabels 64451
-#define RzPanel_sRzShowTextLabels 64452
-#define RzPanel_sRzSelectiveTextOnRight 64453
-#define CnCompConsts_SCnTimerName 64454
-#define CnCompConsts_SCnTimerComment 64455
-#define XMLConst_SDuplicateRegistration 64456
-#define XMLConst_SNoMatchingDOMVendor 64457
-#define XMLConst_SNoDOMNodeEx 64458
-#define XMLConst_SDOMNotSupported 64459
-#define XMLConst_SNodeExpected 64460
-#define XMLConst_SMSDOMNotInstalled 64461
-#define XMLConst_SNotActive 64462
-#define XMLConst_SNodeNotFound 64463
-#define RzBorder_sRzColorBtnHighlight 64464
-#define RzBorder_sRzColor3DDkShadow 64465
-#define RzBorder_sRzColor3DLight 64466
-#define RzBorder_sRzColorInfoText 64467
-#define RzBorder_sRzColorInfoBk 64468
-#define RzBorder_sRzColorHotLight 64469
-#define RzBorder_sRzColorGradientActiveCaption 64470
-#define RzBorder_sRzColorGradientInactiveCaption 64471
-#define RzBorder_sRzColorMenuHighlight 64472
-#define RzBorder_sRzColorMenuBar 64473
-#define RzLstBox_sRzHeaderError 64474
-#define RzLstBox_sRzRowParamError 64475
-#define RzLstBox_sRzColParamError 64476
-#define RzPanel_sRzCustomizeTitle 64477
-#define RzPanel_sRzHint 64478
-#define RzPanel_sRzMoveUp 64479
-#define RzBorder_sRzColorMenu 64480
-#define RzBorder_sRzColorWindow 64481
-#define RzBorder_sRzColorWindowFrame 64482
-#define RzBorder_sRzColorMenuText 64483
-#define RzBorder_sRzColorWindowText 64484
-#define RzBorder_sRzColorCaptionText 64485
-#define RzBorder_sRzColorActiveBorder 64486
-#define RzBorder_sRzColorInactiveBorder 64487
-#define RzBorder_sRzColorAppWorkSpace 64488
-#define RzBorder_sRzColorHighlight 64489
-#define RzBorder_sRzColorHighlightText 64490
-#define RzBorder_sRzColorBtnFace 64491
-#define RzBorder_sRzColorBtnShadow 64492
-#define RzBorder_sRzColorGrayText 64493
-#define RzBorder_sRzColorBtnText 64494
-#define RzBorder_sRzColorInactiveCaptionText 64495
-#define RzBorder_sRzColorTurquoise 64496
-#define RzBorder_sRzColorSkyBlue 64497
-#define RzBorder_sRzColorPlum 64498
-#define RzBorder_sRzColorGray25 64499
-#define RzBorder_sRzColorRose 64500
-#define RzBorder_sRzColorTan 64501
-#define RzBorder_sRzColorLightYellow 64502
-#define RzBorder_sRzColorLightGreen 64503
-#define RzBorder_sRzColorLightTurquoise 64504
-#define RzBorder_sRzColorPaleBlue 64505
-#define RzBorder_sRzColorLavender 64506
-#define RzBorder_sRzColorWhite 64507
-#define RzBorder_sRzColorScrollBar 64508
-#define RzBorder_sRzColorBackground 64509
-#define RzBorder_sRzColorActiveCaption 64510
-#define RzBorder_sRzColorInactiveCaption 64511
-#define RzBorder_sRzColorTeal 64512
-#define RzBorder_sRzColorBlue 64513
-#define RzBorder_sRzColorBlueGray 64514
-#define RzBorder_sRzColorGray50 64515
-#define RzBorder_sRzColorRed 64516
-#define RzBorder_sRzColorLightOrange 64517
-#define RzBorder_sRzColorLime 64518
-#define RzBorder_sRzColorSeaGreen 64519
-#define RzBorder_sRzColorAqua 64520
-#define RzBorder_sRzColorLightBlue 64521
-#define RzBorder_sRzColorViolet 64522
-#define RzBorder_sRzColorGray40 64523
-#define RzBorder_sRzColorPink 64524
-#define RzBorder_sRzColorGold 64525
-#define RzBorder_sRzColorYellow 64526
-#define RzBorder_sRzColorBrightGreen 64527
-#define RM_St2DBarC_StEInvalidCodeword 64528
-#define RM_St2DBarC_StENeedBarHeight 64529
-#define RM_St2DBarC_StENeedHorz 64530
-#define RM_St2DBarC_StENeedVert 64531
-#define RzBorder_sRzColorBlack 64532
-#define RzBorder_sRzColorBrown 64533
-#define RzBorder_sRzColorOliveGreen 64534
-#define RzBorder_sRzColorDarkGreen 64535
-#define RzBorder_sRzColorDarkTeal 64536
-#define RzBorder_sRzColorDarkBlue 64537
-#define RzBorder_sRzColorIndigo 64538
-#define RzBorder_sRzColorGray80 64539
-#define RzBorder_sRzColorDarkRed 64540
-#define RzBorder_sRzColorOrange 64541
-#define RzBorder_sRzColorDarkYellow 64542
-#define RzBorder_sRzColorGreen 64543
-#define RM_StConst_stscDecMathMultOverflowS 64544
-#define RM_StConst_stscDecMathDivOverflowS 64545
-#define RM_StConst_stscTxtDatNoSuchFieldS 64546
-#define RM_StConst_stscTxtDatUniqueNameRequiredS 64547
-#define RM_StConst_stscTxtDatUnhandledVariantS 64548
-#define RM_StConst_stscTxtDatInvalidSchemaS 64549
-#define RM_StConst_stscTxtDatRecordSetOpenS 64550
-#define RM_St2DBarC_StEBadBarHeight 64551
-#define RM_St2DBarC_StEBadBarHeightToWidth 64552
-#define RM_St2DBarC_StEBadBarWidth 64553
-#define RM_St2DBarC_StEBadNumCols 64554
-#define RM_St2DBarC_StEBadNumRows 64555
-#define RM_St2DBarC_StEBadPostalCode 64556
-#define RM_St2DBarC_StEBadQuietZone 64557
-#define RM_St2DBarC_StECodeTooLarge 64558
-#define RM_St2DBarC_StEGLIOutOfRange 64559
-#define RM_StConst_stscStatBadParamS 64560
-#define RM_StConst_stscStatBadDataS 64561
-#define RM_StConst_stscStatNoConvergeS 64562
-#define RM_StConst_stscWordDelimitersS 64563
-#define RM_StConst_stscInvalidSLEntryS 64564
-#define RM_StConst_stscBadStreamS 64565
-#define RM_StConst_stscMoneyNilResultS 64566
-#define RM_StConst_stscMoneyNilParameterS 64567
-#define RM_StConst_stscMoneyCurrenciesNotMatchS 64568
-#define RM_StConst_stscMoneyNoExchangeRatesAvailS 64569
-#define RM_StConst_stscMoneyInvalidExchangeParamsS 64570
-#define RM_StConst_stscMoneyInvalidTriangleExchangeS 64571
-#define RM_StConst_stscMoneyNoSuchExchangeS 64572
-#define RM_StConst_stscMoneyMissingIntermediateRateS 64573
-#define RM_StConst_stscMoneyInvalidExchRateS 64574
-#define RM_StConst_stscMoneyTriExchUsesTriExchS 64575
-#define RM_StConst_stscPatternTooLargeS 64576
-#define RM_StConst_stscStreamsNilS 64577
-#define RM_StConst_stscInTextStreamErrorS 64578
-#define RM_StConst_stscOutTextStreamErrorS 64579
-#define RM_StConst_stscClosureMaybeEmptyS 64580
-#define RM_StConst_stscOutFileDeleteS 64581
-#define RM_StConst_stscInFileNotFoundS 64582
-#define RM_StConst_stscREInFileErrorS 64583
-#define RM_StConst_stscOutFileCreateS 64584
-#define RM_StConst_stscNetNoManualCreateS 64585
-#define RM_StConst_stscNetUnknownErrorS 64586
-#define RM_StConst_stscNetGroupNotSpecifiedS 64587
-#define RM_StConst_stscNetDateSpecifiedOutOfRangeS 64588
-#define RM_StConst_stscNetInvalidParameterS 64589
-#define RM_StConst_stscNetInvalidItemTypeS 64590
-#define RM_StConst_stscStatBadCountS 64591
-#define RM_StConst_stscGetSizeFailedS 64592
-#define RM_StConst_stscNilStreamS 64593
-#define RM_StConst_stscNoSeekForReadS 64594
-#define RM_StConst_stscNoSeekForWriteS 64595
-#define RM_StConst_stscCannotWriteS 64596
-#define RM_StConst_stscBadTerminatorS 64597
-#define RM_StConst_stscBadLineLengthS 64598
-#define RM_StConst_stscCannotSetSizeS 64599
-#define RM_StConst_stscUnknownErrorS 64600
-#define RM_StConst_stscExpandingClassS 64601
-#define RM_StConst_stscAlternationFollowsClosureS 64602
-#define RM_StConst_stscUnbalancedParensS 64603
-#define RM_StConst_stscFollowingClosureS 64604
-#define RM_StConst_stscPatternErrorS 64605
-#define RM_StConst_stscUnbalancedTagS 64606
-#define RM_StConst_stscNoPatternsS 64607
-#define RM_StConst_stscSizeS 64608
-#define RM_StConst_stscTypeS 64609
-#define RM_StConst_stscModifiedS 64610
-#define RM_StConst_stscAttributesS 64611
-#define RM_StConst_stscFileFolderS 64612
-#define RM_StConst_stscSystemFolderS 64613
-#define RM_StConst_stscOriginalLocS 64614
-#define RM_StConst_stscDateDeletedS 64615
-#define RM_StConst_stscFileS 64616
-#define RM_StConst_stscInvalidFolderS 64617
-#define RM_StConst_stscFolderReadOnlyS 64618
-#define RM_StConst_stscInsufficientDataS 64619
-#define RM_StConst_stscCreateFileFailedS 64620
-#define RM_StConst_stscFileMappingFailedS 64621
-#define RM_StConst_stscCreateViewFailedS 64622
-#define RM_StConst_stscBadOriginS 64623
-#define RM_StConst_stscExprUnkFuncS 64624
-#define RM_StConst_stscExprLParExpS 64625
-#define RM_StConst_stscExprRParExpS 64626
-#define RM_StConst_stscExprCommExpS 64627
-#define RM_StConst_stscExprDupIdentS 64628
-#define RM_StConst_stscBadEncodeFmtS 64629
-#define RM_StConst_stscBadAttachmentS 64630
-#define RM_StConst_stscDupeStringS 64631
-#define RM_StConst_stscInStreamS 64632
-#define RM_StConst_stscOutOfBoundsS 64633
-#define RM_StConst_stscInvalidLengthS 64634
-#define RM_StConst_stscNoInputFileS 64635
-#define RM_StConst_stscNoOutputFileS 64636
-#define RM_StConst_stscInFileErrorS 64637
-#define RM_StConst_stscOutFileErrorS 64638
-#define RM_StConst_stscNameS 64639
-#define RM_StConst_stscInvalidUPCACodeLenS 64640
-#define RM_StConst_stscInvalidCharacterS 64641
-#define RM_StConst_stscInvalidCheckCharacterS 64642
-#define RM_StConst_stscInvalidUPCECodeLenS 64643
-#define RM_StConst_stscInvalidEAN8CodeLenS 64644
-#define RM_StConst_stscInvalidEAN13CodeLenS 64645
-#define RM_StConst_stscInvalidSupCodeLenS 64646
-#define RM_StConst_stscFinBadArgS 64647
-#define RM_StConst_stscFinNoConvergeS 64648
-#define RM_StConst_stscExprEmptyS 64649
-#define RM_StConst_stscExprBadNumS 64650
-#define RM_StConst_stscExprBadCharS 64651
-#define RM_StConst_stscExprOpndExpS 64652
-#define RM_StConst_stscExprNumericS 64653
-#define RM_StConst_stscExprBadExpS 64654
-#define RM_StConst_stscExprOpndOvflS 64655
-#define RM_StConst_stscBadElSizeS 64656
-#define RM_StConst_stscBadDupsS 64657
-#define RM_StConst_stscTooManyFilesS 64658
-#define RM_StConst_stscFileCreateS 64659
-#define RM_StConst_stscFileOpenS 64660
-#define RM_StConst_stscFileWriteS 64661
-#define RM_StConst_stscFileReadS 64662
-#define RM_StConst_stscBadStateS 64663
-#define RM_StConst_stscBcdBadFormatS 64664
-#define RM_StConst_stscBcdOverflowS 64665
-#define RM_StConst_stscBcdDivByZeroS 64666
-#define RM_StConst_stscBcdBadInputS 64667
-#define RM_StConst_stscBcdBufOverflowS 64668
-#define RM_StConst_stscNoVerInfoS 64669
-#define RM_StConst_stscVerInfoFailS 64670
-#define RM_StConst_stscBadVerInfoKeyS 64671
-#define RM_StConst_stscNoValueNameSpecifiedS 64672
-#define RM_StConst_stscNoCompareS 64673
-#define RM_StConst_stscBadTypeS 64674
-#define RM_StConst_stscBadSizeS 64675
-#define RM_StConst_stscDupNodeS 64676
-#define RM_StConst_stscBadIndexS 64677
-#define RM_StConst_stscBadWinModeS 64678
-#define RM_StConst_stscUnknownClassS 64679
-#define RM_StConst_stscUnknownNodeClassS 64680
-#define RM_StConst_stscNoStoreDataS 64681
-#define RM_StConst_stscNoLoadDataS 64682
-#define RM_StConst_stscWrongClassS 64683
-#define RM_StConst_stscWrongNodeClassS 64684
-#define RM_StConst_stscBadCompareS 64685
-#define RM_StConst_stscTooManyColsS 64686
-#define RM_StConst_stscBadColCountS 64687
-#define RM_StConst_stscUnloadKeyFailS 64688
-#define RM_StConst_stscNotWinNTPlatformS 64689
-#define RM_StConst_stscBadOptionsKeyComboS 64690
-#define RM_StConst_stscRestoreKeyFailS 64691
-#define RM_StConst_stscReplaceKeyFailS 64692
-#define RM_StConst_stscNoIniFileSupportS 64693
-#define RM_StConst_stscRemoteKeyIsOpenS 64694
-#define RM_StConst_stscConnectRemoteKeyFailS 64695
-#define RM_StConst_stscCloseRemoteKeyFailS 64696
-#define RM_StConst_stscFlushKeyFailS 64697
-#define RM_StConst_stscBufferDataSizesDifS 64698
-#define RM_StConst_stscKeyIsEmptyNotExistsS 64699
-#define RM_StConst_stscGetSecurityFailS 64700
-#define RM_StConst_stscSetSecurityFailS 64701
-#define RM_StConst_stscByteArrayTooLargeS 64702
-#define RM_StConst_stscQueryValueFailS 64703
-#define RM_StConst_stscRegWriteFailS 64704
-#define RM_StConst_stscNoKeyNameS 64705
-#define RM_StConst_stscQueryKeyFailS 64706
-#define RM_StConst_stscEnumKeyFailS 64707
-#define RM_StConst_stscEnumValueFailS 64708
-#define RM_StConst_stscIniDeleteFailS 64709
-#define RM_StConst_stscKeyHasSubKeysS 64710
-#define RM_StConst_stscDeleteKeyFailS 64711
-#define RM_StConst_stscIniDelValueFailS 64712
-#define RM_StConst_stscRegDelValueFailS 64713
-#define RM_StConst_stscOutputFileExistsS 64714
-#define RM_StConst_stscFileHasExtensionS 64715
-#define RM_StConst_stscSaveKeyFailS 64716
-#define RM_StConst_stscNo16bitSupportS 64717
-#define RM_StConst_stscCantFindInputFileS 64718
-#define RM_StConst_stscLoadKeyFailS 64719
-#define rm_JvResources_RsMenuBar 64720
-#define rm_JvResources_RsMenuHighlight 64721
-#define rm_JvJCLUtils_RsEPropertyNotExists 64722
-#define rm_JvJCLUtils_RsEInvalidPropertyType 64723
-#define RM_TB97Cnst_STB97DockParentNotAllowed 64724
-#define RM_TB97Cnst_STB97DockCannotChangePosition 64725
-#define RM_TB97Cnst_STB97ToolwinParentNotAllowed 64726
-#define RM_TB97Cnst_STB97SepParentNotAllowed 64727
-#define RM_StConst_stscFalseStringS 64728
-#define RM_StConst_stscTrueStringS 64729
-#define RM_StConst_stscNoFileKeyS 64730
-#define RM_StConst_stscInvalidPKeyS 64731
-#define RM_StConst_stscNoWin32SS 64732
-#define RM_StConst_stscCreateKeyFailS 64733
-#define RM_StConst_stscOpenKeyFailS 64734
-#define RM_StConst_stscIniWriteFailS 64735
-#define rm_JvResources_RsClAppWorkSpace 64736
-#define rm_JvResources_RsClHighlight 64737
-#define rm_JvResources_RsClHighlightText 64738
-#define rm_JvResources_RsClBtnFace 64739
-#define rm_JvResources_RsClBtnShadow 64740
-#define rm_JvResources_RsClGrayText 64741
-#define rm_JvResources_RsClBtnText 64742
-#define rm_JvResources_RsClInactiveCaptionText 64743
-#define rm_JvResources_RsClBtnHighlight 64744
-#define rm_JvResources_RsCl3DDkShadow 64745
-#define rm_JvResources_RsCl3DLight 64746
-#define rm_JvResources_RsClInfoText 64747
-#define rm_JvResources_RsClInfoBk 64748
-#define rm_JvResources_RsGradientActiveCaption 64749
-#define rm_JvResources_RsGradientInactiveCaption 64750
-#define rm_JvResources_RsHotLight 64751
-#define rm_JvResources_RsClLightGreen 64752
-#define rm_JvResources_RsClLightTurquoise 64753
-#define rm_JvResources_RsClPaleBlue 64754
-#define rm_JvResources_RsClLavender 64755
-#define rm_JvResources_RsClScrollBar 64756
-#define rm_JvResources_RsClBackground 64757
-#define rm_JvResources_RsClActiveCaption 64758
-#define rm_JvResources_RsClInactiveCaption 64759
-#define rm_JvResources_RsClMenu 64760
-#define rm_JvResources_RsClWindow 64761
-#define rm_JvResources_RsClWindowFrame 64762
-#define rm_JvResources_RsClMenuText 64763
-#define rm_JvResources_RsClWindowText 64764
-#define rm_JvResources_RsClCaptionText 64765
-#define rm_JvResources_RsClActiveBorder 64766
-#define rm_JvResources_RsClInactiveBorder 64767
-#define rm_JvResources_RsClBlueGray 64768
-#define rm_JvResources_RsClGray50 64769
-#define rm_JvResources_RsClLightOrange 64770
-#define rm_JvResources_RsClSeaGreen 64771
-#define rm_JvResources_RsClLightBlue 64772
-#define rm_JvResources_RsClViolet 64773
-#define rm_JvResources_RsClGray40 64774
-#define rm_JvResources_RsClPink 64775
-#define rm_JvResources_RsClGold 64776
-#define rm_JvResources_RsClBrightGreen 64777
-#define rm_JvResources_RsClTurquoise 64778
-#define rm_JvResources_RsClPlum 64779
-#define rm_JvResources_RsClGray25 64780
-#define rm_JvResources_RsClRose 64781
-#define rm_JvResources_RsClTan 64782
-#define rm_JvResources_RsClLightYellow 64783
-#define rm_JvResources_RsClAqua 64784
-#define rm_JvResources_RsClWhite 64785
-#define rm_JvResources_RsClMoneyGreen 64786
-#define rm_JvResources_RsClSkyBlue 64787
-#define rm_JvResources_RsClCream 64788
-#define rm_JvResources_RsClMedGray 64789
-#define rm_JvResources_RsClBrown 64790
-#define rm_JvResources_RsClOliveGreen 64791
-#define rm_JvResources_RsClDarkGreen 64792
-#define rm_JvResources_RsClDarkTeal 64793
-#define rm_JvResources_RsClDarkBlue 64794
-#define rm_JvResources_RsClIndigo 64795
-#define rm_JvResources_RsClGray80 64796
-#define rm_JvResources_RsClDarkRed 64797
-#define rm_JvResources_RsClOrange 64798
-#define rm_JvResources_RsClDarkYellow 64799
-#define rm_JvResources_RsEInterpreter402 64800
-#define rm_JvResources_RsEXOrX 64801
-#define rm_JvResources_RsClBlack 64802
-#define rm_JvResources_RsClMaroon 64803
-#define rm_JvResources_RsClGreen 64804
-#define rm_JvResources_RsClOlive 64805
-#define rm_JvResources_RsClNavy 64806
-#define rm_JvResources_RsClPurple 64807
-#define rm_JvResources_RsClTeal 64808
-#define rm_JvResources_RsClGray 64809
-#define rm_JvResources_RsClSilver 64810
-#define rm_JvResources_RsClRed 64811
-#define rm_JvResources_RsClLime 64812
-#define rm_JvResources_RsClYellow 64813
-#define rm_JvResources_RsClBlue 64814
-#define rm_JvResources_RsClFuchsia 64815
-#define rm_JvResources_RsEInterpreter186 64816
-#define rm_JvResources_RsEInterpreter187 64817
-#define rm_JvResources_RsEInterpreter188 64818
-#define rm_JvResources_RsEInterpreter189 64819
-#define rm_JvResources_RsEInterpreter190 64820
-#define rm_JvResources_RsEInterpreter201 64821
-#define rm_JvResources_RsEInterpreter301 64822
-#define rm_JvResources_RsEInterpreter302 64823
-#define rm_JvResources_RsEInterpreter303 64824
-#define rm_JvResources_RsEInterpreter304 64825
-#define rm_JvResources_RsEInterpreter305 64826
-#define rm_JvResources_RsEInterpreter306 64827
-#define rm_JvResources_RsEInterpreter307 64828
-#define rm_JvResources_RsEInterpreter308 64829
-#define rm_JvResources_RsEInterpreter309 64830
-#define rm_JvResources_RsEInterpreter401 64831
-#define rm_JvResources_RsEInterpreter107 64832
-#define rm_JvResources_RsEInterpreter108 64833
-#define rm_JvResources_RsEInterpreter109 64834
-#define rm_JvResources_RsEInterpreter110 64835
-#define rm_JvResources_RsEInterpreter111 64836
-#define rm_JvResources_RsEInterpreter171 64837
-#define rm_JvResources_RsEInterpreter172 64838
-#define rm_JvResources_RsEInterpreter173 64839
-#define rm_JvResources_RsEInterpreter174 64840
-#define rm_JvResources_RsEInterpreter175 64841
-#define rm_JvResources_RsEInterpreter176 64842
-#define rm_JvResources_RsEInterpreter181 64843
-#define rm_JvResources_RsEInterpreter182 64844
-#define rm_JvResources_RsEInterpreter183 64845
-#define rm_JvResources_RsEInterpreter184 64846
-#define rm_JvResources_RsEInterpreter185 64847
-#define rm_JvResources_RsEInterpreter5 64848
-#define rm_JvResources_RsEInterpreter6 64849
-#define rm_JvResources_RsEInterpreter7 64850
-#define rm_JvResources_RsEInterpreter8 64851
-#define rm_JvResources_RsEInterpreter31 64852
-#define rm_JvResources_RsEInterpreter52 64853
-#define rm_JvResources_RsEInterpreter53 64854
-#define rm_JvResources_RsEInterpreter55 64855
-#define rm_JvResources_RsEInterpreter56 64856
-#define rm_JvResources_RsEInterpreter57 64857
-#define rm_JvResources_RsEInterpreter58 64858
-#define rm_JvResources_RsEInterpreter101 64859
-#define rm_JvResources_RsEInterpreter103 64860
-#define rm_JvResources_RsEInterpreter104 64861
-#define rm_JvResources_RsEInterpreter105 64862
-#define rm_JvResources_RsEInterpreter106 64863
-#define rm_JvResources_RsDeleteItem 64864
-#define rm_JvResources_RsSelectAllItem 64865
-#define rm_JvResources_RsENotImplemented 64866
-#define rm_JvResources_RsESorryForOneDimensionalArraysOnly 64867
-#define rm_JvResources_RsERedoNotYetImplemented 64868
-#define rm_JvResources_RsEInvalidCompletionMode 64869
-#define rm_JvResources_RsESorryDynamicArraysSupportIsMadeForO 64870
-#define rm_JvResources_RsEUnknownRecordType 64871
-#define rm_JvResources_RsERangeCheckError 64872
-#define rm_JvResources_RsArrayToArrayAssignment 64873
-#define rm_JvResources_RsESizeMustBeEven 64874
-#define rm_JvResources_RsEInterpreter0 64875
-#define rm_JvResources_RsEInterpreter1 64876
-#define rm_JvResources_RsEInterpreter2 64877
-#define rm_JvResources_RsEInterpreter3 64878
-#define rm_JvResources_RsEInterpreter4 64879
-#define IdResourceStrings_RSURINoProto 64880
-#define IdResourceStrings_RSURINoHost 64881
-#define IdResourceStrings_RSThreadTerminateAndWaitFor 64882
-#define JConsts_sChangeJPGSize 64883
-#define JConsts_sJPEGError 64884
-#define JConsts_sJPEGImageFile 64885
-#define OleConst_SNoMethod 64886
-#define OleConst_SLinkProperties 64887
-#define OleConst_SInvalidLinkSource 64888
-#define OleConst_SCannotBreakLink 64889
-#define OleConst_SPropDlgCaption 64890
-#define OleConst_sNoRunningObject 64891
-#define rm_JvResources_RsUndoItem 64892
-#define rm_JvResources_RsCutItem 64893
-#define rm_JvResources_RsCopyItem 64894
-#define rm_JvResources_RsPasteItem 64895
-#define IdResourceStrings_RSSSLAcceptError 64896
-#define IdResourceStrings_RSSSLConnectError 64897
-#define IdResourceStrings_RSSSLSettingCipherError 64898
-#define IdResourceStrings_RSSSLCreatingContextError 64899
-#define IdResourceStrings_RSSSLLoadingRootCertError 64900
-#define IdResourceStrings_RSSSLLoadingCertError 64901
-#define IdResourceStrings_RSSSLLoadingKeyError 64902
-#define IdResourceStrings_RSSSLGetMethodError 64903
-#define IdResourceStrings_RSSSLDataBindingError 64904
-#define IdResourceStrings_RSOSSLModeNotSet 64905
-#define IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary 64906
-#define IdResourceStrings_RSOSSLStatusString 64907
-#define IdResourceStrings_RSUnevenSizeInDecodeStream 64908
-#define IdResourceStrings_RSUnevenSizeInEncodeStream 64909
-#define IdResourceStrings_RSMessageEncoderNotFound 64910
-#define IdResourceStrings_RSUnrecognizedUUEEncodingScheme 64911
-#define IdResourceStrings_RSTIdMessagePartCreate 64912
-#define IdResourceStrings_RSSocksRequestFailed 64913
-#define IdResourceStrings_RSSocksRequestServerFailed 64914
-#define IdResourceStrings_RSSocksRequestIdentFailed 64915
-#define IdResourceStrings_RSSocksUnknownError 64916
-#define IdResourceStrings_RSSocksServerRespondError 64917
-#define IdResourceStrings_RSSocksAuthMethodError 64918
-#define IdResourceStrings_RSSocksAuthError 64919
-#define IdResourceStrings_RSSocksServerGeneralError 64920
-#define IdResourceStrings_RSSocksServerPermissionError 64921
-#define IdResourceStrings_RSSocksServerNetUnreachableError 64922
-#define IdResourceStrings_RSSocksServerHostUnreachableError 64923
-#define IdResourceStrings_RSSocksServerConnectionRefusedError 64924
-#define IdResourceStrings_RSSocksServerTTLExpiredError 64925
-#define IdResourceStrings_RSSocksServerCommandError 64926
-#define IdResourceStrings_RSSocksServerAddressError 64927
-#define IdResourceStrings_RSStackENETRESET 64928
-#define IdResourceStrings_RSStackECONNABORTED 64929
-#define IdResourceStrings_RSStackECONNRESET 64930
-#define IdResourceStrings_RSStackENOBUFS 64931
-#define IdResourceStrings_RSStackEISCONN 64932
-#define IdResourceStrings_RSStackENOTCONN 64933
-#define IdResourceStrings_RSStackESHUTDOWN 64934
-#define IdResourceStrings_RSStackETOOMANYREFS 64935
-#define IdResourceStrings_RSStackETIMEDOUT 64936
-#define IdResourceStrings_RSStackECONNREFUSED 64937
-#define IdResourceStrings_RSStackELOOP 64938
-#define IdResourceStrings_RSStackENAMETOOLONG 64939
-#define IdResourceStrings_RSStackEHOSTDOWN 64940
-#define IdResourceStrings_RSStackEHOSTUNREACH 64941
-#define IdResourceStrings_RSStackENOTEMPTY 64942
-#define IdResourceStrings_RSStackHOST_NOT_FOUND 64943
-#define IdResourceStrings_RSStackEINPROGRESS 64944
-#define IdResourceStrings_RSStackEALREADY 64945
-#define IdResourceStrings_RSStackENOTSOCK 64946
-#define IdResourceStrings_RSStackEDESTADDRREQ 64947
-#define IdResourceStrings_RSStackEMSGSIZE 64948
-#define IdResourceStrings_RSStackEPROTOTYPE 64949
-#define IdResourceStrings_RSStackENOPROTOOPT 64950
-#define IdResourceStrings_RSStackEPROTONOSUPPORT 64951
-#define IdResourceStrings_RSStackESOCKTNOSUPPORT 64952
-#define IdResourceStrings_RSStackEOPNOTSUPP 64953
-#define IdResourceStrings_RSStackEPFNOSUPPORT 64954
-#define IdResourceStrings_RSStackEAFNOSUPPORT 64955
-#define IdResourceStrings_RSStackEADDRINUSE 64956
-#define IdResourceStrings_RSStackEADDRNOTAVAIL 64957
-#define IdResourceStrings_RSStackENETDOWN 64958
-#define IdResourceStrings_RSStackENETUNREACH 64959
-#define IdResourceStrings_RSConnectTimeout 64960
-#define IdResourceStrings_RSMsgClientEncodingText 64961
-#define IdResourceStrings_RSMsgClientEncodingAttachment 64962
-#define IdResourceStrings_RSMsgClientUnkownMessagePartType 64963
-#define IdResourceStrings_RSMsgClientInvalidEncoding 64964
-#define IdResourceStrings_RSHTTPChunkStarted 64965
-#define IdResourceStrings_RSHTTPAuthAlreadyRegistered 64966
-#define IdResourceStrings_RSInvalidServiceName 64967
-#define IdResourceStrings_RSStackError 64968
-#define IdResourceStrings_RSStackEINTR 64969
-#define IdResourceStrings_RSStackEBADF 64970
-#define IdResourceStrings_RSStackEACCES 64971
-#define IdResourceStrings_RSStackEFAULT 64972
-#define IdResourceStrings_RSStackEINVAL 64973
-#define IdResourceStrings_RSStackEMFILE 64974
-#define IdResourceStrings_RSStackEWOULDBLOCK 64975
-#define IdResourceStrings_RSNotConnected 64976
-#define IdResourceStrings_RSObjectTypeNotSupported 64977
-#define IdResourceStrings_RSIdNoDataToRead 64978
-#define IdResourceStrings_RSCanNotBindRange 64979
-#define IdResourceStrings_RSInvalidPortRange 64980
-#define IdResourceStrings_RSReadTimeout 64981
-#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 64982
-#define IdResourceStrings_RSEMailSymbolOutsideAddress 64983
-#define IdResourceStrings_RSWS2CallError 64984
-#define IdResourceStrings_RSWS2LoadError 64985
-#define IdResourceStrings_RSStatusResolving 64986
-#define IdResourceStrings_RSStatusConnecting 64987
-#define IdResourceStrings_RSStatusConnected 64988
-#define IdResourceStrings_RSStatusDisconnecting 64989
-#define IdResourceStrings_RSStatusDisconnected 64990
-#define IdResourceStrings_RSStatusText 64991
+#define XMLConst_SNoAttributes 64448
+#define XMLConst_SInvalidNodeType 64449
+#define XMLConst_SMismatchedRegItems 64450
+#define XMLConst_SNotSingleTextNode 64451
+#define XMLConst_SNoDOMParseOptions 64452
+#define XMLConst_SNodeReadOnly 64453
+#define XMLConst_SNoRefresh 64454
+#define XMLConst_SMissingFileName 64455
+#define XMLConst_SLine 64456
+#define RzTabs_sRzIncorrectNumberOfPoints 64457
+#define RzTabs_sRzTabRegionCapacityError 64458
+#define RzTabs_sRzSavingDCError 64459
+#define RzTabs_sRzCreateRegionError 64460
+#define RzTabs_sRzPageIndexOutOfRange 64461
+#define RzTabs_sRzInvalidVisibilityChange 64462
+#define RzPanel_sRzClose 64464
+#define RzPanel_sRzTextOptions 64465
+#define RzPanel_sRzNoTextLabels 64466
+#define RzPanel_sRzShowTextLabels 64467
+#define RzPanel_sRzSelectiveTextOnRight 64468
+#define CnCompConsts_SCnTimerName 64469
+#define CnCompConsts_SCnTimerComment 64470
+#define XMLConst_SDuplicateRegistration 64471
+#define XMLConst_SNoMatchingDOMVendor 64472
+#define XMLConst_SNoDOMNodeEx 64473
+#define XMLConst_SDOMNotSupported 64474
+#define XMLConst_SNodeExpected 64475
+#define XMLConst_SMSDOMNotInstalled 64476
+#define XMLConst_SNotActive 64477
+#define XMLConst_SNodeNotFound 64478
+#define XMLConst_SMissingNode 64479
+#define RzBorder_sRzColor3DDkShadow 64480
+#define RzBorder_sRzColor3DLight 64481
+#define RzBorder_sRzColorInfoText 64482
+#define RzBorder_sRzColorInfoBk 64483
+#define RzBorder_sRzColorHotLight 64484
+#define RzBorder_sRzColorGradientActiveCaption 64485
+#define RzBorder_sRzColorGradientInactiveCaption 64486
+#define RzBorder_sRzColorMenuHighlight 64487
+#define RzBorder_sRzColorMenuBar 64488
+#define RzLstBox_sRzHeaderError 64489
+#define RzLstBox_sRzRowParamError 64490
+#define RzLstBox_sRzColParamError 64491
+#define RzPanel_sRzCustomizeTitle 64492
+#define RzPanel_sRzHint 64493
+#define RzPanel_sRzMoveUp 64494
+#define RzPanel_sRzMoveDown 64495
+#define RzBorder_sRzColorWindow 64496
+#define RzBorder_sRzColorWindowFrame 64497
+#define RzBorder_sRzColorMenuText 64498
+#define RzBorder_sRzColorWindowText 64499
+#define RzBorder_sRzColorCaptionText 64500
+#define RzBorder_sRzColorActiveBorder 64501
+#define RzBorder_sRzColorInactiveBorder 64502
+#define RzBorder_sRzColorAppWorkSpace 64503
+#define RzBorder_sRzColorHighlight 64504
+#define RzBorder_sRzColorHighlightText 64505
+#define RzBorder_sRzColorBtnFace 64506
+#define RzBorder_sRzColorBtnShadow 64507
+#define RzBorder_sRzColorGrayText 64508
+#define RzBorder_sRzColorBtnText 64509
+#define RzBorder_sRzColorInactiveCaptionText 64510
+#define RzBorder_sRzColorBtnHighlight 64511
+#define RzBorder_sRzColorSkyBlue 64512
+#define RzBorder_sRzColorPlum 64513
+#define RzBorder_sRzColorGray25 64514
+#define RzBorder_sRzColorRose 64515
+#define RzBorder_sRzColorTan 64516
+#define RzBorder_sRzColorLightYellow 64517
+#define RzBorder_sRzColorLightGreen 64518
+#define RzBorder_sRzColorLightTurquoise 64519
+#define RzBorder_sRzColorPaleBlue 64520
+#define RzBorder_sRzColorLavender 64521
+#define RzBorder_sRzColorWhite 64522
+#define RzBorder_sRzColorScrollBar 64523
+#define RzBorder_sRzColorBackground 64524
+#define RzBorder_sRzColorActiveCaption 64525
+#define RzBorder_sRzColorInactiveCaption 64526
+#define RzBorder_sRzColorMenu 64527
+#define RzBorder_sRzColorBlue 64528
+#define RzBorder_sRzColorBlueGray 64529
+#define RzBorder_sRzColorGray50 64530
+#define RzBorder_sRzColorRed 64531
+#define RzBorder_sRzColorLightOrange 64532
+#define RzBorder_sRzColorLime 64533
+#define RzBorder_sRzColorSeaGreen 64534
+#define RzBorder_sRzColorAqua 64535
+#define RzBorder_sRzColorLightBlue 64536
+#define RzBorder_sRzColorViolet 64537
+#define RzBorder_sRzColorGray40 64538
+#define RzBorder_sRzColorPink 64539
+#define RzBorder_sRzColorGold 64540
+#define RzBorder_sRzColorYellow 64541
+#define RzBorder_sRzColorBrightGreen 64542
+#define RzBorder_sRzColorTurquoise 64543
+#define RM_St2DBarC_StENeedBarHeight 64544
+#define RM_St2DBarC_StENeedHorz 64545
+#define RM_St2DBarC_StENeedVert 64546
+#define RzBorder_sRzColorBlack 64547
+#define RzBorder_sRzColorBrown 64548
+#define RzBorder_sRzColorOliveGreen 64549
+#define RzBorder_sRzColorDarkGreen 64550
+#define RzBorder_sRzColorDarkTeal 64551
+#define RzBorder_sRzColorDarkBlue 64552
+#define RzBorder_sRzColorIndigo 64553
+#define RzBorder_sRzColorGray80 64554
+#define RzBorder_sRzColorDarkRed 64555
+#define RzBorder_sRzColorOrange 64556
+#define RzBorder_sRzColorDarkYellow 64557
+#define RzBorder_sRzColorGreen 64558
+#define RzBorder_sRzColorTeal 64559
+#define RM_StConst_stscDecMathDivOverflowS 64560
+#define RM_StConst_stscTxtDatNoSuchFieldS 64561
+#define RM_StConst_stscTxtDatUniqueNameRequiredS 64562
+#define RM_StConst_stscTxtDatUnhandledVariantS 64563
+#define RM_StConst_stscTxtDatInvalidSchemaS 64564
+#define RM_StConst_stscTxtDatRecordSetOpenS 64565
+#define RM_St2DBarC_StEBadBarHeight 64566
+#define RM_St2DBarC_StEBadBarHeightToWidth 64567
+#define RM_St2DBarC_StEBadBarWidth 64568
+#define RM_St2DBarC_StEBadNumCols 64569
+#define RM_St2DBarC_StEBadNumRows 64570
+#define RM_St2DBarC_StEBadPostalCode 64571
+#define RM_St2DBarC_StEBadQuietZone 64572
+#define RM_St2DBarC_StECodeTooLarge 64573
+#define RM_St2DBarC_StEGLIOutOfRange 64574
+#define RM_St2DBarC_StEInvalidCodeword 64575
+#define RM_StConst_stscStatBadDataS 64576
+#define RM_StConst_stscStatNoConvergeS 64577
+#define RM_StConst_stscWordDelimitersS 64578
+#define RM_StConst_stscInvalidSLEntryS 64579
+#define RM_StConst_stscBadStreamS 64580
+#define RM_StConst_stscMoneyNilResultS 64581
+#define RM_StConst_stscMoneyNilParameterS 64582
+#define RM_StConst_stscMoneyCurrenciesNotMatchS 64583
+#define RM_StConst_stscMoneyNoExchangeRatesAvailS 64584
+#define RM_StConst_stscMoneyInvalidExchangeParamsS 64585
+#define RM_StConst_stscMoneyInvalidTriangleExchangeS 64586
+#define RM_StConst_stscMoneyNoSuchExchangeS 64587
+#define RM_StConst_stscMoneyMissingIntermediateRateS 64588
+#define RM_StConst_stscMoneyInvalidExchRateS 64589
+#define RM_StConst_stscMoneyTriExchUsesTriExchS 64590
+#define RM_StConst_stscDecMathMultOverflowS 64591
+#define RM_StConst_stscStreamsNilS 64592
+#define RM_StConst_stscInTextStreamErrorS 64593
+#define RM_StConst_stscOutTextStreamErrorS 64594
+#define RM_StConst_stscClosureMaybeEmptyS 64595
+#define RM_StConst_stscOutFileDeleteS 64596
+#define RM_StConst_stscInFileNotFoundS 64597
+#define RM_StConst_stscREInFileErrorS 64598
+#define RM_StConst_stscOutFileCreateS 64599
+#define RM_StConst_stscNetNoManualCreateS 64600
+#define RM_StConst_stscNetUnknownErrorS 64601
+#define RM_StConst_stscNetGroupNotSpecifiedS 64602
+#define RM_StConst_stscNetDateSpecifiedOutOfRangeS 64603
+#define RM_StConst_stscNetInvalidParameterS 64604
+#define RM_StConst_stscNetInvalidItemTypeS 64605
+#define RM_StConst_stscStatBadCountS 64606
+#define RM_StConst_stscStatBadParamS 64607
+#define RM_StConst_stscNilStreamS 64608
+#define RM_StConst_stscNoSeekForReadS 64609
+#define RM_StConst_stscNoSeekForWriteS 64610
+#define RM_StConst_stscCannotWriteS 64611
+#define RM_StConst_stscBadTerminatorS 64612
+#define RM_StConst_stscBadLineLengthS 64613
+#define RM_StConst_stscCannotSetSizeS 64614
+#define RM_StConst_stscUnknownErrorS 64615
+#define RM_StConst_stscExpandingClassS 64616
+#define RM_StConst_stscAlternationFollowsClosureS 64617
+#define RM_StConst_stscUnbalancedParensS 64618
+#define RM_StConst_stscFollowingClosureS 64619
+#define RM_StConst_stscPatternErrorS 64620
+#define RM_StConst_stscUnbalancedTagS 64621
+#define RM_StConst_stscNoPatternsS 64622
+#define RM_StConst_stscPatternTooLargeS 64623
+#define RM_StConst_stscTypeS 64624
+#define RM_StConst_stscModifiedS 64625
+#define RM_StConst_stscAttributesS 64626
+#define RM_StConst_stscFileFolderS 64627
+#define RM_StConst_stscSystemFolderS 64628
+#define RM_StConst_stscOriginalLocS 64629
+#define RM_StConst_stscDateDeletedS 64630
+#define RM_StConst_stscFileS 64631
+#define RM_StConst_stscInvalidFolderS 64632
+#define RM_StConst_stscFolderReadOnlyS 64633
+#define RM_StConst_stscInsufficientDataS 64634
+#define RM_StConst_stscCreateFileFailedS 64635
+#define RM_StConst_stscFileMappingFailedS 64636
+#define RM_StConst_stscCreateViewFailedS 64637
+#define RM_StConst_stscBadOriginS 64638
+#define RM_StConst_stscGetSizeFailedS 64639
+#define RM_StConst_stscExprLParExpS 64640
+#define RM_StConst_stscExprRParExpS 64641
+#define RM_StConst_stscExprCommExpS 64642
+#define RM_StConst_stscExprDupIdentS 64643
+#define RM_StConst_stscBadEncodeFmtS 64644
+#define RM_StConst_stscBadAttachmentS 64645
+#define RM_StConst_stscDupeStringS 64646
+#define RM_StConst_stscInStreamS 64647
+#define RM_StConst_stscOutOfBoundsS 64648
+#define RM_StConst_stscInvalidLengthS 64649
+#define RM_StConst_stscNoInputFileS 64650
+#define RM_StConst_stscNoOutputFileS 64651
+#define RM_StConst_stscInFileErrorS 64652
+#define RM_StConst_stscOutFileErrorS 64653
+#define RM_StConst_stscNameS 64654
+#define RM_StConst_stscSizeS 64655
+#define RM_StConst_stscInvalidCharacterS 64656
+#define RM_StConst_stscInvalidCheckCharacterS 64657
+#define RM_StConst_stscInvalidUPCECodeLenS 64658
+#define RM_StConst_stscInvalidEAN8CodeLenS 64659
+#define RM_StConst_stscInvalidEAN13CodeLenS 64660
+#define RM_StConst_stscInvalidSupCodeLenS 64661
+#define RM_StConst_stscFinBadArgS 64662
+#define RM_StConst_stscFinNoConvergeS 64663
+#define RM_StConst_stscExprEmptyS 64664
+#define RM_StConst_stscExprBadNumS 64665
+#define RM_StConst_stscExprBadCharS 64666
+#define RM_StConst_stscExprOpndExpS 64667
+#define RM_StConst_stscExprNumericS 64668
+#define RM_StConst_stscExprBadExpS 64669
+#define RM_StConst_stscExprOpndOvflS 64670
+#define RM_StConst_stscExprUnkFuncS 64671
+#define RM_StConst_stscBadDupsS 64672
+#define RM_StConst_stscTooManyFilesS 64673
+#define RM_StConst_stscFileCreateS 64674
+#define RM_StConst_stscFileOpenS 64675
+#define RM_StConst_stscFileWriteS 64676
+#define RM_StConst_stscFileReadS 64677
+#define RM_StConst_stscBadStateS 64678
+#define RM_StConst_stscBcdBadFormatS 64679
+#define RM_StConst_stscBcdOverflowS 64680
+#define RM_StConst_stscBcdDivByZeroS 64681
+#define RM_StConst_stscBcdBadInputS 64682
+#define RM_StConst_stscBcdBufOverflowS 64683
+#define RM_StConst_stscNoVerInfoS 64684
+#define RM_StConst_stscVerInfoFailS 64685
+#define RM_StConst_stscBadVerInfoKeyS 64686
+#define RM_StConst_stscInvalidUPCACodeLenS 64687
+#define RM_StConst_stscNoCompareS 64688
+#define RM_StConst_stscBadTypeS 64689
+#define RM_StConst_stscBadSizeS 64690
+#define RM_StConst_stscDupNodeS 64691
+#define RM_StConst_stscBadIndexS 64692
+#define RM_StConst_stscBadWinModeS 64693
+#define RM_StConst_stscUnknownClassS 64694
+#define RM_StConst_stscUnknownNodeClassS 64695
+#define RM_StConst_stscNoStoreDataS 64696
+#define RM_StConst_stscNoLoadDataS 64697
+#define RM_StConst_stscWrongClassS 64698
+#define RM_StConst_stscWrongNodeClassS 64699
+#define RM_StConst_stscBadCompareS 64700
+#define RM_StConst_stscTooManyColsS 64701
+#define RM_StConst_stscBadColCountS 64702
+#define RM_StConst_stscBadElSizeS 64703
+#define RM_StConst_stscNotWinNTPlatformS 64704
+#define RM_StConst_stscBadOptionsKeyComboS 64705
+#define RM_StConst_stscRestoreKeyFailS 64706
+#define RM_StConst_stscReplaceKeyFailS 64707
+#define RM_StConst_stscNoIniFileSupportS 64708
+#define RM_StConst_stscRemoteKeyIsOpenS 64709
+#define RM_StConst_stscConnectRemoteKeyFailS 64710
+#define RM_StConst_stscCloseRemoteKeyFailS 64711
+#define RM_StConst_stscFlushKeyFailS 64712
+#define RM_StConst_stscBufferDataSizesDifS 64713
+#define RM_StConst_stscKeyIsEmptyNotExistsS 64714
+#define RM_StConst_stscGetSecurityFailS 64715
+#define RM_StConst_stscSetSecurityFailS 64716
+#define RM_StConst_stscByteArrayTooLargeS 64717
+#define RM_StConst_stscQueryValueFailS 64718
+#define RM_StConst_stscNoValueNameSpecifiedS 64719
+#define RM_StConst_stscNoKeyNameS 64720
+#define RM_StConst_stscQueryKeyFailS 64721
+#define RM_StConst_stscEnumKeyFailS 64722
+#define RM_StConst_stscEnumValueFailS 64723
+#define RM_StConst_stscIniDeleteFailS 64724
+#define RM_StConst_stscKeyHasSubKeysS 64725
+#define RM_StConst_stscDeleteKeyFailS 64726
+#define RM_StConst_stscIniDelValueFailS 64727
+#define RM_StConst_stscRegDelValueFailS 64728
+#define RM_StConst_stscOutputFileExistsS 64729
+#define RM_StConst_stscFileHasExtensionS 64730
+#define RM_StConst_stscSaveKeyFailS 64731
+#define RM_StConst_stscNo16bitSupportS 64732
+#define RM_StConst_stscCantFindInputFileS 64733
+#define RM_StConst_stscLoadKeyFailS 64734
+#define RM_StConst_stscUnloadKeyFailS 64735
+#define rm_JvResources_RsMenuHighlight 64736
+#define rm_JvJCLUtils_RsEPropertyNotExists 64737
+#define rm_JvJCLUtils_RsEInvalidPropertyType 64738
+#define RM_TB97Cnst_STB97DockParentNotAllowed 64739
+#define RM_TB97Cnst_STB97DockCannotChangePosition 64740
+#define RM_TB97Cnst_STB97ToolwinParentNotAllowed 64741
+#define RM_TB97Cnst_STB97SepParentNotAllowed 64742
+#define RM_StConst_stscFalseStringS 64743
+#define RM_StConst_stscTrueStringS 64744
+#define RM_StConst_stscNoFileKeyS 64745
+#define RM_StConst_stscInvalidPKeyS 64746
+#define RM_StConst_stscNoWin32SS 64747
+#define RM_StConst_stscCreateKeyFailS 64748
+#define RM_StConst_stscOpenKeyFailS 64749
+#define RM_StConst_stscIniWriteFailS 64750
+#define RM_StConst_stscRegWriteFailS 64751
+#define rm_JvResources_RsClHighlight 64752
+#define rm_JvResources_RsClHighlightText 64753
+#define rm_JvResources_RsClBtnFace 64754
+#define rm_JvResources_RsClBtnShadow 64755
+#define rm_JvResources_RsClGrayText 64756
+#define rm_JvResources_RsClBtnText 64757
+#define rm_JvResources_RsClInactiveCaptionText 64758
+#define rm_JvResources_RsClBtnHighlight 64759
+#define rm_JvResources_RsCl3DDkShadow 64760
+#define rm_JvResources_RsCl3DLight 64761
+#define rm_JvResources_RsClInfoText 64762
+#define rm_JvResources_RsClInfoBk 64763
+#define rm_JvResources_RsGradientActiveCaption 64764
+#define rm_JvResources_RsGradientInactiveCaption 64765
+#define rm_JvResources_RsHotLight 64766
+#define rm_JvResources_RsMenuBar 64767
+#define rm_JvResources_RsClLightTurquoise 64768
+#define rm_JvResources_RsClPaleBlue 64769
+#define rm_JvResources_RsClLavender 64770
+#define rm_JvResources_RsClScrollBar 64771
+#define rm_JvResources_RsClBackground 64772
+#define rm_JvResources_RsClActiveCaption 64773
+#define rm_JvResources_RsClInactiveCaption 64774
+#define rm_JvResources_RsClMenu 64775
+#define rm_JvResources_RsClWindow 64776
+#define rm_JvResources_RsClWindowFrame 64777
+#define rm_JvResources_RsClMenuText 64778
+#define rm_JvResources_RsClWindowText 64779
+#define rm_JvResources_RsClCaptionText 64780
+#define rm_JvResources_RsClActiveBorder 64781
+#define rm_JvResources_RsClInactiveBorder 64782
+#define rm_JvResources_RsClAppWorkSpace 64783
+#define rm_JvResources_RsClGray50 64784
+#define rm_JvResources_RsClLightOrange 64785
+#define rm_JvResources_RsClSeaGreen 64786
+#define rm_JvResources_RsClLightBlue 64787
+#define rm_JvResources_RsClViolet 64788
+#define rm_JvResources_RsClGray40 64789
+#define rm_JvResources_RsClPink 64790
+#define rm_JvResources_RsClGold 64791
+#define rm_JvResources_RsClBrightGreen 64792
+#define rm_JvResources_RsClTurquoise 64793
+#define rm_JvResources_RsClPlum 64794
+#define rm_JvResources_RsClGray25 64795
+#define rm_JvResources_RsClRose 64796
+#define rm_JvResources_RsClTan 64797
+#define rm_JvResources_RsClLightYellow 64798
+#define rm_JvResources_RsClLightGreen 64799
+#define rm_JvResources_RsClWhite 64800
+#define rm_JvResources_RsClMoneyGreen 64801
+#define rm_JvResources_RsClSkyBlue 64802
+#define rm_JvResources_RsClCream 64803
+#define rm_JvResources_RsClMedGray 64804
+#define rm_JvResources_RsClBrown 64805
+#define rm_JvResources_RsClOliveGreen 64806
+#define rm_JvResources_RsClDarkGreen 64807
+#define rm_JvResources_RsClDarkTeal 64808
+#define rm_JvResources_RsClDarkBlue 64809
+#define rm_JvResources_RsClIndigo 64810
+#define rm_JvResources_RsClGray80 64811
+#define rm_JvResources_RsClDarkRed 64812
+#define rm_JvResources_RsClOrange 64813
+#define rm_JvResources_RsClDarkYellow 64814
+#define rm_JvResources_RsClBlueGray 64815
+#define rm_JvResources_RsEXOrX 64816
+#define rm_JvResources_RsClBlack 64817
+#define rm_JvResources_RsClMaroon 64818
+#define rm_JvResources_RsClGreen 64819
+#define rm_JvResources_RsClOlive 64820
+#define rm_JvResources_RsClNavy 64821
+#define rm_JvResources_RsClPurple 64822
+#define rm_JvResources_RsClTeal 64823
+#define rm_JvResources_RsClGray 64824
+#define rm_JvResources_RsClSilver 64825
+#define rm_JvResources_RsClRed 64826
+#define rm_JvResources_RsClLime 64827
+#define rm_JvResources_RsClYellow 64828
+#define rm_JvResources_RsClBlue 64829
+#define rm_JvResources_RsClFuchsia 64830
+#define rm_JvResources_RsClAqua 64831
+#define rm_JvResources_RsEInterpreter187 64832
+#define rm_JvResources_RsEInterpreter188 64833
+#define rm_JvResources_RsEInterpreter189 64834
+#define rm_JvResources_RsEInterpreter190 64835
+#define rm_JvResources_RsEInterpreter201 64836
+#define rm_JvResources_RsEInterpreter301 64837
+#define rm_JvResources_RsEInterpreter302 64838
+#define rm_JvResources_RsEInterpreter303 64839
+#define rm_JvResources_RsEInterpreter304 64840
+#define rm_JvResources_RsEInterpreter305 64841
+#define rm_JvResources_RsEInterpreter306 64842
+#define rm_JvResources_RsEInterpreter307 64843
+#define rm_JvResources_RsEInterpreter308 64844
+#define rm_JvResources_RsEInterpreter309 64845
+#define rm_JvResources_RsEInterpreter401 64846
+#define rm_JvResources_RsEInterpreter402 64847
+#define rm_JvResources_RsEInterpreter108 64848
+#define rm_JvResources_RsEInterpreter109 64849
+#define rm_JvResources_RsEInterpreter110 64850
+#define rm_JvResources_RsEInterpreter111 64851
+#define rm_JvResources_RsEInterpreter171 64852
+#define rm_JvResources_RsEInterpreter172 64853
+#define rm_JvResources_RsEInterpreter173 64854
+#define rm_JvResources_RsEInterpreter174 64855
+#define rm_JvResources_RsEInterpreter175 64856
+#define rm_JvResources_RsEInterpreter176 64857
+#define rm_JvResources_RsEInterpreter181 64858
+#define rm_JvResources_RsEInterpreter182 64859
+#define rm_JvResources_RsEInterpreter183 64860
+#define rm_JvResources_RsEInterpreter184 64861
+#define rm_JvResources_RsEInterpreter185 64862
+#define rm_JvResources_RsEInterpreter186 64863
+#define rm_JvResources_RsEInterpreter6 64864
+#define rm_JvResources_RsEInterpreter7 64865
+#define rm_JvResources_RsEInterpreter8 64866
+#define rm_JvResources_RsEInterpreter31 64867
+#define rm_JvResources_RsEInterpreter52 64868
+#define rm_JvResources_RsEInterpreter53 64869
+#define rm_JvResources_RsEInterpreter55 64870
+#define rm_JvResources_RsEInterpreter56 64871
+#define rm_JvResources_RsEInterpreter57 64872
+#define rm_JvResources_RsEInterpreter58 64873
+#define rm_JvResources_RsEInterpreter101 64874
+#define rm_JvResources_RsEInterpreter103 64875
+#define rm_JvResources_RsEInterpreter104 64876
+#define rm_JvResources_RsEInterpreter105 64877
+#define rm_JvResources_RsEInterpreter106 64878
+#define rm_JvResources_RsEInterpreter107 64879
+#define rm_JvResources_RsSelectAllItem 64880
+#define rm_JvResources_RsENotImplemented 64881
+#define rm_JvResources_RsESorryForOneDimensionalArraysOnly 64882
+#define rm_JvResources_RsERedoNotYetImplemented 64883
+#define rm_JvResources_RsEInvalidCompletionMode 64884
+#define rm_JvResources_RsESorryDynamicArraysSupportIsMadeForO 64885
+#define rm_JvResources_RsEUnknownRecordType 64886
+#define rm_JvResources_RsERangeCheckError 64887
+#define rm_JvResources_RsArrayToArrayAssignment 64888
+#define rm_JvResources_RsESizeMustBeEven 64889
+#define rm_JvResources_RsEInterpreter0 64890
+#define rm_JvResources_RsEInterpreter1 64891
+#define rm_JvResources_RsEInterpreter2 64892
+#define rm_JvResources_RsEInterpreter3 64893
+#define rm_JvResources_RsEInterpreter4 64894
+#define rm_JvResources_RsEInterpreter5 64895
+#define IdResourceStrings_RSUnrecognizedUUEEncodingScheme 64896
+#define IdResourceStrings_RSThreadTerminateAndWaitFor 64897
+#define JConsts_sChangeJPGSize 64898
+#define JConsts_sJPEGError 64899
+#define JConsts_sJPEGImageFile 64900
+#define OleConst_SNoMethod 64901
+#define OleConst_SLinkProperties 64902
+#define OleConst_SInvalidLinkSource 64903
+#define OleConst_SCannotBreakLink 64904
+#define OleConst_SPropDlgCaption 64905
+#define OleConst_sNoRunningObject 64906
+#define rm_JvResources_RsUndoItem 64907
+#define rm_JvResources_RsCutItem 64908
+#define rm_JvResources_RsCopyItem 64909
+#define rm_JvResources_RsPasteItem 64910
+#define rm_JvResources_RsDeleteItem 64911
+#define IdResourceStrings_RSSocksRequestIdentFailed 64912
+#define IdResourceStrings_RSSocksUnknownError 64913
+#define IdResourceStrings_RSSocksServerRespondError 64914
+#define IdResourceStrings_RSSocksAuthMethodError 64915
+#define IdResourceStrings_RSSocksAuthError 64916
+#define IdResourceStrings_RSSocksServerGeneralError 64917
+#define IdResourceStrings_RSSocksServerPermissionError 64918
+#define IdResourceStrings_RSSocksServerNetUnreachableError 64919
+#define IdResourceStrings_RSSocksServerHostUnreachableError 64920
+#define IdResourceStrings_RSSocksServerConnectionRefusedError 64921
+#define IdResourceStrings_RSSocksServerTTLExpiredError 64922
+#define IdResourceStrings_RSSocksServerCommandError 64923
+#define IdResourceStrings_RSSocksServerAddressError 64924
+#define IdResourceStrings_RSUnevenSizeInDecodeStream 64925
+#define IdResourceStrings_RSUnevenSizeInEncodeStream 64926
+#define IdResourceStrings_RSMessageEncoderNotFound 64927
+#define IdResourceStrings_RSStackENOBUFS 64928
+#define IdResourceStrings_RSStackEISCONN 64929
+#define IdResourceStrings_RSStackENOTCONN 64930
+#define IdResourceStrings_RSStackESHUTDOWN 64931
+#define IdResourceStrings_RSStackETOOMANYREFS 64932
+#define IdResourceStrings_RSStackETIMEDOUT 64933
+#define IdResourceStrings_RSStackECONNREFUSED 64934
+#define IdResourceStrings_RSStackELOOP 64935
+#define IdResourceStrings_RSStackENAMETOOLONG 64936
+#define IdResourceStrings_RSStackEHOSTDOWN 64937
+#define IdResourceStrings_RSStackEHOSTUNREACH 64938
+#define IdResourceStrings_RSStackENOTEMPTY 64939
+#define IdResourceStrings_RSStackHOST_NOT_FOUND 64940
+#define IdResourceStrings_RSTIdMessagePartCreate 64941
+#define IdResourceStrings_RSSocksRequestFailed 64942
+#define IdResourceStrings_RSSocksRequestServerFailed 64943
+#define IdResourceStrings_RSStackEDESTADDRREQ 64944
+#define IdResourceStrings_RSStackEMSGSIZE 64945
+#define IdResourceStrings_RSStackEPROTOTYPE 64946
+#define IdResourceStrings_RSStackENOPROTOOPT 64947
+#define IdResourceStrings_RSStackEPROTONOSUPPORT 64948
+#define IdResourceStrings_RSStackESOCKTNOSUPPORT 64949
+#define IdResourceStrings_RSStackEOPNOTSUPP 64950
+#define IdResourceStrings_RSStackEPFNOSUPPORT 64951
+#define IdResourceStrings_RSStackEAFNOSUPPORT 64952
+#define IdResourceStrings_RSStackEADDRINUSE 64953
+#define IdResourceStrings_RSStackEADDRNOTAVAIL 64954
+#define IdResourceStrings_RSStackENETDOWN 64955
+#define IdResourceStrings_RSStackENETUNREACH 64956
+#define IdResourceStrings_RSStackENETRESET 64957
+#define IdResourceStrings_RSStackECONNABORTED 64958
+#define IdResourceStrings_RSStackECONNRESET 64959
+#define IdResourceStrings_RSMsgClientEncodingText 64960
+#define IdResourceStrings_RSMsgClientEncodingAttachment 64961
+#define IdResourceStrings_RSMsgClientUnkownMessagePartType 64962
+#define IdResourceStrings_RSMsgClientInvalidEncoding 64963
+#define IdResourceStrings_RSInvalidServiceName 64964
+#define IdResourceStrings_RSStackError 64965
+#define IdResourceStrings_RSStackEINTR 64966
+#define IdResourceStrings_RSStackEBADF 64967
+#define IdResourceStrings_RSStackEACCES 64968
+#define IdResourceStrings_RSStackEFAULT 64969
+#define IdResourceStrings_RSStackEINVAL 64970
+#define IdResourceStrings_RSStackEMFILE 64971
+#define IdResourceStrings_RSStackEWOULDBLOCK 64972
+#define IdResourceStrings_RSStackEINPROGRESS 64973
+#define IdResourceStrings_RSStackEALREADY 64974
+#define IdResourceStrings_RSStackENOTSOCK 64975
+#define IdResourceStrings_RSObjectTypeNotSupported 64976
+#define IdResourceStrings_RSIdNoDataToRead 64977
+#define IdResourceStrings_RSCanNotBindRange 64978
+#define IdResourceStrings_RSInvalidPortRange 64979
+#define IdResourceStrings_RSReadTimeout 64980
+#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 64981
+#define IdResourceStrings_RSEMailSymbolOutsideAddress 64982
+#define IdResourceStrings_RSWS2CallError 64983
+#define IdResourceStrings_RSWS2LoadError 64984
+#define IdResourceStrings_RSStatusResolving 64985
+#define IdResourceStrings_RSStatusConnecting 64986
+#define IdResourceStrings_RSStatusConnected 64987
+#define IdResourceStrings_RSStatusDisconnecting 64988
+#define IdResourceStrings_RSStatusDisconnected 64989
+#define IdResourceStrings_RSStatusText 64990
+#define IdResourceStrings_RSConnectTimeout 64991
 #define DbUtilsEh_SLikePredicatEh 64992
 #define DbUtilsEh_SInPredicatEh 64993
 #define DbUtilsEh_SNullConstEh 64994
@@ -584,7 +566,7 @@
 #define IdResourceStrings_RSSetSizeExceeded 65004
 #define IdResourceStrings_RSFileNotFound 65005
 #define IdResourceStrings_RSOnlyOneAntiFreeze 65006
-#define IdResourceStrings_RSIOHandlerPropInvalid 65007
+#define IdResourceStrings_RSNotConnected 65007
 #define EhLibConsts_SCancelEditEh 65008
 #define EhLibConsts_SRefreshRecordEh 65009
 #define EhLibConsts_SDeleteMultipleRecordsQuestionEh 65010
@@ -1115,8 +1097,6 @@
 #define SysConst_SDiskFull 65535
 STRINGTABLE
 BEGIN
-	dxGDIPlusAPI_scxGdipInvalidOperation,	"Invalid operation in GDI+ (Code: %d)"
-	XMLConst_SMissingNode,	"IDOMNode required"
 	XMLConst_SNoAttributes,	"Attributes are not supported on this node type"
 	XMLConst_SInvalidNodeType,	"Invalid node type"
 	XMLConst_SMismatchedRegItems,	"Mismatched paramaters to RegisterChildNodes"
@@ -1132,7 +1112,6 @@ BEGIN
 	RzTabs_sRzCreateRegionError,	"Error creating region"
 	RzTabs_sRzPageIndexOutOfRange,	"%d is an invalid PageIndex value. PageIndex must be between 0 and %d"
 	RzTabs_sRzInvalidVisibilityChange,	"You cannot change the Visible property of a page"
-	RzPanel_sRzMoveDown,	"Move Down"
 	RzPanel_sRzClose,	"Close"
 	RzPanel_sRzTextOptions,	"Text Options"
 	RzPanel_sRzNoTextLabels,	"No text labels"
@@ -1148,7 +1127,7 @@ BEGIN
 	XMLConst_SMSDOMNotInstalled,	"Microsoft MSXML is not installed"
 	XMLConst_SNotActive,	"No active document"
 	XMLConst_SNodeNotFound,	"Node \"%s\" not found"
-	RzBorder_sRzColorBtnHighlight,	"Button Highlight"
+	XMLConst_SMissingNode,	"IDOMNode required"
 	RzBorder_sRzColor3DDkShadow,	"3D Dark Shadow"
 	RzBorder_sRzColor3DLight,	"3D Light"
 	RzBorder_sRzColorInfoText,	"Info Text"
@@ -1164,7 +1143,7 @@ BEGIN
 	RzPanel_sRzCustomizeTitle,	"Customize Toolbar"
 	RzPanel_sRzHint,	"Uncheck to hide control"
 	RzPanel_sRzMoveUp,	"Move Up"
-	RzBorder_sRzColorMenu,	"Menu"
+	RzPanel_sRzMoveDown,	"Move Down"
 	RzBorder_sRzColorWindow,	"Window"
 	RzBorder_sRzColorWindowFrame,	"Window Frame"
 	RzBorder_sRzColorMenuText,	"Menu Text"
@@ -1180,7 +1159,7 @@ BEGIN
 	RzBorder_sRzColorGrayText,	"Gray Text"
 	RzBorder_sRzColorBtnText,	"Button Text"
 	RzBorder_sRzColorInactiveCaptionText,	"Inactive Caption Text"
-	RzBorder_sRzColorTurquoise,	"Turquoise"
+	RzBorder_sRzColorBtnHighlight,	"Button Highlight"
 	RzBorder_sRzColorSkyBlue,	"Sky Blue"
 	RzBorder_sRzColorPlum,	"Plum"
 	RzBorder_sRzColorGray25,	"Gray 25%"
@@ -1196,7 +1175,7 @@ BEGIN
 	RzBorder_sRzColorBackground,	"Background"
 	RzBorder_sRzColorActiveCaption,	"Active Caption"
 	RzBorder_sRzColorInactiveCaption,	"Inactive Caption"
-	RzBorder_sRzColorTeal,	"Teal"
+	RzBorder_sRzColorMenu,	"Menu"
 	RzBorder_sRzColorBlue,	"Blue"
 	RzBorder_sRzColorBlueGray,	"Blue Gray"
 	RzBorder_sRzColorGray50,	"Gray 50%"
@@ -1212,7 +1191,7 @@ BEGIN
 	RzBorder_sRzColorGold,	"Gold"
 	RzBorder_sRzColorYellow,	"Yellow"
 	RzBorder_sRzColorBrightGreen,	"Bright Green"
-	RM_St2DBarC_StEInvalidCodeword,	"Invalid Codeword"
+	RzBorder_sRzColorTurquoise,	"Turquoise"
 	RM_St2DBarC_StENeedBarHeight,	"Either BarHeight or BarHeightToWidth is required"
 	RM_St2DBarC_StENeedHorz,	"Horizontal size needs to be specified"
 	RM_St2DBarC_StENeedVert,	"Vertical size needs to be specified"
@@ -1228,7 +1207,7 @@ BEGIN
 	RzBorder_sRzColorOrange,	"Orange"
 	RzBorder_sRzColorDarkYellow,	"Dark Yellow"
 	RzBorder_sRzColorGreen,	"Green"
-	RM_StConst_stscDecMathMultOverflowS,	"Decimal math: result overflowed during multiplication"
+	RzBorder_sRzColorTeal,	"Teal"
 	RM_StConst_stscDecMathDivOverflowS,	"Decimal math: result overflowed during division"
 	RM_StConst_stscTxtDatNoSuchFieldS,	"No such field"
 	RM_StConst_stscTxtDatUniqueNameRequiredS,	"Field name must be unique"
@@ -1244,7 +1223,7 @@ BEGIN
 	RM_St2DBarC_StEBadQuietZone,	"Invalid Quiet Zone"
 	RM_St2DBarC_StECodeTooLarge,	"Code too large for barcode"
 	RM_St2DBarC_StEGLIOutOfRange,	"GLI value out of range"
-	RM_StConst_stscStatBadParamS,	"Invalid parameter"
+	RM_St2DBarC_StEInvalidCodeword,	"Invalid Codeword"
 	RM_StConst_stscStatBadDataS,	"Invalid data point in array"
 	RM_StConst_stscStatNoConvergeS,	"no convergence in numerical routine"
 	RM_StConst_stscWordDelimitersS,	"219"
@@ -1260,7 +1239,7 @@ BEGIN
 	RM_StConst_stscMoneyMissingIntermediateRateS,	"Intermediate exchange rate for %s->%s missing"
 	RM_StConst_stscMoneyInvalidExchRateS,	"Exchange rate is missing a property value"
 	RM_StConst_stscMoneyTriExchUsesTriExchS,	"Triangular exchange rate is using triangular exchange rates"
-	RM_StConst_stscPatternTooLargeS,	"Pattern exceeds MaxPatLen"
+	RM_StConst_stscDecMathMultOverflowS,	"Decimal math: result overflowed during multiplication"
 	RM_StConst_stscStreamsNilS,	"Input and/or output stream is not assigned"
 	RM_StConst_stscInTextStreamErrorS,	"Error creating internal input text stream"
 	RM_StConst_stscOutTextStreamErrorS,	"Error creating internal output text stream"
@@ -1276,7 +1255,7 @@ BEGIN
 	RM_StConst_stscNetInvalidParameterS,	"Invalid parameter"
 	RM_StConst_stscNetInvalidItemTypeS,	"Invalid item type for this method"
 	RM_StConst_stscStatBadCountS,	"Unequal or bad counts of array elements"
-	RM_StConst_stscGetSizeFailedS,	"Error reading size of existing file"
+	RM_StConst_stscStatBadParamS,	"Invalid parameter"
 	RM_StConst_stscNilStreamS,	"Buffered/text stream: Attempted to read, write, or seek and underlying stream is nil"
 	RM_StConst_stscNoSeekForReadS,	"Buffered/text stream: Could not seek to the correct position in the underlying stream (for read request)"
 	RM_StConst_stscNoSeekForWriteS,	"Buffered/text stream: Could not seek to the correct position in the underlying stream (for write request)"
@@ -1292,7 +1271,7 @@ BEGIN
 	RM_StConst_stscPatternErrorS,	"Error detected near end of pattern"
 	RM_StConst_stscUnbalancedTagS,	"Unbalanced tag marker"
 	RM_StConst_stscNoPatternsS,	"No Match, Replace, or SelAvoid Patterns defined"
-	RM_StConst_stscSizeS,	"Size"
+	RM_StConst_stscPatternTooLargeS,	"Pattern exceeds MaxPatLen"
 	RM_StConst_stscTypeS,	"Type"
 	RM_StConst_stscModifiedS,	"Modified"
 	RM_StConst_stscAttributesS,	"Attributes"
@@ -1308,7 +1287,7 @@ BEGIN
 	RM_StConst_stscFileMappingFailedS,	"CreateFileMapping failed"
 	RM_StConst_stscCreateViewFailedS,	"MapViewOfFile failed"
 	RM_StConst_stscBadOriginS,	"Bad origin parameter for call to Seek"
-	RM_StConst_stscExprUnkFuncS,	"Unknown function identifier"
+	RM_StConst_stscGetSizeFailedS,	"Error reading size of existing file"
 	RM_StConst_stscExprLParExpS,	"Left parenthesis expected"
 	RM_StConst_stscExprRParExpS,	"Right parenthesis expected"
 	RM_StConst_stscExprCommExpS,	"List separator expected"
@@ -1324,7 +1303,7 @@ BEGIN
 	RM_StConst_stscInFileErrorS,	"Error opening input file"
 	RM_StConst_stscOutFileErrorS,	"Error creating output file"
 	RM_StConst_stscNameS,	"Name"
-	RM_StConst_stscInvalidUPCACodeLenS,	"Invalid code length (must be 11 or 12)"
+	RM_StConst_stscSizeS,	"Size"
 	RM_StConst_stscInvalidCharacterS,	"Invalid character"
 	RM_StConst_stscInvalidCheckCharacterS,	"Invalid check character"
 	RM_StConst_stscInvalidUPCECodeLenS,	"Invalid code length (must be 6)"
@@ -1340,7 +1319,7 @@ BEGIN
 	RM_StConst_stscExprNumericS,	"Numeric error"
 	RM_StConst_stscExprBadExpS,	"Invalid expression"
 	RM_StConst_stscExprOpndOvflS,	"Operand stack overflow"
-	RM_StConst_stscBadElSizeS,	"Can only assign a matrix to a virtual matrix if element sizes are equal"
+	RM_StConst_stscExprUnkFuncS,	"Unknown function identifier"
 	RM_StConst_stscBadDupsS,	"Can only set Duplicates to False in an empty sorted collection"
 	RM_StConst_stscTooManyFilesS,	"Too many merge files in TStSorter"
 	RM_StConst_stscFileCreateS,	"Error creating file"
@@ -1356,7 +1335,7 @@ BEGIN
 	RM_StConst_stscNoVerInfoS,	"File does not contain version info"
 	RM_StConst_stscVerInfoFailS,	"Unable to read version info"
 	RM_StConst_stscBadVerInfoKeyS,	"The specified key cannnot be found in version info"
-	RM_StConst_stscNoValueNameSpecifiedS,	"No Value Name specified"
+	RM_StConst_stscInvalidUPCACodeLenS,	"Invalid code length (must be 11 or 12)"
 	RM_StConst_stscNoCompareS,	"Compare property must be set"
 	RM_StConst_stscBadTypeS,	"An incompatible class is passed to a method"
 	RM_StConst_stscBadSizeS,	"Bad size parameter"
@@ -1372,7 +1351,7 @@ BEGIN
 	RM_StConst_stscBadCompareS,	"Unable to assign this compare function now"
 	RM_StConst_stscTooManyColsS,	"Cannot assign a matrix with more than 1 column to an array"
 	RM_StConst_stscBadColCountS,	"Can only assign a matrix to a virtual matrix if column counts are equal"
-	RM_StConst_stscUnloadKeyFailS,	"Unable to unload key\\nErrorCode: %d"
+	RM_StConst_stscBadElSizeS,	"Can only assign a matrix to a virtual matrix if element sizes are equal"
 	RM_StConst_stscNotWinNTPlatformS,	"Function not supported on this platform"
 	RM_StConst_stscBadOptionsKeyComboS,	"Selection options incompatible\\nwith specified primary key"
 	RM_StConst_stscRestoreKeyFailS,	"Unable to restore key\\nError Code: %d"
@@ -1388,7 +1367,7 @@ BEGIN
 	RM_StConst_stscSetSecurityFailS,	"Failed to Set Security Information\\nError Code: %d"
 	RM_StConst_stscByteArrayTooLargeS,	"Size of byte array exceeds limit"
 	RM_StConst_stscQueryValueFailS,	"Unable to query value in key"
-	RM_StConst_stscRegWriteFailS,	"Failed to write value to Registry\\nError Code: %d"
+	RM_StConst_stscNoValueNameSpecifiedS,	"No Value Name specified"
 	RM_StConst_stscNoKeyNameS,	"No key name specified"
 	RM_StConst_stscQueryKeyFailS,	"Unable to query specified key\\nError Code: %d"
 	RM_StConst_stscEnumKeyFailS,	"Unable to enumerate key\\nError Code: %d"
@@ -1404,7 +1383,7 @@ BEGIN
 	RM_StConst_stscNo16bitSupportS,	"Function not supported in 16-bit applications"
 	RM_StConst_stscCantFindInputFileS,	"Can not find input file"
 	RM_StConst_stscLoadKeyFailS,	"Unable to load key\\nError Code: %d"
-	rm_JvResources_RsMenuBar,	"Menu Bar"
+	RM_StConst_stscUnloadKeyFailS,	"Unable to unload key\\nErrorCode: %d"
 	rm_JvResources_RsMenuHighlight,	"Menu Highlight"
 	rm_JvJCLUtils_RsEPropertyNotExists,	"Property \"%s\" does not exist"
 	rm_JvJCLUtils_RsEInvalidPropertyType,	"Property \"%s\" has invalid type"
@@ -1420,7 +1399,7 @@ BEGIN
 	RM_StConst_stscCreateKeyFailS,	"Failed to create key\\nError Code: %d"
 	RM_StConst_stscOpenKeyFailS,	"Failed to open key\\nError Code: %d"
 	RM_StConst_stscIniWriteFailS,	"Failed to write value to INI file"
-	rm_JvResources_RsClAppWorkSpace,	"Application workspace"
+	RM_StConst_stscRegWriteFailS,	"Failed to write value to Registry\\nError Code: %d"
 	rm_JvResources_RsClHighlight,	"Selection background"
 	rm_JvResources_RsClHighlightText,	"Selection text"
 	rm_JvResources_RsClBtnFace,	"Button face"
@@ -1436,7 +1415,7 @@ BEGIN
 	rm_JvResources_RsGradientActiveCaption,	"Gradient Active Caption"
 	rm_JvResources_RsGradientInactiveCaption,	"Gradient Inactive Caption"
 	rm_JvResources_RsHotLight,	"Hot Light"
-	rm_JvResources_RsClLightGreen,	"Light Green"
+	rm_JvResources_RsMenuBar,	"Menu Bar"
 	rm_JvResources_RsClLightTurquoise,	"Light Turquoise"
 	rm_JvResources_RsClPaleBlue,	"Pale Blue"
 	rm_JvResources_RsClLavender,	"Lavender"
@@ -1452,7 +1431,7 @@ BEGIN
 	rm_JvResources_RsClCaptionText,	"Active window title bar text"
 	rm_JvResources_RsClActiveBorder,	"Active window border"
 	rm_JvResources_RsClInactiveBorder,	"Inactive window border"
-	rm_JvResources_RsClBlueGray,	"Blue Gray"
+	rm_JvResources_RsClAppWorkSpace,	"Application workspace"
 	rm_JvResources_RsClGray50,	"Gray 50%"
 	rm_JvResources_RsClLightOrange,	"Light Orange"
 	rm_JvResources_RsClSeaGreen,	"Sea Green"
@@ -1468,7 +1447,7 @@ BEGIN
 	rm_JvResources_RsClRose,	"Rose"
 	rm_JvResources_RsClTan,	"Tan"
 	rm_JvResources_RsClLightYellow,	"Light Yellow"
-	rm_JvResources_RsClAqua,	"Aqua"
+	rm_JvResources_RsClLightGreen,	"Light Green"
 	rm_JvResources_RsClWhite,	"White"
 	rm_JvResources_RsClMoneyGreen,	"Money green"
 	rm_JvResources_RsClSkyBlue,	"Sky blue"
@@ -1484,7 +1463,7 @@ BEGIN
 	rm_JvResources_RsClDarkRed,	"Dark Red"
 	rm_JvResources_RsClOrange,	"Orange"
 	rm_JvResources_RsClDarkYellow,	"Dark Yellow"
-	rm_JvResources_RsEInterpreter402,	"Array and Record types are not allowed as procedure/function parameter"
+	rm_JvResources_RsClBlueGray,	"Blue Gray"
 	rm_JvResources_RsEXOrX,	"' or '"
 	rm_JvResources_RsClBlack,	"Black"
 	rm_JvResources_RsClMaroon,	"Maroon"
@@ -1500,7 +1479,7 @@ BEGIN
 	rm_JvResources_RsClYellow,	"Yellow"
 	rm_JvResources_RsClBlue,	"Blue"
 	rm_JvResources_RsClFuchsia,	"Fuchsia"
-	rm_JvResources_RsEInterpreter186,	"Invalid type of result in call to function '%s'"
+	rm_JvResources_RsClAqua,	"Aqua"
 	rm_JvResources_RsEInterpreter187,	"Can't get proc address for function '%s'"
 	rm_JvResources_RsEInterpreter188,	"Invalid type of argument in call to function '%s'"
 	rm_JvResources_RsEInterpreter189,	"Invalid type of result in call to function '%s'"
@@ -1516,7 +1495,7 @@ BEGIN
 	rm_JvResources_RsEInterpreter308,	"String Constant"
 	rm_JvResources_RsEInterpreter309,	"Statement"
 	rm_JvResources_RsEInterpreter401,	"Implementation of unit not found"
-	rm_JvResources_RsEInterpreter107,	" not allowed before else"
+	rm_JvResources_RsEInterpreter402,	"Array and Record types are not allowed as procedure/function parameter"
 	rm_JvResources_RsEInterpreter108,	"Type of expression must be integer"
 	rm_JvResources_RsEInterpreter109,	"Record, object or class type required"
 	rm_JvResources_RsEInterpreter110,	"Missing operator or semicolon"
@@ -1532,7 +1511,7 @@ BEGIN
 	rm_JvResources_RsEInterpreter183,	"Incompatible types: '%0:s' and '%1:s'"
 	rm_JvResources_RsEInterpreter184,	"Error loading library '%s'"
 	rm_JvResources_RsEInterpreter185,	"Invalid type of argument in call to function '%s'"
-	rm_JvResources_RsEInterpreter5,	"Error in unit '%0:s' on line %1:d : %2:s"
+	rm_JvResources_RsEInterpreter186,	"Invalid type of result in call to function '%s'"
 	rm_JvResources_RsEInterpreter6,	"External error in unit '%0:s' on line %1:d : %2:s"
 	rm_JvResources_RsEInterpreter7,	"Access denied to '%s'"
 	rm_JvResources_RsEInterpreter8,	"Expression is too complex - overflow"
@@ -1548,7 +1527,7 @@ BEGIN
 	rm_JvResources_RsEInterpreter104,	"Undeclared Identifier '%s'"
 	rm_JvResources_RsEInterpreter105,	"Type of expression must be boolean"
 	rm_JvResources_RsEInterpreter106,	"Class type required"
-	rm_JvResources_RsDeleteItem,	"&Delete"
+	rm_JvResources_RsEInterpreter107,	" not allowed before else"
 	rm_JvResources_RsSelectAllItem,	"Select &All"
 	rm_JvResources_RsENotImplemented,	"not implemented"
 	rm_JvResources_RsESorryForOneDimensionalArraysOnly,	"Sorry, for one-dimensional arrays only"
@@ -1564,8 +1543,8 @@ BEGIN
 	rm_JvResources_RsEInterpreter2,	"Internal interpreter error: %s"
 	rm_JvResources_RsEInterpreter3,	"User break"
 	rm_JvResources_RsEInterpreter4,	"Re-raising an exception only allowed in exception handler"
-	IdResourceStrings_RSURINoProto,	"Protocol field is empty"
-	IdResourceStrings_RSURINoHost,	"Host field is empty"
+	rm_JvResources_RsEInterpreter5,	"Error in unit '%0:s' on line %1:d : %2:s"
+	IdResourceStrings_RSUnrecognizedUUEEncodingScheme,	"Unrecognized UUE encoding scheme."
 	IdResourceStrings_RSThreadTerminateAndWaitFor,	"Cannot call TerminateAndWaitFor on FreeAndTerminate threads"
 	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
 	JConsts_sJPEGError,	"JPEG error #%d"
@@ -1580,25 +1559,7 @@ BEGIN
 	rm_JvResources_RsCutItem,	"Cu&t"
 	rm_JvResources_RsCopyItem,	"&Copy"
 	rm_JvResources_RsPasteItem,	"&Paste"
-	IdResourceStrings_RSSSLAcceptError,	"Error accepting connection with SSL."
-	IdResourceStrings_RSSSLConnectError,	"Error connecting with SSL."
-	IdResourceStrings_RSSSLSettingCipherError,	"SetCipher failed."
-	IdResourceStrings_RSSSLCreatingContextError,	"Error creating SSL context."
-	IdResourceStrings_RSSSLLoadingRootCertError,	"Could not load root certificate."
-	IdResourceStrings_RSSSLLoadingCertError,	"Could not load certificate."
-	IdResourceStrings_RSSSLLoadingKeyError,	"Could not load key, check password."
-	IdResourceStrings_RSSSLGetMethodError,	"Error geting SSL method."
-	IdResourceStrings_RSSSLDataBindingError,	"Error binding data to SSL socket."
-	IdResourceStrings_RSOSSLModeNotSet,	"Mode has not been set."
-	IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary,	"Could not load SSL library."
-	IdResourceStrings_RSOSSLStatusString,	"SSL status: \"%s\""
-	IdResourceStrings_RSUnevenSizeInDecodeStream,	"Uneven size in DecodeToStream."
-	IdResourceStrings_RSUnevenSizeInEncodeStream,	"Uneven size in Encode."
-	IdResourceStrings_RSMessageEncoderNotFound,	"Message encoder not found"
-	IdResourceStrings_RSUnrecognizedUUEEncodingScheme,	"Unrecognized UUE encoding scheme."
-	IdResourceStrings_RSTIdMessagePartCreate,	"TIdMessagePart can not be created.  Use descendant classes. "
-	IdResourceStrings_RSSocksRequestFailed,	"Request rejected or failed."
-	IdResourceStrings_RSSocksRequestServerFailed,	"Request rejected because SOCKS server cannot connect."
+	rm_JvResources_RsDeleteItem,	"&Delete"
 	IdResourceStrings_RSSocksRequestIdentFailed,	"Request rejected because the client program and identd report different user-ids."
 	IdResourceStrings_RSSocksUnknownError,	"Unknown socks error."
 	IdResourceStrings_RSSocksServerRespondError,	"Socks server did not respond."
@@ -1612,9 +1573,9 @@ BEGIN
 	IdResourceStrings_RSSocksServerTTLExpiredError,	"TTL expired."
 	IdResourceStrings_RSSocksServerCommandError,	"Command not supported."
 	IdResourceStrings_RSSocksServerAddressError,	"Address type not supported."
-	IdResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
-	IdResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
-	IdResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
+	IdResourceStrings_RSUnevenSizeInDecodeStream,	"Uneven size in DecodeToStream."
+	IdResourceStrings_RSUnevenSizeInEncodeStream,	"Uneven size in Encode."
+	IdResourceStrings_RSMessageEncoderNotFound,	"Message encoder not found"
 	IdResourceStrings_RSStackENOBUFS,	"No buffer space available."
 	IdResourceStrings_RSStackEISCONN,	"Socket is already connected."
 	IdResourceStrings_RSStackENOTCONN,	"Socket is not connected."
@@ -1628,9 +1589,9 @@ BEGIN
 	IdResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
 	IdResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
 	IdResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
-	IdResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
-	IdResourceStrings_RSStackEALREADY,	"Operation already in progress."
-	IdResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
+	IdResourceStrings_RSTIdMessagePartCreate,	"TIdMessagePart can not be created.  Use descendant classes. "
+	IdResourceStrings_RSSocksRequestFailed,	"Request rejected or failed."
+	IdResourceStrings_RSSocksRequestServerFailed,	"Request rejected because SOCKS server cannot connect."
 	IdResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
 	IdResourceStrings_RSStackEMSGSIZE,	"Message too long."
 	IdResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
@@ -1644,13 +1605,13 @@ BEGIN
 	IdResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
 	IdResourceStrings_RSStackENETDOWN,	"Network is down."
 	IdResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
-	IdResourceStrings_RSConnectTimeout,	"Connect timed out."
+	IdResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
+	IdResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
+	IdResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
 	IdResourceStrings_RSMsgClientEncodingText,	"Encoding text"
 	IdResourceStrings_RSMsgClientEncodingAttachment,	"Encoding attachment"
 	IdResourceStrings_RSMsgClientUnkownMessagePartType,	"Unknown Message Part Type."
 	IdResourceStrings_RSMsgClientInvalidEncoding,	"Invalid Encoding. UU only allows Body and Attachments"
-	IdResourceStrings_RSHTTPChunkStarted,	"Chunk Started"
-	IdResourceStrings_RSHTTPAuthAlreadyRegistered,	"This authentication method is already registered with class name %s."
 	IdResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
 	IdResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
 	IdResourceStrings_RSStackEINTR,	"Interrupted system call."
@@ -1660,7 +1621,9 @@ BEGIN
 	IdResourceStrings_RSStackEINVAL,	"Invalid argument."
 	IdResourceStrings_RSStackEMFILE,	"Too many open files."
 	IdResourceStrings_RSStackEWOULDBLOCK,	"Operation would block. "
-	IdResourceStrings_RSNotConnected,	"Not Connected"
+	IdResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
+	IdResourceStrings_RSStackEALREADY,	"Operation already in progress."
+	IdResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
 	IdResourceStrings_RSObjectTypeNotSupported,	"Object type not supported."
 	IdResourceStrings_RSIdNoDataToRead,	"No data to read."
 	IdResourceStrings_RSCanNotBindRange,	"Can not bind in port range (%d - %d)"
@@ -1676,6 +1639,7 @@ BEGIN
 	IdResourceStrings_RSStatusDisconnecting,	"Disconnecting."
 	IdResourceStrings_RSStatusDisconnected,	"Disconnected."
 	IdResourceStrings_RSStatusText,	"%s"
+	IdResourceStrings_RSConnectTimeout,	"Connect timed out."
 	DbUtilsEh_SLikePredicatEh,	""
 	DbUtilsEh_SInPredicatEh,	"In"
 	DbUtilsEh_SNullConstEh,	"Null"
@@ -1691,7 +1655,7 @@ BEGIN
 	IdResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
 	IdResourceStrings_RSFileNotFound,	"File \"%s\" not found"
 	IdResourceStrings_RSOnlyOneAntiFreeze,	"Only one TIdAntiFreeze can exist per application."
-	IdResourceStrings_RSIOHandlerPropInvalid,	"IOHandler value is not valid"
+	IdResourceStrings_RSNotConnected,	"Not Connected"
 	EhLibConsts_SCancelEditEh,	"Cancel edit"
 	EhLibConsts_SRefreshRecordEh,	"Refresh data"
 	EhLibConsts_SDeleteMultipleRecordsQuestionEh,	"Delete %d selected records?"

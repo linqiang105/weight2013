@@ -87,7 +87,6 @@ uses
   MeterConnect2 in 'MeterConnect2.pas' {MeterConnect2Form},
   superobject in 'Common\superobject.pas',
   superxmlparser in 'Common\superxmlparser.pas',
-  UploadCloud in 'UploadCloud.pas' {UploadCloudForm},
   frx2DBarcode in 'Code2D\frx2DBarcode.pas',
   frx2DBarcodeRTTI in 'Code2D\frx2DBarcodeRTTI.pas',
   uBitMapOverriden in 'Code2D\uBitMapOverriden.pas',
@@ -114,7 +113,6 @@ begin
   Application.CreateForm(TCarForm, CarForm);
   Application.CreateForm(TMailForm, MailForm);
   Application.CreateForm(TBaseInfoSelForm, BaseInfoSelForm);
-  Application.CreateForm(TUploadCloudForm, UploadCloudForm);
   Application.CreateForm(TMeterConnect1Form, MeterConnect1Form);
   Application.CreateForm(TMeterConnect2Form, MeterConnect2Form);
   Application.Run;

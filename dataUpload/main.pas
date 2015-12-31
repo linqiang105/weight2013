@@ -9,7 +9,7 @@ uses
   ZLib, ZLibEx, Menus;
 
 type
-  TMainForm = class(TForm)
+  TUploadCloudForm = class(TForm)
     GBDatabase: TGroupBox;
     LEIP: TLabeledEdit;
     LEUsername: TLabeledEdit;
@@ -46,7 +46,7 @@ type
   end;
 
 var
-  MainForm: TMainForm;
+  UploadCloudForm: TUploadCloudForm;
 
 implementation
 
@@ -54,7 +54,6 @@ uses
   CommonUtil;
 
 {$R *.dfm}
-
 
 function EncodePassword(str: string): string;
 var
@@ -85,14 +84,14 @@ begin
   end;
 end;
 
-procedure TMainForm.BitBtnRunClick(Sender: TObject);
+procedure TUploadCloudForm.BitBtnRunClick(Sender: TObject);
 begin
   TUpload.Enabled := True;
   BitBtnRun.Enabled := False;
   BitBtnStop.Enabled := True;
 end;
 
-function TMainForm.uploadRecord: Boolean;
+function TUploadCloudForm.uploadRecord: Boolean;
 var uploadId: string;
   gs1, gs2, gs3, gs4, ts1, ts2, ts3, ts4: TMemoryStream;
 begin
@@ -347,7 +346,7 @@ begin
   Result := True;
 end;
 
-procedure TMainForm.TUploadTimer(Sender: TObject);
+procedure TUploadCloudForm.TUploadTimer(Sender: TObject);
 begin
   (Sender as TTimer).Enabled := False;
   try
@@ -357,14 +356,14 @@ begin
   end;
 end;
 
-procedure TMainForm.BitBtnStopClick(Sender: TObject);
+procedure TUploadCloudForm.BitBtnStopClick(Sender: TObject);
 begin
   TUpload.Enabled := False;
   BitBtnRun.Enabled := True;
   BitBtnStop.Enabled := False;
 end;
 
-function TMainForm.getLocalConnection: Boolean;
+function TUploadCloudForm.getLocalConnection: Boolean;
 var fileName: string;
   ConnectedIP, Database, user, pass: string;
   ConnStr: string;
@@ -427,7 +426,7 @@ begin
   Result := True;
 end;
 
-procedure TMainForm.FormShow(Sender: TObject);
+procedure TUploadCloudForm.FormShow(Sender: TObject);
 begin
   loadSetting;
   getLocalConnection;
@@ -435,7 +434,7 @@ begin
   ADOQRemote.Connection := ADOCRemote;
 end;
 
-procedure TMainForm.CBDatabaseEnter(Sender: TObject);
+procedure TUploadCloudForm.CBDatabaseEnter(Sender: TObject);
 begin
   with ADOCRemote do
   begin
@@ -468,7 +467,7 @@ begin
   end;
 end;
 
-function TMainForm.saveSetting: Boolean;
+function TUploadCloudForm.saveSetting: Boolean;
 var myini: TiniFile;
 begin
   myini := TIniFile.Create(ExtractFilePath(ParamStr(0)) + 'setup.ini');
@@ -485,7 +484,7 @@ begin
   Result := True;
 end;
 
-function TMainForm.loadSetting: Boolean;
+function TUploadCloudForm.loadSetting: Boolean;
 var myini: TiniFile;
 begin
   myini := TIniFile.Create(ExtractFilePath(ParamStr(0)) + 'setup.ini');
@@ -504,17 +503,17 @@ begin
   Result := True;
 end;
 
-procedure TMainForm.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TUploadCloudForm.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   saveSetting;
 end;
 
-procedure TMainForm.CBDatabaseChange(Sender: TObject);
+procedure TUploadCloudForm.CBDatabaseChange(Sender: TObject);
 begin
   saveSetting;
 end;
 
-function TMainForm.log(str: string): Boolean;
+function TUploadCloudForm.log(str: string): Boolean;
 var sl: TStringList;
 begin
   if MemoLog.Lines.Count > 200 then
@@ -532,7 +531,7 @@ begin
   Result := True;
 end;
 
-function TMainForm.getRemoteConnection: Boolean;
+function TUploadCloudForm.getRemoteConnection: Boolean;
 begin
   with ADOCRemote do //连接数据库
   try

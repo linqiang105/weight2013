@@ -1,13 +1,14 @@
 object UploadCloudForm: TUploadCloudForm
-  Left = 413
-  Top = 274
-  Width = 449
-  Height = 307
-  Caption = #21518#21488#25968#25454#19978#20256
+  Left = 468
+  Top = 241
+  BorderStyle = bsDialog
+  Caption = #31216#37325#25968#25454#19978#20256#25163#26426#31471
+  ClientHeight = 365
+  ClientWidth = 300
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Icon.Data = {
@@ -3061,148 +3062,62 @@ object UploadCloudForm: TUploadCloudForm
     FFFFF007E6FFE0036CFFC00166FF800068FF80006AFF000062F1000008230000
     000B000047BB00007CFF0001AEFF8001AEFF800373FFC00779FFE01F0470}
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poMainFormCenter
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 13
-  object GBDatabase: TGroupBox
+  TextHeight = 16
+  object GBSet: TGroupBox
     Left = 0
     Top = 0
-    Width = 185
-    Height = 280
-    Align = alLeft
-    Caption = #36828#31243'SQL'#25968#25454#24211#21442#25968#37197#32622
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 16
-      Top = 144
-      Width = 78
-      Height = 13
-      Caption = #25968#25454#24211'            '
-    end
-    object LEIP: TLabeledEdit
-      Left = 15
-      Top = 40
-      Width = 150
-      Height = 21
-      EditLabel.Width = 62
-      EditLabel.Height = 13
-      EditLabel.Caption = 'IP'#22320#22336'        '
-      TabOrder = 0
-      Text = '127.0.0.1'
-    end
-    object LEUsername: TLabeledEdit
-      Left = 15
-      Top = 80
-      Width = 150
-      Height = 21
-      EditLabel.Width = 63
-      EditLabel.Height = 13
-      EditLabel.Caption = #29992#25143#21517'       '
-      TabOrder = 1
-      Text = 'sa'
-    end
-    object LEPassword: TLabeledEdit
-      Left = 15
-      Top = 120
-      Width = 150
-      Height = 21
-      EditLabel.Width = 49
-      EditLabel.Height = 13
-      EditLabel.Caption = #23494#30721'       '
-      PasswordChar = '*'
-      TabOrder = 2
-      Text = '123'
-    end
-    object CBDatabase: TComboBox
-      Left = 15
-      Top = 160
-      Width = 150
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 3
-      OnChange = CBDatabaseChange
-      OnEnter = CBDatabaseEnter
-    end
-    object BitBtnRun: TBitBtn
-      Left = 15
-      Top = 232
-      Width = 75
-      Height = 35
-      Caption = #21551#21160
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 4
-      OnClick = BitBtnRunClick
-    end
-    object BitBtnStop: TBitBtn
-      Left = 95
-      Top = 232
-      Width = 75
-      Height = 35
-      Caption = #20572#27490
-      Enabled = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentFont = False
-      TabOrder = 5
-      OnClick = BitBtnStopClick
-    end
-    object LEAddr: TLabeledEdit
-      Left = 15
-      Top = 200
-      Width = 150
-      Height = 21
-      EditLabel.Width = 80
-      EditLabel.Height = 13
-      EditLabel.Caption = #22320#28857#32534#21495'        '
-      TabOrder = 6
-      Text = 'A'
-    end
-  end
-  object MemoLog: TMemo
-    Left = 185
-    Top = 0
-    Width = 256
-    Height = 280
+    Width = 300
+    Height = 365
     Align = alClient
-    ReadOnly = True
-    ScrollBars = ssVertical
-    TabOrder = 1
+    Caption = #35774#32622
+    TabOrder = 0
+    object MemoLog: TMemo
+      Left = 12
+      Top = 64
+      Width = 274
+      Height = 289
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object LEAccount: TLabeledEdit
+      Left = 72
+      Top = 24
+      Width = 209
+      Height = 24
+      EditLabel.Width = 54
+      EditLabel.Height = 16
+      EditLabel.Caption = #36134#25143#21517'      '
+      LabelPosition = lpLeft
+      TabOrder = 1
+    end
   end
   object TUpload: TTimer
     Enabled = False
-    Interval = 3000
+    Interval = 10000
     OnTimer = TUploadTimer
-    Left = 352
-    Top = 160
+    Left = 360
+    Top = 208
   end
   object ADOCLocal: TADOConnection
     LoginPrompt = False
-    Left = 160
-    Top = 168
-  end
-  object ADOCRemote: TADOConnection
-    LoginPrompt = False
-    Left = 160
-    Top = 112
-  end
-  object ADOQRemote: TADOQuery
-    Parameters = <>
-    Left = 248
-    Top = 112
+    Left = 360
+    Top = 72
   end
   object ADOQLocal: TADOQuery
     Parameters = <>
-    Left = 248
-    Top = 168
+    Left = 360
+    Top = 144
   end
 end

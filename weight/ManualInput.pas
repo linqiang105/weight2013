@@ -135,6 +135,8 @@ type
     procedure EdtScaleChange(Sender: TObject);
     procedure EdtBundleChange(Sender: TObject);
     procedure EdtPriceChange(Sender: TObject);
+    procedure CBShouHuoExit(Sender: TObject);
+    procedure CBGoodsExit(Sender: TObject);
   private
     { Private declarations }
     procedure loadFormDesign;
@@ -1697,6 +1699,23 @@ begin
       end
     end;
   end;
+end;
+
+procedure TManualInputForm.CBShouHuoExit(Sender: TObject);
+begin
+  EdtPrice.Text := FloatToStr(TPriceUtil.getPrice(CBShouHuo.Text, CBGoods.Text));
+
+end;
+
+procedure TManualInputForm.CBGoodsExit(Sender: TObject);
+var price, scale: Double;
+begin
+  TPrepareUtil.getGoodsInfo(CBGoods.Text, price, scale);
+  //EdtPrice.Text := FloatToStr(price);
+  EdtScale.Text := FloatToStr(scale);
+
+  EdtPrice.Text := FloatToStr(TPriceUtil.getPrice(CBShouHuo.Text, CBGoods.Text));
+
 end;
 
 end.

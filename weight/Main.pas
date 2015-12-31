@@ -270,7 +270,6 @@ type
     procedure DBGridEh1CellClick(Column: TColumnEh);
     procedure SMScanTicketClick(Sender: TObject);
     procedure SMScanReportClick(Sender: TObject);
-    procedure TBPhoneClick(Sender: TObject);
     procedure ADefineExecute(Sender: TObject);
   private
     { Private declarations }
@@ -339,7 +338,7 @@ uses QueryDM, SoftwareSet, ModifyPassword, Login, UserPurview,
   MeterConnect2, Mail, OtherUtil, WeightUtil, ReportUtil, ShellAPI,
   ManualInput, Storage, Price, InvalidDataQuery, Autoshut, DateUtils,
   ReportSys, CostSet, Math, ScanTicket, ScanReport, WeightRecord,
-  UploadCloud, MeterUtil, LoginInfo;
+  MeterUtil, LoginInfo;
 
 {$R *.dfm}
 
@@ -1329,12 +1328,14 @@ begin
     FrmWeight1.CBShouHuo.Text := FieldByName('收货单位').AsString;
     FrmWeight1.CBGoods.Text := FieldByName('货名').AsString;
     FrmWeight1.CBSpec.Text := FieldByName('规格').AsString;
+    {
     if StrToFloatDef(FieldByName('净重').AsString, 0) = 0 then
     begin
       FrmWeight1.EdtGross.Text := FieldByName('毛重').AsString;
       FrmWeight1.EdtTare.Text := FieldByName('皮重').AsString;
       FrmWeight1.lastGlideNo := FieldByName('流水号').AsString;
     end;
+    }
     FrmWeight1.EdtCost.Text := FieldByName('过磅费').AsString;
     FrmWeight1.EdtQuanter.Text := FieldByName('方量').AsString;
 
@@ -3017,12 +3018,6 @@ begin
       ScanReportForm.Free;
     end;
   end;
-end;
-
-procedure TMainForm.TBPhoneClick(Sender: TObject);
-begin
-  if TUserUtil.HasAuthority('系统设置') then
-    UploadCloudForm.ShowModal;
 end;
 
 procedure TMainForm.ADefineExecute(Sender: TObject);
