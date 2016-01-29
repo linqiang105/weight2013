@@ -1,0 +1,137 @@
+create table tbl_company(
+	id int identity(1,1) primary key,
+	code nvarchar(20),
+	name nvarchar(50),
+	dbname nvarchar(50)
+)
+GO
+
+select * from tbl_weight_info_fzatw
+
+create table tbl_user(
+	id int identity(1,1) primary key,
+	username nvarchar(50),
+	[password] nvarchar(50),
+	tel nvarchar(50),
+	token nvarchar(50),
+	company int,
+	[left] numeric(18,3) default 0,
+	expireTime datetime default getdate(),
+	expired bit default 0
+)
+GO
+
+create table tbl_charge_history(
+	id int identity(1,1) primary key,
+	[user] int,
+	chargeMoney money,
+	chargeTime datetime default getdate(),
+	chargeFrom nvarchar(50)
+)
+GO
+
+create table tbl_weight_info_model(
+	id int identity(1,1),
+	glideNo nvarchar(50) primary key,
+	carNo nvarchar(50),
+	weightType nvarchar(2),
+	sender nvarchar(50),
+	receiver nvarchar(50),
+	goods nvarchar(50),
+	spec nvarchar(50),
+	gross numeric(10,3) DEFAULT 0,
+	tare numeric(10,3) DEFAULT 0,
+	net numeric(10,3) DEFAULT 0,
+	bundle numeric(10,3) DEFAULT 0,
+	[real] numeric(10,3) DEFAULT 0,
+	price numeric(10,3) DEFAULT 0,
+	[sum] numeric(10,3) DEFAULT 0,
+	scale numeric(10,3) DEFAULT 1,
+	quanter numeric(10,3) DEFAULT 0,
+	cost numeric(10,3) DEFAULT 0,
+	grossMan nvarchar(50),
+	tareMan nvarchar(50),
+	grossAddr nvarchar(50),
+	tareAddr nvarchar(50),
+	grossTime datetime,
+	tareTime datetime,
+	firstTime datetime,
+	secondTime datetime,
+	updateUser nvarchar(50),
+	updateTime datetime,
+	memo nvarchar(50),
+	printCount int DEFAULT 0,
+	upload bit DEFAULT 0,
+	backup1 nvarchar(50),
+	backup2 nvarchar(50),
+	backup3 nvarchar(50),
+	backup4 nvarchar(50),
+	backup5 nvarchar(50),
+	backup6  numeric(10,3) DEFAULT 0,
+	backup7  numeric(10,3) DEFAULT 0,
+	backup8  numeric(10,3) DEFAULT 0,
+	backup9  numeric(10,3) DEFAULT 0,
+	backup10 nvarchar(50),
+	backup11 nvarchar(50),
+	backup12 nvarchar(50),
+	backup13 nvarchar(50),
+	backup14 nvarchar(50),
+	backup15 numeric(10,3) DEFAULT 0,
+	backup16 numeric(10,3) DEFAULT 0,
+	backup17 numeric(10,3) DEFAULT 0,
+	backup18 numeric(10,3) DEFAULT 0
+)
+GO
+
+create table tbl_weight_info_fzatw(
+	id int identity(1,1),
+	glideNo nvarchar(50) primary key,
+	carNo nvarchar(50),
+	weightType nvarchar(2),
+	sender nvarchar(50),
+	receiver nvarchar(50),
+	goods nvarchar(50),
+	spec nvarchar(50),
+	gross numeric(10,3) DEFAULT 0,
+	tare numeric(10,3) DEFAULT 0,
+	net numeric(10,3) DEFAULT 0,
+	bundle numeric(10,3) DEFAULT 0,
+	[real] numeric(10,3) DEFAULT 0,
+	price numeric(10,3) DEFAULT 0,
+	[sum] numeric(10,3) DEFAULT 0,
+	scale numeric(10,3) DEFAULT 1,
+	quanter numeric(10,3) DEFAULT 0,
+	cost numeric(10,3) DEFAULT 0,
+	grossMan nvarchar(50),
+	tareMan nvarchar(50),
+	grossAddr nvarchar(50),
+	tareAddr nvarchar(50),
+	grossTime datetime,
+	tareTime datetime,
+	firstTime datetime,
+	secondTime datetime,
+	updateUser nvarchar(50),
+	updateTime datetime,
+	memo nvarchar(50),
+	printCount int DEFAULT 0,
+	upload bit DEFAULT 0,
+	backup1 nvarchar(50),
+	backup2 nvarchar(50),
+	backup3 nvarchar(50),
+	backup4 nvarchar(50),
+	backup5 nvarchar(50),
+	backup6  numeric(10,3) DEFAULT 0,
+	backup7  numeric(10,3) DEFAULT 0,
+	backup8  numeric(10,3) DEFAULT 0,
+	backup9  numeric(10,3) DEFAULT 0,
+	backup10 nvarchar(50),
+	backup11 nvarchar(50),
+	backup12 nvarchar(50),
+	backup13 nvarchar(50),
+	backup14 nvarchar(50),
+	backup15 numeric(10,3) DEFAULT 0,
+	backup16 numeric(10,3) DEFAULT 0,
+	backup17 numeric(10,3) DEFAULT 0,
+	backup18 numeric(10,3) DEFAULT 0 
+)
+GO

@@ -939,6 +939,7 @@ class function TMeterUtil.Personlize(s, startChar: string; start, len,
 var i, j, k: Integer;
   r, sTemp: string;
 begin
+  {
   sTemp := '';
   for i := 0 to Length(s) do
   begin
@@ -948,6 +949,7 @@ begin
     end;
   end;
   s := sTemp;
+  }
   if (Length(startChar) > 1) and (Copy(startChar, 1, 1) = '#') then
     StartChar := Chr(StrToInt(Copy(startChar, 2, Length(startChar))));
   for i := 0 to Length(s) do

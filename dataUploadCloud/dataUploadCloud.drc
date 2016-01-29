@@ -8,303 +8,305 @@
   resources were bound to the produced executable.
 */
 
-#define IdResourceStrings_RSSSLGetMethodError 65088
-#define IdResourceStrings_RSSSLDataBindingError 65089
-#define IdResourceStrings_RSOSSLModeNotSet 65090
-#define IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary 65091
-#define IdResourceStrings_RSOSSLStatusString 65092
-#define IdResourceStrings_RSUnevenSizeInDecodeStream 65093
-#define IdResourceStrings_RSUnevenSizeInEncodeStream 65094
-#define IdResourceStrings_RSURINoProto 65095
-#define IdResourceStrings_RSURINoHost 65096
-#define IdResourceStrings_RSSocksAuthError 65104
-#define IdResourceStrings_RSSocksServerGeneralError 65105
-#define IdResourceStrings_RSSocksServerPermissionError 65106
-#define IdResourceStrings_RSSocksServerNetUnreachableError 65107
-#define IdResourceStrings_RSSocksServerHostUnreachableError 65108
-#define IdResourceStrings_RSSocksServerConnectionRefusedError 65109
-#define IdResourceStrings_RSSocksServerTTLExpiredError 65110
-#define IdResourceStrings_RSSocksServerCommandError 65111
-#define IdResourceStrings_RSSocksServerAddressError 65112
-#define IdResourceStrings_RSSSLAcceptError 65113
-#define IdResourceStrings_RSSSLConnectError 65114
-#define IdResourceStrings_RSSSLSettingCipherError 65115
-#define IdResourceStrings_RSSSLCreatingContextError 65116
-#define IdResourceStrings_RSSSLLoadingRootCertError 65117
-#define IdResourceStrings_RSSSLLoadingCertError 65118
-#define IdResourceStrings_RSSSLLoadingKeyError 65119
-#define IdResourceStrings_RSStackESHUTDOWN 65120
-#define IdResourceStrings_RSStackETOOMANYREFS 65121
-#define IdResourceStrings_RSStackETIMEDOUT 65122
-#define IdResourceStrings_RSStackECONNREFUSED 65123
-#define IdResourceStrings_RSStackELOOP 65124
-#define IdResourceStrings_RSStackENAMETOOLONG 65125
-#define IdResourceStrings_RSStackEHOSTDOWN 65126
-#define IdResourceStrings_RSStackEHOSTUNREACH 65127
-#define IdResourceStrings_RSStackENOTEMPTY 65128
-#define IdResourceStrings_RSStackHOST_NOT_FOUND 65129
-#define IdResourceStrings_RSSocksRequestFailed 65130
-#define IdResourceStrings_RSSocksRequestServerFailed 65131
-#define IdResourceStrings_RSSocksRequestIdentFailed 65132
-#define IdResourceStrings_RSSocksUnknownError 65133
-#define IdResourceStrings_RSSocksServerRespondError 65134
-#define IdResourceStrings_RSSocksAuthMethodError 65135
-#define IdResourceStrings_RSStackENOPROTOOPT 65136
-#define IdResourceStrings_RSStackEPROTONOSUPPORT 65137
-#define IdResourceStrings_RSStackESOCKTNOSUPPORT 65138
-#define IdResourceStrings_RSStackEOPNOTSUPP 65139
-#define IdResourceStrings_RSStackEPFNOSUPPORT 65140
-#define IdResourceStrings_RSStackEAFNOSUPPORT 65141
-#define IdResourceStrings_RSStackEADDRINUSE 65142
-#define IdResourceStrings_RSStackEADDRNOTAVAIL 65143
-#define IdResourceStrings_RSStackENETDOWN 65144
-#define IdResourceStrings_RSStackENETUNREACH 65145
-#define IdResourceStrings_RSStackENETRESET 65146
-#define IdResourceStrings_RSStackECONNABORTED 65147
-#define IdResourceStrings_RSStackECONNRESET 65148
-#define IdResourceStrings_RSStackENOBUFS 65149
-#define IdResourceStrings_RSStackEISCONN 65150
-#define IdResourceStrings_RSStackENOTCONN 65151
-#define IdResourceStrings_RSHTTPAuthAlreadyRegistered 65152
-#define IdResourceStrings_RSInvalidServiceName 65153
-#define IdResourceStrings_RSStackError 65154
-#define IdResourceStrings_RSStackEINTR 65155
-#define IdResourceStrings_RSStackEBADF 65156
-#define IdResourceStrings_RSStackEACCES 65157
-#define IdResourceStrings_RSStackEFAULT 65158
-#define IdResourceStrings_RSStackEINVAL 65159
-#define IdResourceStrings_RSStackEMFILE 65160
-#define IdResourceStrings_RSStackEWOULDBLOCK 65161
-#define IdResourceStrings_RSStackEINPROGRESS 65162
-#define IdResourceStrings_RSStackEALREADY 65163
-#define IdResourceStrings_RSStackENOTSOCK 65164
-#define IdResourceStrings_RSStackEDESTADDRREQ 65165
-#define IdResourceStrings_RSStackEMSGSIZE 65166
-#define IdResourceStrings_RSStackEPROTOTYPE 65167
-#define IdResourceStrings_RSNotConnected 65168
-#define IdResourceStrings_RSIdNoDataToRead 65169
-#define IdResourceStrings_RSCanNotBindRange 65170
-#define IdResourceStrings_RSInvalidPortRange 65171
-#define IdResourceStrings_RSReadTimeout 65172
-#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 65173
-#define IdResourceStrings_RSWS2CallError 65174
-#define IdResourceStrings_RSWS2LoadError 65175
-#define IdResourceStrings_RSStatusResolving 65176
-#define IdResourceStrings_RSStatusConnecting 65177
-#define IdResourceStrings_RSStatusConnected 65178
-#define IdResourceStrings_RSStatusDisconnecting 65179
-#define IdResourceStrings_RSStatusDisconnected 65180
-#define IdResourceStrings_RSStatusText 65181
-#define IdResourceStrings_RSConnectTimeout 65182
-#define IdResourceStrings_RSHTTPChunkStarted 65183
-#define ADOConst_SCantRequery 65184
-#define ADOConst_SNoFilterOptions 65185
-#define ADOConst_SRecordsetNotOpen 65186
-#define ADOConst_sNameAttr 65187
-#define ADOConst_sValueAttr 65188
-#define IdResourceStrings_RSAlreadyConnected 65189
-#define IdResourceStrings_RSCannotAllocateSocket 65190
-#define IdResourceStrings_RSConnectionClosedGracefully 65191
-#define IdResourceStrings_RSCouldNotBindSocket 65192
-#define IdResourceStrings_RSFailedTimeZoneInfo 65193
-#define IdResourceStrings_RSNotEnoughDataInBuffer 65194
-#define IdResourceStrings_RSWinsockInitializationError 65195
-#define IdResourceStrings_RSSetSizeExceeded 65196
-#define IdResourceStrings_RSFileNotFound 65197
-#define IdResourceStrings_RSOnlyOneAntiFreeze 65198
-#define IdResourceStrings_RSIOHandlerPropInvalid 65199
-#define DBConsts_SCouldNotParseTimeStamp 65200
-#define DBConsts_SInvalidSqlTimeStamp 65201
-#define ComConst_SOleError 65202
-#define ComConst_SNoMethod 65203
-#define ComConst_SVarNotObject 65204
-#define ComConst_STooManyParams 65205
-#define ADOConst_SInvalidEnumValue 65206
-#define ADOConst_SMissingConnection 65207
-#define ADOConst_SNoDetailFilter 65208
-#define ADOConst_SBookmarksRequired 65209
-#define ADOConst_SMissingCommandText 65210
-#define ADOConst_SNoResultSet 65211
-#define ADOConst_SADOCreateError 65212
-#define ADOConst_SEventsNotSupported 65213
-#define ADOConst_SUsupportedFieldType 65214
-#define ADOConst_SConnectionRequired 65215
-#define DBConsts_SNotEditing 65216
-#define DBConsts_SDataSetClosed 65217
-#define DBConsts_SNestedDataSetClass 65218
-#define DBConsts_STextFalse 65219
-#define DBConsts_STextTrue 65220
-#define DBConsts_SParameterNotFound 65221
-#define DBConsts_SInvalidVersion 65222
-#define DBConsts_SBadFieldType 65223
-#define DBConsts_SProviderSQLNotSupported 65224
-#define DBConsts_SProviderExecuteNotSupported 65225
-#define DBConsts_SDataSetUnidirectional 65226
-#define DBConsts_SUnassignedVar 65227
-#define DBConsts_SRecordNotFound 65228
-#define DBConsts_SBcdOverflow 65229
-#define DBConsts_SInvalidBcdValue 65230
-#define DBConsts_SInvalidFormatType 65231
-#define DBConsts_SInvalidBoolValue 65232
-#define DBConsts_SInvalidFloatValue 65233
-#define DBConsts_SFieldTypeMismatch 65234
-#define DBConsts_SFieldSizeMismatch 65235
-#define DBConsts_SInvalidVarByteArray 65236
-#define DBConsts_SFieldOutOfRange 65237
-#define DBConsts_SFieldRequired 65238
-#define DBConsts_SDataSetMissing 65239
-#define DBConsts_SInvalidCalcType 65240
-#define DBConsts_SFieldReadOnly 65241
-#define DBConsts_SNoIndexForFields 65242
-#define DBConsts_SIndexNotFound 65243
-#define DBConsts_SCircularDataLink 65244
-#define DBConsts_SLookupInfoError 65245
-#define DBConsts_SDataSourceChange 65246
-#define DBConsts_SDataSetOpen 65247
-#define ExtCtrls_clName3DLight 65248
-#define ExtCtrls_clNameWindow 65249
-#define ExtCtrls_clNameWindowFrame 65250
-#define ExtCtrls_clNameWindowText 65251
-#define WinHelpViewer_hNoKeyword 65252
-#define DBConsts_SInvalidFieldSize 65253
-#define DBConsts_SInvalidFieldKind 65254
-#define DBConsts_SUnknownFieldType 65255
-#define DBConsts_SFieldNameMissing 65256
-#define DBConsts_SDuplicateFieldName 65257
-#define DBConsts_SFieldNotFound 65258
-#define DBConsts_SFieldAccessError 65259
-#define DBConsts_SFieldValueError 65260
-#define DBConsts_SFieldRangeError 65261
-#define DBConsts_SBcdFieldRangeError 65262
-#define DBConsts_SInvalidIntegerValue 65263
-#define ExtCtrls_clNameBtnText 65264
-#define ExtCtrls_clNameCaptionText 65265
-#define ExtCtrls_clNameDefault 65266
-#define ExtCtrls_clNameGrayText 65267
-#define ExtCtrls_clNameHighlight 65268
-#define ExtCtrls_clNameHighlightText 65269
-#define ExtCtrls_clNameInactiveBorder 65270
-#define ExtCtrls_clNameInactiveCaption 65271
-#define ExtCtrls_clNameInactiveCaptionText 65272
-#define ExtCtrls_clNameInfoBk 65273
-#define ExtCtrls_clNameInfoText 65274
-#define ExtCtrls_clNameMenu 65275
-#define ExtCtrls_clNameMenuText 65276
-#define ExtCtrls_clNameNone 65277
-#define ExtCtrls_clNameScrollBar 65278
-#define ExtCtrls_clName3DDkShadow 65279
-#define ExtCtrls_clNameYellow 65280
-#define ExtCtrls_clNameBlue 65281
-#define ExtCtrls_clNameFuchsia 65282
-#define ExtCtrls_clNameAqua 65283
-#define ExtCtrls_clNameWhite 65284
-#define ExtCtrls_clNameMoneyGreen 65285
-#define ExtCtrls_clNameSkyBlue 65286
-#define ExtCtrls_clNameCream 65287
-#define ExtCtrls_clNameMedGray 65288
-#define ExtCtrls_clNameActiveBorder 65289
-#define ExtCtrls_clNameActiveCaption 65290
-#define ExtCtrls_clNameAppWorkSpace 65291
-#define ExtCtrls_clNameBackground 65292
-#define ExtCtrls_clNameBtnFace 65293
-#define ExtCtrls_clNameBtnHighlight 65294
-#define ExtCtrls_clNameBtnShadow 65295
-#define Consts_SDockZoneHasNoCtl 65296
-#define HelpIntfs_hNoTableOfContents 65297
-#define HelpIntfs_hNothingFound 65298
-#define HelpIntfs_hNoContext 65299
-#define HelpIntfs_hNoTopics 65300
-#define ExtCtrls_clNameBlack 65301
-#define ExtCtrls_clNameMaroon 65302
-#define ExtCtrls_clNameGreen 65303
-#define ExtCtrls_clNameOlive 65304
-#define ExtCtrls_clNameNavy 65305
-#define ExtCtrls_clNamePurple 65306
-#define ExtCtrls_clNameTeal 65307
-#define ExtCtrls_clNameGray 65308
-#define ExtCtrls_clNameSilver 65309
-#define ExtCtrls_clNameRed 65310
-#define ExtCtrls_clNameLime 65311
-#define Consts_SmkcLeft 65312
-#define Consts_SmkcUp 65313
-#define Consts_SmkcRight 65314
-#define Consts_SmkcDown 65315
-#define Consts_SmkcIns 65316
-#define Consts_SmkcDel 65317
-#define Consts_SmkcShift 65318
-#define Consts_SmkcCtrl 65319
-#define Consts_SmkcAlt 65320
-#define Consts_SIconToClipboard 65321
-#define Consts_SCannotOpenClipboard 65322
-#define Consts_SInvalidMemoSize 65323
-#define Consts_SDuplicateMenus 65324
-#define Consts_SDockedCtlNeedsName 65325
-#define Consts_SDockTreeRemoveError 65326
-#define Consts_SDockZoneNotFound 65327
-#define Consts_SMsgDlgHelp 65328
-#define Consts_SMsgDlgAbort 65329
-#define Consts_SMsgDlgRetry 65330
-#define Consts_SMsgDlgIgnore 65331
-#define Consts_SMsgDlgAll 65332
-#define Consts_SMsgDlgNoToAll 65333
-#define Consts_SMsgDlgYesToAll 65334
-#define Consts_SmkcBkSp 65335
-#define Consts_SmkcTab 65336
-#define Consts_SmkcEsc 65337
-#define Consts_SmkcEnter 65338
-#define Consts_SmkcSpace 65339
-#define Consts_SmkcPgUp 65340
-#define Consts_SmkcPgDn 65341
-#define Consts_SmkcEnd 65342
-#define Consts_SmkcHome 65343
-#define Consts_SRetryButton 65344
-#define Consts_SAbortButton 65345
-#define Consts_SAllButton 65346
-#define Consts_SCannotDragForm 65347
-#define Consts_SVMetafiles 65348
-#define Consts_SVEnhMetafiles 65349
-#define Consts_SVIcons 65350
-#define Consts_SVBitmaps 65351
-#define Consts_SMsgDlgWarning 65352
-#define Consts_SMsgDlgError 65353
-#define Consts_SMsgDlgInformation 65354
-#define Consts_SMsgDlgConfirm 65355
-#define Consts_SMsgDlgYes 65356
-#define Consts_SMsgDlgNo 65357
-#define Consts_SMsgDlgOK 65358
-#define Consts_SMsgDlgCancel 65359
-#define Consts_SVisibleChanged 65360
-#define Consts_SCannotShowModal 65361
-#define Consts_SMenuIndexError 65362
-#define Consts_SMenuReinserted 65363
-#define Consts_SMenuNotFound 65364
-#define Consts_SNoTimers 65365
-#define Consts_SGroupIndexTooLow 65366
-#define Consts_SNoMDIForm 65367
-#define Consts_SControlParentSetToSelf 65368
-#define Consts_SOKButton 65369
-#define Consts_SCancelButton 65370
-#define Consts_SYesButton 65371
-#define Consts_SNoButton 65372
-#define Consts_SHelpButton 65373
-#define Consts_SCloseButton 65374
-#define Consts_SIgnoreButton 65375
+#define IdResourceStrings_RSSSLLoadingCertError 65088
+#define IdResourceStrings_RSSSLLoadingKeyError 65089
+#define IdResourceStrings_RSSSLGetMethodError 65090
+#define IdResourceStrings_RSSSLDataBindingError 65091
+#define IdResourceStrings_RSOSSLModeNotSet 65092
+#define IdResourceStrings_RSOSSLCouldNotLoadSSLLibrary 65093
+#define IdResourceStrings_RSOSSLStatusString 65094
+#define IdResourceStrings_RSUnevenSizeInDecodeStream 65095
+#define IdResourceStrings_RSUnevenSizeInEncodeStream 65096
+#define IdResourceStrings_RSURINoProto 65097
+#define IdResourceStrings_RSURINoHost 65098
+#define IdResourceStrings_RSSocksServerRespondError 65104
+#define IdResourceStrings_RSSocksAuthMethodError 65105
+#define IdResourceStrings_RSSocksAuthError 65106
+#define IdResourceStrings_RSSocksServerGeneralError 65107
+#define IdResourceStrings_RSSocksServerPermissionError 65108
+#define IdResourceStrings_RSSocksServerNetUnreachableError 65109
+#define IdResourceStrings_RSSocksServerHostUnreachableError 65110
+#define IdResourceStrings_RSSocksServerConnectionRefusedError 65111
+#define IdResourceStrings_RSSocksServerTTLExpiredError 65112
+#define IdResourceStrings_RSSocksServerCommandError 65113
+#define IdResourceStrings_RSSocksServerAddressError 65114
+#define IdResourceStrings_RSSSLAcceptError 65115
+#define IdResourceStrings_RSSSLConnectError 65116
+#define IdResourceStrings_RSSSLSettingCipherError 65117
+#define IdResourceStrings_RSSSLCreatingContextError 65118
+#define IdResourceStrings_RSSSLLoadingRootCertError 65119
+#define IdResourceStrings_RSStackEISCONN 65120
+#define IdResourceStrings_RSStackENOTCONN 65121
+#define IdResourceStrings_RSStackESHUTDOWN 65122
+#define IdResourceStrings_RSStackETOOMANYREFS 65123
+#define IdResourceStrings_RSStackETIMEDOUT 65124
+#define IdResourceStrings_RSStackECONNREFUSED 65125
+#define IdResourceStrings_RSStackELOOP 65126
+#define IdResourceStrings_RSStackENAMETOOLONG 65127
+#define IdResourceStrings_RSStackEHOSTDOWN 65128
+#define IdResourceStrings_RSStackEHOSTUNREACH 65129
+#define IdResourceStrings_RSStackENOTEMPTY 65130
+#define IdResourceStrings_RSStackHOST_NOT_FOUND 65131
+#define IdResourceStrings_RSSocksRequestFailed 65132
+#define IdResourceStrings_RSSocksRequestServerFailed 65133
+#define IdResourceStrings_RSSocksRequestIdentFailed 65134
+#define IdResourceStrings_RSSocksUnknownError 65135
+#define IdResourceStrings_RSStackEMSGSIZE 65136
+#define IdResourceStrings_RSStackEPROTOTYPE 65137
+#define IdResourceStrings_RSStackENOPROTOOPT 65138
+#define IdResourceStrings_RSStackEPROTONOSUPPORT 65139
+#define IdResourceStrings_RSStackESOCKTNOSUPPORT 65140
+#define IdResourceStrings_RSStackEOPNOTSUPP 65141
+#define IdResourceStrings_RSStackEPFNOSUPPORT 65142
+#define IdResourceStrings_RSStackEAFNOSUPPORT 65143
+#define IdResourceStrings_RSStackEADDRINUSE 65144
+#define IdResourceStrings_RSStackEADDRNOTAVAIL 65145
+#define IdResourceStrings_RSStackENETDOWN 65146
+#define IdResourceStrings_RSStackENETUNREACH 65147
+#define IdResourceStrings_RSStackENETRESET 65148
+#define IdResourceStrings_RSStackECONNABORTED 65149
+#define IdResourceStrings_RSStackECONNRESET 65150
+#define IdResourceStrings_RSStackENOBUFS 65151
+#define IdResourceStrings_RSConnectTimeout 65152
+#define IdResourceStrings_RSHTTPChunkStarted 65153
+#define IdResourceStrings_RSHTTPAuthAlreadyRegistered 65154
+#define IdResourceStrings_RSInvalidServiceName 65155
+#define IdResourceStrings_RSStackError 65156
+#define IdResourceStrings_RSStackEINTR 65157
+#define IdResourceStrings_RSStackEBADF 65158
+#define IdResourceStrings_RSStackEACCES 65159
+#define IdResourceStrings_RSStackEFAULT 65160
+#define IdResourceStrings_RSStackEINVAL 65161
+#define IdResourceStrings_RSStackEMFILE 65162
+#define IdResourceStrings_RSStackEWOULDBLOCK 65163
+#define IdResourceStrings_RSStackEINPROGRESS 65164
+#define IdResourceStrings_RSStackEALREADY 65165
+#define IdResourceStrings_RSStackENOTSOCK 65166
+#define IdResourceStrings_RSStackEDESTADDRREQ 65167
+#define IdResourceStrings_RSOnlyOneAntiFreeze 65168
+#define IdResourceStrings_RSIOHandlerPropInvalid 65169
+#define IdResourceStrings_RSNotConnected 65170
+#define IdResourceStrings_RSIdNoDataToRead 65171
+#define IdResourceStrings_RSCanNotBindRange 65172
+#define IdResourceStrings_RSInvalidPortRange 65173
+#define IdResourceStrings_RSReadTimeout 65174
+#define IdResourceStrings_RSReadLnMaxLineLengthExceeded 65175
+#define IdResourceStrings_RSWS2CallError 65176
+#define IdResourceStrings_RSWS2LoadError 65177
+#define IdResourceStrings_RSStatusResolving 65178
+#define IdResourceStrings_RSStatusConnecting 65179
+#define IdResourceStrings_RSStatusConnected 65180
+#define IdResourceStrings_RSStatusDisconnecting 65181
+#define IdResourceStrings_RSStatusDisconnected 65182
+#define IdResourceStrings_RSStatusText 65183
+#define ADOConst_SUsupportedFieldType 65184
+#define ADOConst_SConnectionRequired 65185
+#define ADOConst_SCantRequery 65186
+#define ADOConst_SNoFilterOptions 65187
+#define ADOConst_SRecordsetNotOpen 65188
+#define ADOConst_sNameAttr 65189
+#define ADOConst_sValueAttr 65190
+#define IdResourceStrings_RSAlreadyConnected 65191
+#define IdResourceStrings_RSCannotAllocateSocket 65192
+#define IdResourceStrings_RSConnectionClosedGracefully 65193
+#define IdResourceStrings_RSCouldNotBindSocket 65194
+#define IdResourceStrings_RSFailedTimeZoneInfo 65195
+#define IdResourceStrings_RSNotEnoughDataInBuffer 65196
+#define IdResourceStrings_RSWinsockInitializationError 65197
+#define IdResourceStrings_RSSetSizeExceeded 65198
+#define IdResourceStrings_RSFileNotFound 65199
+#define DBConsts_SInvalidBcdValue 65200
+#define DBConsts_SInvalidFormatType 65201
+#define DBConsts_SCouldNotParseTimeStamp 65202
+#define DBConsts_SInvalidSqlTimeStamp 65203
+#define ComConst_SOleError 65204
+#define ComConst_SNoMethod 65205
+#define ComConst_SVarNotObject 65206
+#define ComConst_STooManyParams 65207
+#define ADOConst_SInvalidEnumValue 65208
+#define ADOConst_SMissingConnection 65209
+#define ADOConst_SNoDetailFilter 65210
+#define ADOConst_SBookmarksRequired 65211
+#define ADOConst_SMissingCommandText 65212
+#define ADOConst_SNoResultSet 65213
+#define ADOConst_SADOCreateError 65214
+#define ADOConst_SEventsNotSupported 65215
+#define DBConsts_SDataSourceChange 65216
+#define DBConsts_SDataSetOpen 65217
+#define DBConsts_SNotEditing 65218
+#define DBConsts_SDataSetClosed 65219
+#define DBConsts_SNestedDataSetClass 65220
+#define DBConsts_STextFalse 65221
+#define DBConsts_STextTrue 65222
+#define DBConsts_SParameterNotFound 65223
+#define DBConsts_SInvalidVersion 65224
+#define DBConsts_SBadFieldType 65225
+#define DBConsts_SProviderSQLNotSupported 65226
+#define DBConsts_SProviderExecuteNotSupported 65227
+#define DBConsts_SDataSetUnidirectional 65228
+#define DBConsts_SUnassignedVar 65229
+#define DBConsts_SRecordNotFound 65230
+#define DBConsts_SBcdOverflow 65231
+#define DBConsts_SBcdFieldRangeError 65232
+#define DBConsts_SInvalidIntegerValue 65233
+#define DBConsts_SInvalidBoolValue 65234
+#define DBConsts_SInvalidFloatValue 65235
+#define DBConsts_SFieldTypeMismatch 65236
+#define DBConsts_SFieldSizeMismatch 65237
+#define DBConsts_SInvalidVarByteArray 65238
+#define DBConsts_SFieldOutOfRange 65239
+#define DBConsts_SFieldRequired 65240
+#define DBConsts_SDataSetMissing 65241
+#define DBConsts_SInvalidCalcType 65242
+#define DBConsts_SFieldReadOnly 65243
+#define DBConsts_SNoIndexForFields 65244
+#define DBConsts_SIndexNotFound 65245
+#define DBConsts_SCircularDataLink 65246
+#define DBConsts_SLookupInfoError 65247
+#define ExtCtrls_clNameScrollBar 65248
+#define ExtCtrls_clName3DDkShadow 65249
+#define ExtCtrls_clName3DLight 65250
+#define ExtCtrls_clNameWindow 65251
+#define ExtCtrls_clNameWindowFrame 65252
+#define ExtCtrls_clNameWindowText 65253
+#define WinHelpViewer_hNoKeyword 65254
+#define DBConsts_SInvalidFieldSize 65255
+#define DBConsts_SInvalidFieldKind 65256
+#define DBConsts_SUnknownFieldType 65257
+#define DBConsts_SFieldNameMissing 65258
+#define DBConsts_SDuplicateFieldName 65259
+#define DBConsts_SFieldNotFound 65260
+#define DBConsts_SFieldAccessError 65261
+#define DBConsts_SFieldValueError 65262
+#define DBConsts_SFieldRangeError 65263
+#define ExtCtrls_clNameBtnHighlight 65264
+#define ExtCtrls_clNameBtnShadow 65265
+#define ExtCtrls_clNameBtnText 65266
+#define ExtCtrls_clNameCaptionText 65267
+#define ExtCtrls_clNameDefault 65268
+#define ExtCtrls_clNameGrayText 65269
+#define ExtCtrls_clNameHighlight 65270
+#define ExtCtrls_clNameHighlightText 65271
+#define ExtCtrls_clNameInactiveBorder 65272
+#define ExtCtrls_clNameInactiveCaption 65273
+#define ExtCtrls_clNameInactiveCaptionText 65274
+#define ExtCtrls_clNameInfoBk 65275
+#define ExtCtrls_clNameInfoText 65276
+#define ExtCtrls_clNameMenu 65277
+#define ExtCtrls_clNameMenuText 65278
+#define ExtCtrls_clNameNone 65279
+#define ExtCtrls_clNameRed 65280
+#define ExtCtrls_clNameLime 65281
+#define ExtCtrls_clNameYellow 65282
+#define ExtCtrls_clNameBlue 65283
+#define ExtCtrls_clNameFuchsia 65284
+#define ExtCtrls_clNameAqua 65285
+#define ExtCtrls_clNameWhite 65286
+#define ExtCtrls_clNameMoneyGreen 65287
+#define ExtCtrls_clNameSkyBlue 65288
+#define ExtCtrls_clNameCream 65289
+#define ExtCtrls_clNameMedGray 65290
+#define ExtCtrls_clNameActiveBorder 65291
+#define ExtCtrls_clNameActiveCaption 65292
+#define ExtCtrls_clNameAppWorkSpace 65293
+#define ExtCtrls_clNameBackground 65294
+#define ExtCtrls_clNameBtnFace 65295
+#define Consts_SDockTreeRemoveError 65296
+#define Consts_SDockZoneNotFound 65297
+#define Consts_SDockZoneHasNoCtl 65298
+#define HelpIntfs_hNoTableOfContents 65299
+#define HelpIntfs_hNothingFound 65300
+#define HelpIntfs_hNoContext 65301
+#define HelpIntfs_hNoTopics 65302
+#define ExtCtrls_clNameBlack 65303
+#define ExtCtrls_clNameMaroon 65304
+#define ExtCtrls_clNameGreen 65305
+#define ExtCtrls_clNameOlive 65306
+#define ExtCtrls_clNameNavy 65307
+#define ExtCtrls_clNamePurple 65308
+#define ExtCtrls_clNameTeal 65309
+#define ExtCtrls_clNameGray 65310
+#define ExtCtrls_clNameSilver 65311
+#define Consts_SmkcEnd 65312
+#define Consts_SmkcHome 65313
+#define Consts_SmkcLeft 65314
+#define Consts_SmkcUp 65315
+#define Consts_SmkcRight 65316
+#define Consts_SmkcDown 65317
+#define Consts_SmkcIns 65318
+#define Consts_SmkcDel 65319
+#define Consts_SmkcShift 65320
+#define Consts_SmkcCtrl 65321
+#define Consts_SmkcAlt 65322
+#define Consts_SIconToClipboard 65323
+#define Consts_SCannotOpenClipboard 65324
+#define Consts_SInvalidMemoSize 65325
+#define Consts_SDuplicateMenus 65326
+#define Consts_SDockedCtlNeedsName 65327
+#define Consts_SMsgDlgOK 65328
+#define Consts_SMsgDlgCancel 65329
+#define Consts_SMsgDlgHelp 65330
+#define Consts_SMsgDlgAbort 65331
+#define Consts_SMsgDlgRetry 65332
+#define Consts_SMsgDlgIgnore 65333
+#define Consts_SMsgDlgAll 65334
+#define Consts_SMsgDlgNoToAll 65335
+#define Consts_SMsgDlgYesToAll 65336
+#define Consts_SmkcBkSp 65337
+#define Consts_SmkcTab 65338
+#define Consts_SmkcEsc 65339
+#define Consts_SmkcEnter 65340
+#define Consts_SmkcSpace 65341
+#define Consts_SmkcPgUp 65342
+#define Consts_SmkcPgDn 65343
+#define Consts_SCloseButton 65344
+#define Consts_SIgnoreButton 65345
+#define Consts_SRetryButton 65346
+#define Consts_SAbortButton 65347
+#define Consts_SAllButton 65348
+#define Consts_SCannotDragForm 65349
+#define Consts_SVMetafiles 65350
+#define Consts_SVEnhMetafiles 65351
+#define Consts_SVIcons 65352
+#define Consts_SVBitmaps 65353
+#define Consts_SMsgDlgWarning 65354
+#define Consts_SMsgDlgError 65355
+#define Consts_SMsgDlgInformation 65356
+#define Consts_SMsgDlgConfirm 65357
+#define Consts_SMsgDlgYes 65358
+#define Consts_SMsgDlgNo 65359
+#define Consts_SParentRequired 65360
+#define Consts_SMDIChildNotVisible 65361
+#define Consts_SVisibleChanged 65362
+#define Consts_SCannotShowModal 65363
+#define Consts_SMenuIndexError 65364
+#define Consts_SMenuReinserted 65365
+#define Consts_SMenuNotFound 65366
+#define Consts_SNoTimers 65367
+#define Consts_SGroupIndexTooLow 65368
+#define Consts_SNoMDIForm 65369
+#define Consts_SControlParentSetToSelf 65370
+#define Consts_SOKButton 65371
+#define Consts_SCancelButton 65372
+#define Consts_SYesButton 65373
+#define Consts_SNoButton 65374
+#define Consts_SHelpButton 65375
 #define Consts_SInvalidIcon 65376
 #define Consts_SInvalidMetafile 65377
-#define Consts_SChangeIconSize 65378
-#define Consts_SUnknownClipboardFormat 65379
-#define Consts_SOutOfResources 65380
-#define Consts_SNoCanvasHandle 65381
-#define Consts_SInvalidImageSize 65382
-#define Consts_SInvalidImageList 65383
-#define Consts_SImageIndexError 65384
-#define Consts_SImageReadFail 65385
-#define Consts_SImageWriteFail 65386
-#define Consts_SWindowDCError 65387
-#define Consts_SWindowClass 65388
-#define Consts_SCannotFocus 65389
-#define Consts_SParentRequired 65390
-#define Consts_SMDIChildNotVisible 65391
+#define Consts_SInvalidPixelFormat 65378
+#define Consts_SScanLine 65379
+#define Consts_SChangeIconSize 65380
+#define Consts_SUnknownClipboardFormat 65381
+#define Consts_SOutOfResources 65382
+#define Consts_SNoCanvasHandle 65383
+#define Consts_SInvalidImageSize 65384
+#define Consts_SInvalidImageList 65385
+#define Consts_SImageIndexError 65386
+#define Consts_SImageReadFail 65387
+#define Consts_SImageWriteFail 65388
+#define Consts_SWindowDCError 65389
+#define Consts_SWindowClass 65390
+#define Consts_SCannotFocus 65391
 #define RTLConsts_SListCountError 65392
 #define RTLConsts_SListIndexError 65393
 #define RTLConsts_SMemoryStreamError 65394
@@ -451,6 +453,8 @@
 #define SysConst_SDiskFull 65535
 STRINGTABLE
 BEGIN
+	IdResourceStrings_RSSSLLoadingCertError,	"Could not load certificate."
+	IdResourceStrings_RSSSLLoadingKeyError,	"Could not load key, check password."
 	IdResourceStrings_RSSSLGetMethodError,	"Error geting SSL method."
 	IdResourceStrings_RSSSLDataBindingError,	"Error binding data to SSL socket."
 	IdResourceStrings_RSOSSLModeNotSet,	"Mode has not been set."
@@ -460,6 +464,8 @@ BEGIN
 	IdResourceStrings_RSUnevenSizeInEncodeStream,	"Uneven size in Encode."
 	IdResourceStrings_RSURINoProto,	"Protocol field is empty"
 	IdResourceStrings_RSURINoHost,	"Host field is empty"
+	IdResourceStrings_RSSocksServerRespondError,	"Socks server did not respond."
+	IdResourceStrings_RSSocksAuthMethodError,	"Invalid socks authentication method."
 	IdResourceStrings_RSSocksAuthError,	"Authentication error to socks server."
 	IdResourceStrings_RSSocksServerGeneralError,	"General SOCKS server failure."
 	IdResourceStrings_RSSocksServerPermissionError,	"Connection not allowed by ruleset."
@@ -474,8 +480,8 @@ BEGIN
 	IdResourceStrings_RSSSLSettingCipherError,	"SetCipher failed."
 	IdResourceStrings_RSSSLCreatingContextError,	"Error creating SSL context."
 	IdResourceStrings_RSSSLLoadingRootCertError,	"Could not load root certificate."
-	IdResourceStrings_RSSSLLoadingCertError,	"Could not load certificate."
-	IdResourceStrings_RSSSLLoadingKeyError,	"Could not load key, check password."
+	IdResourceStrings_RSStackEISCONN,	"Socket is already connected."
+	IdResourceStrings_RSStackENOTCONN,	"Socket is not connected."
 	IdResourceStrings_RSStackESHUTDOWN,	"Cannot send or receive after socket is closed."
 	IdResourceStrings_RSStackETOOMANYREFS,	"Too many references, cannot splice."
 	IdResourceStrings_RSStackETIMEDOUT,	"Connection timed out."
@@ -490,8 +496,8 @@ BEGIN
 	IdResourceStrings_RSSocksRequestServerFailed,	"Request rejected because SOCKS server cannot connect."
 	IdResourceStrings_RSSocksRequestIdentFailed,	"Request rejected because the client program and identd report different user-ids."
 	IdResourceStrings_RSSocksUnknownError,	"Unknown socks error."
-	IdResourceStrings_RSSocksServerRespondError,	"Socks server did not respond."
-	IdResourceStrings_RSSocksAuthMethodError,	"Invalid socks authentication method."
+	IdResourceStrings_RSStackEMSGSIZE,	"Message too long."
+	IdResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
 	IdResourceStrings_RSStackENOPROTOOPT,	"Bad protocol option."
 	IdResourceStrings_RSStackEPROTONOSUPPORT,	"Protocol not supported."
 	IdResourceStrings_RSStackESOCKTNOSUPPORT,	"Socket type not supported."
@@ -506,8 +512,8 @@ BEGIN
 	IdResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
 	IdResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
 	IdResourceStrings_RSStackENOBUFS,	"No buffer space available."
-	IdResourceStrings_RSStackEISCONN,	"Socket is already connected."
-	IdResourceStrings_RSStackENOTCONN,	"Socket is not connected."
+	IdResourceStrings_RSConnectTimeout,	"Connect timed out."
+	IdResourceStrings_RSHTTPChunkStarted,	"Chunk Started"
 	IdResourceStrings_RSHTTPAuthAlreadyRegistered,	"This authentication method is already registered with class name %s."
 	IdResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
 	IdResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
@@ -522,8 +528,8 @@ BEGIN
 	IdResourceStrings_RSStackEALREADY,	"Operation already in progress."
 	IdResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
 	IdResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
-	IdResourceStrings_RSStackEMSGSIZE,	"Message too long."
-	IdResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
+	IdResourceStrings_RSOnlyOneAntiFreeze,	"Only one TIdAntiFreeze can exist per application."
+	IdResourceStrings_RSIOHandlerPropInvalid,	"IOHandler value is not valid"
 	IdResourceStrings_RSNotConnected,	"Not Connected"
 	IdResourceStrings_RSIdNoDataToRead,	"No data to read."
 	IdResourceStrings_RSCanNotBindRange,	"Can not bind in port range (%d - %d)"
@@ -538,8 +544,8 @@ BEGIN
 	IdResourceStrings_RSStatusDisconnecting,	"Disconnecting."
 	IdResourceStrings_RSStatusDisconnected,	"Disconnected."
 	IdResourceStrings_RSStatusText,	"%s"
-	IdResourceStrings_RSConnectTimeout,	"Connect timed out."
-	IdResourceStrings_RSHTTPChunkStarted,	"Chunk Started"
+	ADOConst_SUsupportedFieldType,	"Unsupported field type (%s) in field %s"
+	ADOConst_SConnectionRequired,	"A connection component is required for async ExecuteOptions"
 	ADOConst_SCantRequery,	"Cannot perform a requery after connection has changed"
 	ADOConst_SNoFilterOptions,	"FilterOptions are not supported"
 	ADOConst_SRecordsetNotOpen,	"Recordset is not open"
@@ -554,8 +560,8 @@ BEGIN
 	IdResourceStrings_RSWinsockInitializationError,	"Winsock Initialization Error."
 	IdResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
 	IdResourceStrings_RSFileNotFound,	"File \"%s\" not found"
-	IdResourceStrings_RSOnlyOneAntiFreeze,	"Only one TIdAntiFreeze can exist per application."
-	IdResourceStrings_RSIOHandlerPropInvalid,	"IOHandler value is not valid"
+	DBConsts_SInvalidBcdValue,	"%s is not a valid BCD value"
+	DBConsts_SInvalidFormatType,	"Invalid format type for BCD"
 	DBConsts_SCouldNotParseTimeStamp,	"Could not parse SQL TimeStamp string"
 	DBConsts_SInvalidSqlTimeStamp,	"Invalid SQL date/time values"
 	ComConst_SOleError,	"OLE error %.8x"
@@ -570,8 +576,8 @@ BEGIN
 	ADOConst_SNoResultSet,	"CommandText does not return a result set"
 	ADOConst_SADOCreateError,	"Error creating object.  Please verify that the Microsoft Data Access Components 2.1 (or later) have been properly installed"
 	ADOConst_SEventsNotSupported,	"Events are not supported with server side TableDirect cursors"
-	ADOConst_SUsupportedFieldType,	"Unsupported field type (%s) in field %s"
-	ADOConst_SConnectionRequired,	"A connection component is required for async ExecuteOptions"
+	DBConsts_SDataSourceChange,	"DataSource cannot be changed"
+	DBConsts_SDataSetOpen,	"Cannot perform this operation on an open dataset"
 	DBConsts_SNotEditing,	"Dataset not in edit or insert mode"
 	DBConsts_SDataSetClosed,	"Cannot perform this operation on a closed dataset"
 	DBConsts_SNestedDataSetClass,	"Nested dataset must inherit from %s"
@@ -586,8 +592,8 @@ BEGIN
 	DBConsts_SUnassignedVar,	"Unassigned variant value"
 	DBConsts_SRecordNotFound,	"Record not found"
 	DBConsts_SBcdOverflow,	"BCD overflow"
-	DBConsts_SInvalidBcdValue,	"%s is not a valid BCD value"
-	DBConsts_SInvalidFormatType,	"Invalid format type for BCD"
+	DBConsts_SBcdFieldRangeError,	"%s is not a valid value for field '%s'. The allowed range is %s to %s"
+	DBConsts_SInvalidIntegerValue,	"'%s' is not a valid integer value for field '%s'"
 	DBConsts_SInvalidBoolValue,	"'%s' is not a valid boolean value for field '%s'"
 	DBConsts_SInvalidFloatValue,	"'%s' is not a valid floating point value for field '%s'"
 	DBConsts_SFieldTypeMismatch,	"Type mismatch for field '%s', expecting: %s actual: %s"
@@ -602,8 +608,8 @@ BEGIN
 	DBConsts_SIndexNotFound,	"Index '%s' not found"
 	DBConsts_SCircularDataLink,	"Circular datalinks are not allowed"
 	DBConsts_SLookupInfoError,	"Lookup information for field '%s' is incomplete"
-	DBConsts_SDataSourceChange,	"DataSource cannot be changed"
-	DBConsts_SDataSetOpen,	"Cannot perform this operation on an open dataset"
+	ExtCtrls_clNameScrollBar,	"Scroll Bar"
+	ExtCtrls_clName3DDkShadow,	"3D Dark Shadow"
 	ExtCtrls_clName3DLight,	"3D Light"
 	ExtCtrls_clNameWindow,	"Window Background"
 	ExtCtrls_clNameWindowFrame,	"Window Frame"
@@ -618,8 +624,8 @@ BEGIN
 	DBConsts_SFieldAccessError,	"Cannot access field '%s' as type %s"
 	DBConsts_SFieldValueError,	"Invalid value for field '%s'"
 	DBConsts_SFieldRangeError,	"%g is not a valid value for field '%s'. The allowed range is %g to %g"
-	DBConsts_SBcdFieldRangeError,	"%s is not a valid value for field '%s'. The allowed range is %s to %s"
-	DBConsts_SInvalidIntegerValue,	"'%s' is not a valid integer value for field '%s'"
+	ExtCtrls_clNameBtnHighlight,	"Button Highlight"
+	ExtCtrls_clNameBtnShadow,	"Button Shadow"
 	ExtCtrls_clNameBtnText,	"Button Text"
 	ExtCtrls_clNameCaptionText,	"Caption Text"
 	ExtCtrls_clNameDefault,	"Default"
@@ -634,8 +640,8 @@ BEGIN
 	ExtCtrls_clNameMenu,	"Menu Background"
 	ExtCtrls_clNameMenuText,	"Menu Text"
 	ExtCtrls_clNameNone,	"None"
-	ExtCtrls_clNameScrollBar,	"Scroll Bar"
-	ExtCtrls_clName3DDkShadow,	"3D Dark Shadow"
+	ExtCtrls_clNameRed,	"Red"
+	ExtCtrls_clNameLime,	"Lime"
 	ExtCtrls_clNameYellow,	"Yellow"
 	ExtCtrls_clNameBlue,	"Blue"
 	ExtCtrls_clNameFuchsia,	"Fuchsia"
@@ -650,8 +656,8 @@ BEGIN
 	ExtCtrls_clNameAppWorkSpace,	"Application Workspace"
 	ExtCtrls_clNameBackground,	"Background"
 	ExtCtrls_clNameBtnFace,	"Button Face"
-	ExtCtrls_clNameBtnHighlight,	"Button Highlight"
-	ExtCtrls_clNameBtnShadow,	"Button Shadow"
+	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
+	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	HelpIntfs_hNoTableOfContents,	"Unable to find a Table of Contents"
 	HelpIntfs_hNothingFound,	"No help found for %s"
@@ -666,8 +672,8 @@ BEGIN
 	ExtCtrls_clNameTeal,	"Teal"
 	ExtCtrls_clNameGray,	"Gray"
 	ExtCtrls_clNameSilver,	"Silver"
-	ExtCtrls_clNameRed,	"Red"
-	ExtCtrls_clNameLime,	"Lime"
+	Consts_SmkcEnd,	"End"
+	Consts_SmkcHome,	"Home"
 	Consts_SmkcLeft,	"Left"
 	Consts_SmkcUp,	"Up"
 	Consts_SmkcRight,	"Right"
@@ -682,8 +688,8 @@ BEGIN
 	Consts_SInvalidMemoSize,	"Text exceeds memo capacity"
 	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
 	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
-	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
-	Consts_SDockZoneNotFound,	" - Dock zone not found"
+	Consts_SMsgDlgOK,	"确定"
+	Consts_SMsgDlgCancel,	"取消"
 	Consts_SMsgDlgHelp,	"帮助(&H)"
 	Consts_SMsgDlgAbort,	"放弃(&A)"
 	Consts_SMsgDlgRetry,	"重试(&R)"
@@ -698,8 +704,8 @@ BEGIN
 	Consts_SmkcSpace,	"Space"
 	Consts_SmkcPgUp,	"PgUp"
 	Consts_SmkcPgDn,	"PgDn"
-	Consts_SmkcEnd,	"End"
-	Consts_SmkcHome,	"Home"
+	Consts_SCloseButton,	"关闭"
+	Consts_SIgnoreButton,	"忽略"
 	Consts_SRetryButton,	"重试"
 	Consts_SAbortButton,	"放弃"
 	Consts_SAllButton,	"全部"
@@ -714,8 +720,8 @@ BEGIN
 	Consts_SMsgDlgConfirm,	"确认"
 	Consts_SMsgDlgYes,	"是(&Y)"
 	Consts_SMsgDlgNo,	"否(&N)"
-	Consts_SMsgDlgOK,	"确定"
-	Consts_SMsgDlgCancel,	"取消"
+	Consts_SParentRequired,	"Control '%s' has no parent window"
+	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
 	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
 	Consts_SCannotShowModal,	"Cannot make a visible window modal"
 	Consts_SMenuIndexError,	"Menu index out of range"
@@ -730,10 +736,10 @@ BEGIN
 	Consts_SYesButton,	"是"
 	Consts_SNoButton,	"否"
 	Consts_SHelpButton,	"帮助"
-	Consts_SCloseButton,	"关闭"
-	Consts_SIgnoreButton,	"忽略"
 	Consts_SInvalidIcon,	"Icon image is not valid"
 	Consts_SInvalidMetafile,	"Metafile is not valid"
+	Consts_SInvalidPixelFormat,	"Invalid pixel format"
+	Consts_SScanLine,	"Scan line index out of range"
 	Consts_SChangeIconSize,	"Cannot change the size of an icon"
 	Consts_SUnknownClipboardFormat,	"Unsupported clipboard format"
 	Consts_SOutOfResources,	"Out of system resources"
@@ -746,8 +752,6 @@ BEGIN
 	Consts_SWindowDCError,	"Error creating window device context"
 	Consts_SWindowClass,	"Error creating window class"
 	Consts_SCannotFocus,	"Cannot focus a disabled or invisible window"
-	Consts_SParentRequired,	"Control '%s' has no parent window"
-	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
 	RTLConsts_SListCountError,	"List count out of bounds (%d)"
 	RTLConsts_SListIndexError,	"List index out of bounds (%d)"
 	RTLConsts_SMemoryStreamError,	"Out of memory while expanding memory stream"

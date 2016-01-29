@@ -271,6 +271,8 @@ type
     procedure SMScanTicketClick(Sender: TObject);
     procedure SMScanReportClick(Sender: TObject);
     procedure ADefineExecute(Sender: TObject);
+    procedure ShowJson1Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
   private
     { Private declarations }
     myini: TiniFile;
@@ -3032,6 +3034,36 @@ begin
     finally
       LoginInfoForm.Free;
     end;
+  end;
+end;
+
+procedure TMainForm.ShowJson1Click(Sender: TObject);
+var w: TWeightRecord;
+begin
+  w := TWeightRecord.Create;
+  try
+    if TWeightRecordUtil.get(
+      DBGridEh1.DataSource.DataSet.FieldByName('流水号').AsString, w) then
+    begin
+      ShowMessage(w.toJsonString);
+    end;
+  finally
+    w.Free;
+  end;
+end;
+
+procedure TMainForm.N5Click(Sender: TObject);
+var w: TWeightRecord;
+begin
+  w := TWeightRecord.Create;
+  try
+    if TWeightRecordUtil.get(
+      DBGridEh1.DataSource.DataSet.FieldByName('流水号').AsString, w) then
+    begin
+      ShowMessage(Utf8ToAnsi( w.toXmlString));
+    end;
+  finally
+    w.Free;
   end;
 end;
 

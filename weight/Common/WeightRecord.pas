@@ -2,7 +2,7 @@ unit WeightRecord;
 
 interface
 
-uses SysUtils, Variants, Dialogs, ADODB, IdURI;
+uses SysUtils, Variants, Dialogs, ADODB, IdURI, XMLIntf, XMLDoc, Forms;
 
 type
   TWeightRecord = class
@@ -59,6 +59,7 @@ type
     backup18: Double;
     function toString(): string;
     function toJsonString(): string;
+    function toXmlString(): string;
     function toEncodeJsonString(): string;
   end;
 
@@ -354,6 +355,212 @@ begin
     + FloatToStr(backup15) + ',' + FloatToStr(backup16) + ','
     + FloatToStr(backup17) + ',' + FloatToStr(backup18);
   Result := s;
+end;
+
+function TWeightRecord.toXmlString: string;
+var
+  XMLDoc: TXMLDocument;
+  rootNode: IXMLNode;
+  currentNode: IXMLNode;
+begin
+  XMLDoc := TXMLDocument.Create(Application);
+  try
+    XMLDoc.Active := True;
+    XMLDoc.Version := '1.0';
+    XMLDoc.Encoding := 'UTF-8';
+    rootNode := XMLDoc.AddChild('weightData');
+
+    rootNode.SetAttributeNS('glideNo', 'glideNo', glideNo);
+    
+    currentNode := rootNode.AddChild('carNo');
+    currentNode.Text := carNo;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('weightType');
+    currentNode.Text := faHuo;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('sender');
+    currentNode.Text := faHuo;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('receiver');
+    currentNode.Text := shouHuo;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('goods');
+    currentNode.Text := goods;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('spec');
+    currentNode.Text := spec;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('gross');
+    currentNode.Text := FloatToStr(gross);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('tare');
+    currentNode.Text := FloatToStr(tare);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('net');
+    currentNode.Text := FloatToStr(net);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('bundle');
+    currentNode.Text := FloatToStr(bundle);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('real');
+    currentNode.Text := FloatToStr(real);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('price');
+    currentNode.Text := FloatToStr(price);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('sum');
+    currentNode.Text := FloatToStr(sum);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('scale');
+    currentNode.Text := FloatToStr(scale);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('quanter');
+    currentNode.Text := FloatToStr(quanter);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('cost');
+    currentNode.Text := FloatToStr(cost);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('grossMan');
+    currentNode.Text := grossMan;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('tareMan');
+    currentNode.Text := tareMan;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('grossAddr');
+    currentNode.Text := grossAddr;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('tareAddr');
+    currentNode.Text := tareAddr;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('grossTime');
+    currentNode.Text := FormatDateTime('yyyy-MM-dd HH:nn:ss', grossTime);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('tareTime');
+    currentNode.Text := FormatDateTime('yyyy-MM-dd HH:nn:ss', tareTime);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('firstTime');
+    currentNode.Text := FormatDateTime('yyyy-MM-dd HH:nn:ss', firstTime);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('secondTime');
+    currentNode.Text := FormatDateTime('yyyy-MM-dd HH:nn:ss', secondTime);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('updateUser');
+    currentNode.Text := updateUser;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('updateTime');
+    currentNode.Text := FormatDateTime('yyyy-MM-dd HH:nn:ss', updateTime);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('memo');
+    currentNode.Text := memo;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('printCount');
+    currentNode.Text := IntToStr(printCount);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup1');
+    currentNode.Text := backup1;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup2');
+    currentNode.Text := backup2;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup3');
+    currentNode.Text := backup3;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup4');
+    currentNode.Text := backup4;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup5');
+    currentNode.Text := backup5;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup6');
+    currentNode.Text := FloatToStr(backup6);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup7');
+    currentNode.Text := FloatToStr(backup7);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup8');
+    currentNode.Text := FloatToStr(backup8);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup9');
+    currentNode.Text := FloatToStr(backup9);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup10');
+    currentNode.Text := backup10;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup11');
+    currentNode.Text := backup11;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup12');
+    currentNode.Text := backup12;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup13');
+    currentNode.Text := backup13;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup14');
+    currentNode.Text := backup14;
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup15');
+    currentNode.Text := FloatToStr(backup15);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup16');
+    currentNode.Text := FloatToStr(backup16);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup17');
+    currentNode.Text := FloatToStr(backup17);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    currentNode := rootNode.AddChild('backup18');
+    currentNode.Text := FloatToStr(backup18);
+    XMLDoc.DocumentElement.ChildNodes.Add(currentNode);
+
+    //XMLDoc.SaveToFile('c:\a.xml');
+    Result := XMLDoc.XML.Text;
+  finally
+    XMLDoc.Free
+  end;
 end;
 
 end.

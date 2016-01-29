@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, Buttons, ExtCtrls, DB, ADODB, Registry, IniFiles,
   IdCoder, IdCoder3to4, IdCoderMIME, IdBaseComponent, IdHashMessageDigest,
   ZLib, ZLibEx, Menus, RzLabel, IdComponent, IdTCPConnection,
-  IdTCPClient, IdHTTP;
+  IdTCPClient, IdHTTP, WinSkinData;
 
 type
   TUploadCloudForm = class(TForm)
@@ -17,6 +17,10 @@ type
     GBSet: TGroupBox;
     MemoLog: TMemo;
     LEAccount: TLabeledEdit;
+    GroupBox1: TGroupBox;
+    RGSoftware: TRadioGroup;
+    RadioGroup1: TRadioGroup;
+    SkinData1: TSkinData;
     procedure TUploadTimer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure LETokenChange(Sender: TObject);
@@ -205,7 +209,7 @@ begin
         end
         else
         begin
-          log('上传失败：' + Utf8ToAnsi(jo.S['message']));
+          log('上传失败：' + jo.S['message']);
         end;
       except on e: Exception do
           log(e.Message);
